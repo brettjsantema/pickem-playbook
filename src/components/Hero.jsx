@@ -7,8 +7,8 @@ export default function Hero() {
         <div className="hero-content">
           <span className="badge badge-green">Free Guides + Referral Bonuses</span>
           <h1 className="hero-title">
-            Win More.<br />
-            <span className="hero-accent">Play Smarter.</span>
+            2026 Pick&apos;em<br />
+            <span className="hero-accent">Bonus Guide</span>
           </h1>
           <p className="hero-text">
             Real guides to DFS picks, sweepstakes casinos, and crypto prediction markets —
