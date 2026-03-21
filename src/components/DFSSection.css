@@ -1,0 +1,233 @@
+/* Underdog Featured Card */
+.underdog-card {
+  padding: 36px;
+  margin-bottom: 56px;
+}
+
+.underdog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 36px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--border);
+}
+
+.underdog-top {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.underdog-name {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--text);
+  margin-bottom: 6px;
+  letter-spacing: -0.5px;
+}
+
+.underdog-tagline {
+  font-size: 15px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.underdog-cta-top {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.underdog-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+/* Guide Steps */
+.guide-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.step {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.step-num {
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--accent);
+  background: rgba(245, 166, 35, 0.1);
+  border: 1px solid rgba(245, 166, 35, 0.25);
+  border-radius: 6px;
+  padding: 4px 8px;
+  flex-shrink: 0;
+  letter-spacing: 1px;
+}
+
+.step-content strong {
+  display: block;
+  color: var(--text);
+  margin-bottom: 4px;
+  font-size: 15px;
+}
+
+.step-content p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.bonus-tip {
+  display: flex;
+  gap: 12px;
+  background: rgba(124, 111, 247, 0.08);
+  border: 1px solid rgba(124, 111, 247, 0.2);
+  border-radius: 8px;
+  padding: 14px 16px;
+  font-size: 14px;
+}
+
+.bonus-tip-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.bonus-tip strong {
+  color: var(--text);
+}
+
+.bonus-tip p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+/* Offers */
+.offer-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.offer-list li {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.offer-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.offer-list strong {
+  display: block;
+  color: var(--text);
+  font-size: 15px;
+  margin-bottom: 3px;
+}
+
+.offer-list p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.underdog-cta-bottom {
+  width: 100%;
+  display: block;
+  text-align: center;
+  padding: 14px;
+  font-size: 16px;
+}
+
+/* Secondary DFS Grid */
+.also-try-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+  letter-spacing: -0.3px;
+}
+
+.secondary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.secondary-card {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.secondary-top {
+  margin-bottom: 4px;
+}
+
+.secondary-name {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.3px;
+}
+
+.secondary-tagline {
+  font-size: 13px;
+  color: var(--accent);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.secondary-desc {
+  font-size: 14px;
+  line-height: 1.7;
+  flex: 1;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .underdog-body {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+
+@media (max-width: 600px) {
+  .underdog-card {
+    padding: 24px;
+  }
+
+  .underdog-header {
+    flex-direction: column;
+  }
+
+  .underdog-cta-top {
+    width: 100%;
+    text-align: center;
+  }
+}

@@ -1,0 +1,164 @@
+/* Explainer card */
+.sweeps-explainer {
+  padding: 36px;
+  margin-bottom: 48px;
+}
+
+.sweeps-explainer-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.sweeps-explainer-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.sweeps-explainer-body p {
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.sweeps-explainer-body strong {
+  color: var(--text);
+}
+
+.sweeps-how-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.sweeps-how-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sweeps-how-icon {
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.sweeps-how-item strong {
+  color: var(--text);
+  font-size: 14px;
+}
+
+.sweeps-how-item p {
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Casino grid */
+.sweeps-grid-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.sweeps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 48px;
+}
+
+.sweeps-card {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sweeps-card-badge {
+  margin-bottom: 4px;
+}
+
+.sweeps-card-name {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.3px;
+}
+
+.sweeps-card-tagline {
+  font-size: 13px;
+  color: var(--accent-secondary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.sweeps-card-desc {
+  font-size: 14px;
+  line-height: 1.7;
+  flex: 1;
+}
+
+.sweeps-card-cta {
+  display: block;
+  text-align: center;
+  margin-top: 8px;
+  padding: 12px;
+}
+
+/* Tips card */
+.sweeps-tips {
+  padding: 36px;
+}
+
+.sweeps-tips-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.sweeps-tips-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sweeps-tips-body p {
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .sweeps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sweeps-how-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .sweeps-explainer {
+    padding: 24px;
+  }
+
+  .sweeps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sweeps-how-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sweeps-tips {
+    padding: 24px;
+  }
+}
