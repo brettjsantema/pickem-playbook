@@ -2,21 +2,25 @@ import { useState } from 'react'
 import './Nav.css'
 
 const links = [
-  { label: 'DFS Picks', href: '#dfs' },
-  { label: 'Sweepstakes', href: '#sweeps' },
-  { label: 'Crypto Markets', href: '#crypto' },
+  { key: 'sportsbooks', label: 'Sportsbooks' },
+  { key: 'sweeps', label: 'Sweepstakes' },
+  { key: 'crypto', label: 'Prediction Markets' },
 ]
 
-export default function Nav() {
+export default function Nav({ active, setActive }) {
   const [open, setOpen] = useState(false)
+
+  function handleClick(key) {
+    setActive(active === key ? null : key)
+    setOpen(false)
+  }
 
   return (
     <nav className="nav">
       <div className="container nav-inner">
-        <a href="#" className="nav-logo">
-          <span className="nav-logo-icon">🏆</span>
-          <span>2026 Pick&apos;em Playbook</span>
-        </a>
+        <button className="nav-logo" onClick={() => { setActive(null); setOpen(false) }}>
+          2026 Pick&apos;em Playbook
+        </button>
 
         <button className="nav-hamburger" onClick={() => setOpen(!open)} aria-label="Toggle menu">
           <span /><span /><span />
@@ -24,13 +28,15 @@ export default function Nav() {
 
         <ul className={`nav-links ${open ? 'open' : ''}`}>
           {links.map(l => (
-            <li key={l.href}>
-              <a href={l.href} onClick={() => setOpen(false)}>{l.label}</a>
+            <li key={l.key}>
+              <button
+                className={`nav-link ${active === l.key ? 'nav-link--active' : ''}`}
+                onClick={() => handleClick(l.key)}
+              >
+                {l.label}
+              </button>
             </li>
           ))}
-          <li>
-            <a href="#" className="btn btn-primary nav-cta">Get Started</a>
-          </li>
         </ul>
       </div>
     </nav>

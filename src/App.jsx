@@ -1,19 +1,28 @@
+import { useState } from 'react'
 import Nav from './components/Nav.jsx'
-import Hero from './components/Hero.jsx'
+import Home from './components/Home.jsx'
 import DFSSection from './components/DFSSection.jsx'
 import SweepsSection from './components/SweepsSection.jsx'
 import CryptoSection from './components/CryptoSection.jsx'
 import Footer from './components/Footer.jsx'
 
+const sections = {
+  sportsbooks: DFSSection,
+  sweeps: SweepsSection,
+  crypto: CryptoSection,
+}
+
 export default function App() {
+  const [active, setActive] = useState(null)
+
+  const SectionComponent = active ? sections[active] : null
+
   return (
     <>
-      <Nav />
+      <Nav active={active} setActive={setActive} />
       <main>
-        <Hero />
-        <DFSSection />
-        <SweepsSection />
-        <CryptoSection />
+        <Home active={active} setActive={setActive} />
+        {SectionComponent && <SectionComponent />}
       </main>
       <Footer />
     </>

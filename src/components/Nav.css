@@ -11,53 +11,43 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 64px;
+  height: 60px;
 }
 
 .nav-logo {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 18px;
-  font-weight: 800;
+  background: none;
+  border: none;
   color: var(--text);
-  text-decoration: none;
-  letter-spacing: -0.5px;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  letter-spacing: -0.3px;
+  padding: 0;
 }
 
-.nav-logo:hover {
-  text-decoration: none;
-  color: var(--accent);
-}
-
-.nav-logo-icon {
-  font-size: 22px;
-}
+.nav-logo:hover { color: var(--accent); }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 4px;
   list-style: none;
 }
 
-.nav-links a {
+.nav-link {
+  background: none;
+  border: none;
   color: var(--text-muted);
-  font-weight: 500;
   font-size: 14px;
-  transition: color 0.2s;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: color 0.15s, background 0.15s;
 }
 
-.nav-links a:hover {
-  color: var(--text);
-  text-decoration: none;
-}
-
-.nav-cta {
-  font-size: 13px !important;
-  padding: 8px 20px !important;
-  color: #0f1117 !important;
-}
+.nav-link:hover { color: var(--text); background: rgba(255,255,255,0.04); }
+.nav-link--active { color: var(--accent); }
 
 .nav-hamburger {
   display: none;
@@ -75,34 +65,25 @@
   height: 2px;
   background: var(--text);
   border-radius: 2px;
-  transition: 0.2s;
 }
 
-@media (max-width: 768px) {
-  .nav-hamburger {
-    display: flex;
-  }
+@media (max-width: 640px) {
+  .nav-hamburger { display: flex; }
 
   .nav-links {
     display: none;
     position: absolute;
-    top: 64px;
+    top: 60px;
     left: 0;
     right: 0;
     background: var(--bg-card);
     border-bottom: 1px solid var(--border);
     flex-direction: column;
-    padding: 20px;
-    gap: 16px;
-    align-items: flex-start;
+    padding: 12px;
+    gap: 4px;
+    align-items: stretch;
   }
 
-  .nav-links.open {
-    display: flex;
-  }
-
-  .nav-cta {
-    width: 100%;
-    text-align: center;
-  }
+  .nav-links.open { display: flex; }
+  .nav-link { text-align: left; }
 }

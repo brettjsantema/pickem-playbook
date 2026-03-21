@@ -1,0 +1,78 @@
+.home {
+  padding: 100px 0 80px;
+  text-align: center;
+}
+
+.home-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.home-title {
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 900;
+  letter-spacing: -1.5px;
+  color: var(--text);
+}
+
+.home-desc {
+  font-size: 17px;
+  color: var(--text-muted);
+  max-width: 480px;
+  line-height: 1.7;
+}
+
+.home-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.home-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, transform 0.1s;
+}
+
+.home-btn:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.home-btn--active {
+  border-color: var(--accent);
+  background: rgba(245, 166, 35, 0.08);
+  color: var(--accent);
+}
+
+.home-btn-icon {
+  font-size: 20px;
+}
+
+@media (max-width: 600px) {
+  .home {
+    padding: 64px 0 48px;
+  }
+
+  .home-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .home-btn {
+    justify-content: center;
+  }
+}
