@@ -4,25 +4,29 @@ import Home from './components/Home.jsx'
 import DFSSection from './components/DFSSection.jsx'
 import SweepsSection from './components/SweepsSection.jsx'
 import CryptoSection from './components/CryptoSection.jsx'
+import FAQSection from './components/FAQSection.jsx'
 import Footer from './components/Footer.jsx'
 
-const sections = {
+const sectionMap = {
   sportsbooks: DFSSection,
   sweeps: SweepsSection,
   crypto: CryptoSection,
+  faq: FAQSection,
 }
 
 export default function App() {
   const [active, setActive] = useState(null)
 
-  const SectionComponent = active ? sections[active] : null
+  const SectionComponent = sectionMap[active] || null
 
   return (
     <>
       <Nav active={active} setActive={setActive} />
       <main>
-        <Home active={active} setActive={setActive} />
-        {SectionComponent && <SectionComponent />}
+        {SectionComponent
+          ? <SectionComponent />
+          : <Home setActive={setActive} />
+        }
       </main>
       <Footer />
     </>

@@ -1,32 +1,69 @@
+import { Trophy, Dice, TrendingUp } from './Icons.jsx'
 import './Home.css'
 
-const buttons = [
-  { key: 'sportsbooks', label: 'Sportsbooks', icon: '🏈' },
-  { key: 'sweeps', label: 'Sweepstakes Casinos', icon: '🎰' },
-  { key: 'crypto', label: 'Prediction Markets', icon: '📊' },
+const guides = [
+  {
+    key: 'sportsbooks',
+    title: "Pick'em Bonus Guide",
+    desc: "How to claim deposit bonuses on pick'em apps like Underdog and PrizePicks without actually gambling.",
+    Icon: Trophy,
+  },
+  {
+    key: 'sweeps',
+    title: 'Sweeps Casinos Guide',
+    desc: 'The best sweepstakes casinos with daily bonuses and welcome offers. No deposit required on most.',
+    Icon: Dice,
+  },
+  {
+    key: 'crypto',
+    title: 'Prediction Markets Overview',
+    desc: 'Kalshi, Polymarket, and others. Lower fees and transparent pricing for those who want to trade outcomes.',
+    Icon: TrendingUp,
+  },
 ]
 
-export default function Home({ active, setActive }) {
+export default function Home({ setActive }) {
   return (
-    <section className="home">
-      <div className="container home-inner">
-        <h1 className="home-title">2026 Pick&apos;em Bonus Guide</h1>
-        <p className="home-desc">
-          The fastest way to claim your welcome bonuses. Pick a category below to see the top platforms, what they offer, and exactly how to redeem it.
-        </p>
-        <div className="home-buttons">
-          {buttons.map(b => (
-            <button
-              key={b.key}
-              className={`home-btn ${active === b.key ? 'home-btn--active' : ''}`}
-              onClick={() => setActive(active === b.key ? null : b.key)}
-            >
-              <span className="home-btn-icon">{b.icon}</span>
-              {b.label}
+    <div className="home">
+      <div className="container">
+
+        <div className="home-hero">
+          <h1 className="home-hero-title">Free money from gambling apps.</h1>
+          <p className="home-hero-sub">
+            Sportsbooks and casinos hand out large welcome bonuses to new users. With basic strategy, you can get the most out of them with little to no risk. Pick a guide to get started!
+          </p>
+        </div>
+
+        <div className="home-guide-grid">
+          {guides.map(g => (
+            <button key={g.key} className="home-guide-card" onClick={() => setActive(g.key)}>
+              <div className="home-guide-card-heading">
+                <g.Icon size={18} color="var(--accent)" />
+                <h2 className="home-guide-title">{g.title}</h2>
+              </div>
+              <p className="home-guide-desc">{g.desc}</p>
+              <span className="home-guide-cta">Read guide →</span>
             </button>
           ))}
         </div>
+
+        <div className="home-about">
+          <h2 className="home-about-title">About</h2>
+          <p>
+            Sportsbooks and casinos are throwing loads of signup bonuses at new users right now. Most only require a 1x playthrough, and with a little strategy you can hedge your bets and play high-EV games to take the gambling out of it entirely. I've easily pulled in over $1,000 in just a few weeks from welcome offers.
+          </p>
+          <p>
+            The catch is these deals are only available to new users, so there's only so many to claim. This site is a list of the best ones I've found, with step-by-step guides on how to redeem each offer.
+          </p>
+          <p>
+            These deals exist because casinos have a high customer acquisition cost. They count on people getting hooked, but this site is about the opposite: claim the offer, get paid, and move on to the next one.
+          </p>
+          <p>
+            The links here are referral links, which usually get you an extra bonus on top of the standard offer. It helps me out too, so it's a win-win.
+          </p>
+        </div>
+
       </div>
-    </section>
+    </div>
   )
 }
