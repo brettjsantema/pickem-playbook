@@ -35,6 +35,14 @@ export default function Nav({ active, setActive }) {
         </button>
 
         <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
+          <li>
+            <button
+              className={`nav-link ${!active || active === 'about' ? 'nav-link--active' : ''}`}
+              onClick={() => nav(null)}
+            >
+              About
+            </button>
+          </li>
           <li className="nav-dropdown-wrap">
             <button
               className={`nav-link nav-link--dropdown ${guideActive ? 'nav-link--active' : ''}`}
@@ -57,14 +65,6 @@ export default function Nav({ active, setActive }) {
                 ))}
               </ul>
             )}
-          </li>
-          <li>
-            <button
-              className={`nav-link ${!active || active === 'about' ? 'nav-link--active' : ''}`}
-              onClick={() => nav(null)}
-            >
-              About
-            </button>
           </li>
           <li>
             <button

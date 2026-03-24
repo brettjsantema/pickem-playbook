@@ -5,13 +5,13 @@ const guides = [
   {
     key: 'sportsbooks',
     title: "Pick'em Bonus Guide",
-    desc: "How to claim deposit bonuses on pick'em apps like Underdog and PrizePicks without actually gambling.",
+    desc: "How to redeem welcome bonuses on pick'em apps like Underdog and PrizePicks without actually gambling.",
     Icon: Trophy,
   },
   {
     key: 'sweeps',
     title: 'Sweeps Casinos Guide',
-    desc: 'The best sweepstakes casinos with daily bonuses and welcome offers. No deposit required on most.',
+    desc: 'The best sweepstakes casinos with daily bonuses and welcome offers.',
     Icon: Dice,
   },
   {
@@ -29,9 +29,13 @@ export default function Home({ setActive }) {
 
         <div className="home-hero">
           <h1 className="home-hero-title">Free money from gambling apps.</h1>
-          <p className="home-hero-sub">
-            Sportsbooks and casinos hand out large welcome bonuses to new users. With basic strategy, you can get the most out of them with little to no risk. Pick a guide to get started!
-          </p>
+          <div className="home-hero-row">
+            <img src="/images/cash1.png" alt="" className="hero-cash hero-cash--left" />
+            <p className="home-hero-sub">
+              Sportsbooks and casinos hand out large welcome bonuses to new users. With basic strategy, you can get the most out of them with little to no risk. Pick a guide to get started!
+            </p>
+            <img src="/images/cash3.png" alt="" className="hero-cash hero-cash--right" />
+          </div>
         </div>
 
         <div className="home-guide-grid">
