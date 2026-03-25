@@ -137,6 +137,11 @@
   color: var(--text-muted);
 }
 
+@media (max-width: 600px) {
+  .hero-cash--left,
+  .hero-cash--right { display: none; }
+}
+
 @media (max-width: 500px) {
   .home-guide-grid { grid-template-columns: 1fr; }
   .home { padding: 40px 0 56px; }
