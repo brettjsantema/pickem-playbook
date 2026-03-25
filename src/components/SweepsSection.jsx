@@ -44,17 +44,30 @@ export default function SweepsSection() {
           <p className="section-subtitle">How to make passive income from daily freebies, and collect on big welcome bonuses.</p>
         </div>
 
+        <nav className="sweeps-toc">
+          <a href="#sweeps-core" className="sweeps-toc-link">Core Concept</a>
+          <span className="sweeps-toc-sep">·</span>
+          <a href="#sweeps-farming" className="sweeps-toc-link">Daily Farming</a>
+          <span className="sweeps-toc-sep">·</span>
+          <a href="#sweeps-offers" className="sweeps-toc-link">Welcome Offers</a>
+          <span className="sweeps-toc-sep">·</span>
+          <a href="#sweeps-games" className="sweeps-toc-link">Game Strategy</a>
+          <span className="sweeps-toc-sep">·</span>
+          <a href="#sweeps-sites" className="sweeps-toc-link">Recommended Sites</a>
+        </nav>
+
         <div className="sweeps-guide">
 
           {/* Core Concept */}
-          <div className="sweeps-block">
+          <div id="sweeps-core" className="sweeps-block">
             <h3 className="sweeps-heading">Core Concept</h3>
             <p>Sweepstakes casinos operate throughout most of the US under a legal loophole: they give out two currencies. <strong>Gold Coins (GC)</strong> are play-money with no redeemable value. <strong>Sweeps Coins (SC)</strong> can be redeemed for real cash, typically at a 1 SC = $1 rate. When you "deposit" money, you are actually buying GC, and the SC is given as an extra "bonus".</p>
             <p>There are dozens of these sites, and most hand out free SC daily just for logging in. The amount each day is small, but it only takes a couple of seconds per site to log in and claim the bonus, so the amount really adds up. On top of that, most sites have very generous welcome offers, and by choosing the right games you can make some serious cash off of them. </p>
+            <a href="#sweeps-sites" className="sweeps-jump-link">Skip to Recommended Sites ↓</a>
           </div>
 
           {/* Daily Farming */}
-          <div className="sweeps-block">
+          <div id="sweeps-farming" className="sweeps-block">
             <h3 className="sweeps-heading">Daily Farming Strategy</h3>
             <div className="sweeps-callout">
               <CheckCircleFill size={13} className="sweeps-callout-icon" />
@@ -78,7 +91,7 @@ export default function SweepsSection() {
           </div>
 
           {/* Welcome Offers */}
-          <div className="sweeps-block">
+          <div id="sweeps-offers" className="sweeps-block">
             <h3 className="sweeps-heading">Claiming Welcome Offers</h3>
             <p>On top of free dailies, most sweepstakes casinos have a welcome offer where you buy a GC package and receive a large SC bonus alongside it. The typical structure is something like: spend $20, get $40 in SC. You'll then be offered a second offer, third offer, etc. for greater amounts. These deals are extremely profitable without really gambling.</p>
             <p>The best games return around <strong>94%</strong> of what's wagered (RTP), give or take. Most welcome offers only require a 1x playthrough of the SC bonus before you can redeem it. You wager the SC once through, lose roughly 5%, and keep the rest. The bonus almost always covers that loss by a wide margin.</p>
@@ -100,7 +113,7 @@ export default function SweepsSection() {
           </div>
 
           {/* Game Strategy */}
-          <div className="sweeps-block">
+          <div id="sweeps-games" className="sweeps-block">
             <h3 className="sweeps-heading">Game Strategy</h3>
             <p>When you do need to wager your unplayed SC, game selection matters.</p>
             <ul className="sweeps-list">
@@ -139,7 +152,7 @@ export default function SweepsSection() {
         </div>
 
         {/* Platform Cards */}
-        <div className="sweeps-platforms-divider">
+        <div id="sweeps-sites" className="sweeps-platforms-divider">
           <h3 className="sweeps-platforms-heading">Recommended Sites</h3>
           <div className="sweeps-platforms-subline" />
         </div>
@@ -171,7 +184,7 @@ export default function SweepsSection() {
         <div className="sweeps-launcher-divider" />
         <div className="sweeps-launcher">
           <p className="sweeps-launcher-label">Farming daily bonuses? Open all the sites in 1 click.</p>
-          <p className="sweeps-launcher-hint">Your browser will block the tabs on first use — just hit <strong>Allow popups from this page</strong> when prompted.</p>
+          <p className="sweeps-launcher-hint">Your browser may block the tabs on first use. Just hit <strong>Allow popups from this page</strong> if prompted.</p>
           <div className="sweeps-launcher-row">
             <button
               className={`sweeps-lock-btn ${unlocked ? 'sweeps-lock-btn--unlocked' : ''}`}

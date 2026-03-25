@@ -1,12 +1,11 @@
 import { useState } from 'react'
 import { CashStack } from 'react-bootstrap-icons'
-import { Trophy, Dice, TrendingUp } from './Icons.jsx'
+import { Trophy, Dice } from './Icons.jsx'
 import './Nav.css'
 
 const guides = [
   { key: 'sportsbooks', label: "Pick'em Bonus Guide", Icon: Trophy },
   { key: 'sweeps', label: 'Sweeps Casinos Guide', Icon: Dice },
-  { key: 'crypto', label: 'Prediction Markets Overview', Icon: TrendingUp },
 ]
 
 export default function Nav({ active, setActive }) {
