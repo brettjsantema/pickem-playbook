@@ -47,9 +47,10 @@
 /* Guide cards */
 .home-guide-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px;
-  margin-bottom: 64px;
+  max-width: 680px;
+  margin: 0 auto 64px;
 }
 
 .home-guide-card {
@@ -93,13 +94,21 @@
 }
 
 .home-guide-cta {
-  font-size: 13px;
-  font-weight: 600;
+  display: block;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
   color: var(--accent);
   letter-spacing: 0.2px;
-  transition: text-shadow 0.2s;
+  border: 1px solid rgba(0, 255, 136, 0.3);
+  border-radius: 8px;
+  padding: 10px 0;
+  margin-top: 4px;
+  transition: background 0.15s, box-shadow 0.15s, text-shadow 0.2s;
 }
 .home-guide-card:hover .home-guide-cta {
+  background: rgba(0, 255, 136, 0.06);
+  box-shadow: var(--glow-sm);
   text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
 }
 
@@ -128,7 +137,7 @@
   color: var(--text-muted);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 500px) {
   .home-guide-grid { grid-template-columns: 1fr; }
   .home { padding: 40px 0 56px; }
 }
