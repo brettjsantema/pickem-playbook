@@ -1,4 +1,4 @@
-import { Trophy, Dice, TrendingUp } from './Icons.jsx'
+import { Trophy, Dice } from './Icons.jsx'
 import './Home.css'
 
 const guides = [
@@ -13,12 +13,6 @@ const guides = [
     title: 'Sweeps Casinos Guide',
     desc: 'The best sweepstakes casinos with daily bonuses and welcome offers.',
     Icon: Dice,
-  },
-  {
-    key: 'crypto',
-    title: 'Prediction Markets Overview',
-    desc: 'Kalshi, Polymarket, and others. Lower fees and transparent pricing for those who want to trade outcomes.',
-    Icon: TrendingUp,
   },
 ]
 
