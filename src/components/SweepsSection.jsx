@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { ExclamationTriangleFill, CheckCircleFill, XCircleFill, CashStack, LockFill, UnlockFill, ArrowRight } from 'react-bootstrap-icons'
+import { track } from '@vercel/analytics'
 import './Section.css'
 import './SweepsSection.css'
 
@@ -31,6 +32,7 @@ export default function SweepsSection() {
 
   function openAllTabs() {
     if (!unlocked) return
+    track('open_all_tabs', { count: platforms.length })
     platforms.forEach(p => window.open(p.link, '_blank', 'noopener,noreferrer'))
     setUnlocked(false)
   }
@@ -173,7 +175,7 @@ export default function SweepsSection() {
                   <span>{p.welcomeText}</span>
                 </div>
               </div>
-              <a href={p.link} className="btn btn-primary platform-cta sweeps-card-btn" target="_blank" rel="noopener noreferrer">
+              <a href={p.link} className="btn btn-primary platform-cta sweeps-card-btn" target="_blank" rel="noopener noreferrer" onClick={() => track('signup_click', { site: p.name, section: 'sweeps' })}>
                 <CashStack size={14} /> Sign Up
               </a>
             </div>

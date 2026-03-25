@@ -1,4 +1,5 @@
 import { ExclamationTriangleFill, CheckCircleFill } from 'react-bootstrap-icons'
+import { track } from '@vercel/analytics'
 import './Section.css'
 import './DFSSection.css'
 
@@ -122,7 +123,7 @@ export default function DFSSection() {
               <p className="platform-tagline">{p.tagline}</p>
               <p className="platform-desc">{p.review}</p>
               <p className="platform-desc">{p.bonus}</p>
-              <a href={p.link} className="btn btn-primary platform-cta" target="_blank" rel="noopener noreferrer">
+              <a href={p.link} className="btn btn-primary platform-cta" target="_blank" rel="noopener noreferrer" onClick={() => track('signup_click', { site: p.name, section: 'dfs' })}>
                 {p.cta} →
               </a>
             </div>
