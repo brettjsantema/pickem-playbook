@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 import Nav from './components/Nav.jsx'
 import Home from './components/Home.jsx'
 import DFSSection from './components/DFSSection.jsx'
@@ -29,6 +30,7 @@ export default function App() {
         }
       </main>
       <Footer />
+      <Analytics />
     </>
   )
 }
