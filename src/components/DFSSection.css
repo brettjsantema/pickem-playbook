@@ -35,6 +35,12 @@
   padding-left: 4px;
 }
 
+.dfs-bet-note {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-left: 8px;
+}
+
 .dfs-bet-combo {
   display: inline-block;
   font-family: 'Courier New', monospace;

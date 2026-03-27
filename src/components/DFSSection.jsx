@@ -105,6 +105,21 @@ export default function DFSSection() {
             <p className="dfs-tip">
               If you're new to pick'em apps, place a couple of small bets first to get a feel for the interface before going in on the full hedge.
             </p>
+
+            <h3 className="dfs-guide-heading" style={{marginTop: '28px'}}>"Selection unavailable due to attempted promotional farming"</h3>
+            <p>
+              For Chalkboard: If they block your 4th lineup with this message, you can work around it by splitting that 4th bet into two 3-leg parlays. Instead of placing <span className="dfs-bet-combo">Less / Less</span> as a 2-leg, add a third player to create two new lineups that cover both outcomes:
+            </p>
+            <ul className="dfs-bet-list">
+              <li><span className="dfs-bet-combo">More / More</span></li>
+              <li><span className="dfs-bet-combo">More / Less</span></li>
+              <li><span className="dfs-bet-combo">Less / More</span></li>
+              <li><span className="dfs-bet-combo">Less / Less / More</span> <span className="dfs-bet-note">— reduce wager slightly</span></li>
+              <li><span className="dfs-bet-combo">Less / Less / Less</span> <span className="dfs-bet-note">— reduce wager slightly</span></li>
+            </ul>
+            <p>
+              The third pick splits what would have been one <span className="dfs-bet-combo">Less / Less</span> bet into two outcomes. Lower the wager on both 3-leg bets so the potential payout stays roughly equal across all five lineups.
+            </p>
           </div>
 
           <div className="dfs-guide-image">
