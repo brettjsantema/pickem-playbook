@@ -18,7 +18,7 @@ const platforms = [
     logo: '/images/logos/prizepicks.png',
     tagline: 'Place a $5 lineup, get $50 instantly',
     review: 'The most heavily marketed pick\'em app. Very similar to Underdog with Higher/Lower props across major sports.',
-    bonus: 'Multipliers are worse than Underdog, but they make up for it with lots of payout boosts and free lineups. Complete easy missions to save up boosts — for example, if a mission says "place a lineup containing all CBB picks", just place a $1 2-leg parlay with 2 goblin props. You can also apply $5 or $10 bonus lineups directly to the hedge. Just verify the payouts are roughly equal across all outcomes before locking in.',
+    bonus: 'Multipliers are slightly worse than Underdog, but payout boosts and free lineups more than make up for it. See the PrizePicks bonus strategy section above.',
     link: 'https://app.prizepicks.com/sign-up?invite_code=PR-XZHXTPY&source=prizepicks&medium=user_referral&campaign=dc5639f4-8b9e-495c-b32c-c80f813c5df6&content=qr',
     cta: 'Claim Bonus',
   },
@@ -63,7 +63,7 @@ export default function DFSSection() {
 
         <div className="dfs-guide">
           <div className="dfs-guide-text">
-            <h3 className="dfs-guide-heading">The Strategy</h3>
+            <h3 className="dfs-guide-heading">The 4-way hedge strategy</h3>
             <p>
               Pick'em apps let you build parlays on player props. Most welcome bonuses only require a 1x playthrough, which makes them very easy to exploit with the right approach.
             </p>
@@ -78,9 +78,6 @@ export default function DFSSection() {
             </ul>
             <p>
               No matter what happens, exactly one of those bets wins. Bet the same amount on all four. Before placing them, click through each combination and check the multiplier. On Underdog, the max for a 2-leg is 3.5x. The closer all four multipliers are to 3.5x, the better the deal. Avoid lines where one combo pays noticeably less.
-            </p>
-            <p>
-              For PrizePicks, Dabble, and Chalkboard the multipliers are slightly worse, but they compensate with bonus bets and payout boosts. The same 4-bet hedge works, just make sure to use up any bonus lineups and apply any payout boosts before you cash out.
             </p>
             <div className="dfs-callout">
               <div className="dfs-callout-item">
@@ -106,19 +103,27 @@ export default function DFSSection() {
               If you're new to pick'em apps, place a couple of small bets first to get a feel for the interface before going in on the full hedge.
             </p>
 
-            <h3 className="dfs-guide-heading" style={{marginTop: '28px'}}>"Selection unavailable due to attempted promotional farming"</h3>
+            <h3 className="dfs-guide-heading" style={{marginTop: '28px'}}>The 5-way hedge strategy</h3>
             <p>
-              For Chalkboard: If they block your 4th lineup with this message, you can work around it by splitting that 4th bet into two 3-leg parlays. Instead of placing <span className="dfs-bet-combo">Less / Less</span> as a 2-leg, add a third player to create two new lineups that cover both outcomes:
+              If a site blocks your 4th lineup with a "promotional farming" error, split that bet into two 3-leg parlays. Instead of placing <span className="dfs-bet-combo">Less / Less</span> as a 2-leg, add a third player to cover both of its outcomes:
             </p>
             <ul className="dfs-bet-list">
               <li><span className="dfs-bet-combo">More / More</span></li>
               <li><span className="dfs-bet-combo">More / Less</span></li>
               <li><span className="dfs-bet-combo">Less / More</span></li>
-              <li><span className="dfs-bet-combo">Less / Less / More</span> <span className="dfs-bet-note">— reduce wager slightly</span></li>
-              <li><span className="dfs-bet-combo">Less / Less / Less</span> <span className="dfs-bet-note">— reduce wager slightly</span></li>
+              <li><span className="dfs-bet-combo">Less / Less / More</span> <span className="dfs-bet-note">(reduce wager slightly)</span></li>
+              <li><span className="dfs-bet-combo">Less / Less / Less</span> <span className="dfs-bet-note">(reduce wager slightly)</span></li>
             </ul>
             <p>
-              The third pick splits what would have been one <span className="dfs-bet-combo">Less / Less</span> bet into two outcomes. Lower the wager on both 3-leg bets so the potential payout stays roughly equal across all five lineups.
+              Lower the wager on both 3-leg bets so the potential payout stays roughly equal across all five lineups.
+            </p>
+
+            <h3 className="dfs-guide-heading" style={{marginTop: '28px'}}>PrizePicks bonus strategy</h3>
+            <p>
+              PrizePicks multipliers are slightly worse than Underdog, but they hand out a lot of payout boosts and free lineups that more than make up for it.
+            </p>
+            <p>
+              Complete easy missions to stack up boosts before running the hedge. For example, if a mission says something like "place a lineup containing all CBB picks", just place a $1 2-leg parlay with 2 goblin props to tick it off. Apply any accumulated payout boosts to your hedge lineups, and use any $5 or $10 bonus lineups as additional hedge bets. Just verify the payouts are roughly equal across all outcomes before locking in.
             </p>
           </div>
 
