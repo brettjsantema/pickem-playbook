@@ -333,6 +333,14 @@
   flex-shrink: 0;
 }
 
+.sweeps-card-btn--soon {
+  opacity: 0.4;
+  cursor: default;
+  pointer-events: none;
+  font-size: 12px;
+  justify-content: center;
+}
+
 .sweeps-card-btns {
   display: flex;
   flex-direction: column;

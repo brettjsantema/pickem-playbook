@@ -14,7 +14,7 @@
   display: flex;
   align-items: center;
   gap: 20px;
-  margin-bottom: 32px;
+  margin-bottom: 28px;
 }
 
 .casino-guide-logo {
@@ -38,10 +38,97 @@
   gap: 8px;
   font-size: 15px;
   padding: 12px 28px;
+  margin-top: 32px;
 }
 
 .casino-guide-notfound {
   padding: 80px 24px;
   text-align: center;
   color: var(--text-muted);
+}
+
+/* Guide content */
+.casino-guide-details {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin: 20px 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 560px;
+}
+
+.casino-guide-detail-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 14px;
+}
+
+.casino-guide-detail-label {
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.casino-guide-detail-val {
+  color: var(--text);
+  font-weight: 600;
+  text-align: right;
+}
+
+.casino-guide-two-col {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 36px;
+  align-items: start;
+  margin-top: 8px;
+}
+
+.casino-guide-callout {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: rgba(0, 255, 136, 0.05);
+  border: 1px solid rgba(0, 255, 136, 0.2);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin-top: 16px;
+}
+
+.casino-guide-callout-icon {
+  color: var(--accent);
+  flex-shrink: 0;
+  margin-top: 3px;
+  filter: drop-shadow(0 0 4px rgba(0, 255, 136, 0.5));
+}
+
+.casino-guide-callout strong { color: var(--accent); }
+
+.casino-guide-screenshot {
+  width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-bright);
+  display: block;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.casino-guide-img-caption {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: 8px;
+}
+
+@media (max-width: 700px) {
+  .casino-guide-two-col {
+    grid-template-columns: 1fr;
+  }
+  .casino-guide-img-col {
+    order: -1;
+  }
 }
