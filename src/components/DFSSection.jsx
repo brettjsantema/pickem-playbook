@@ -43,9 +43,9 @@ const platforms = [
   {
     name: 'Stimi',
     logo: '/images/logos/stimi.avif',
-    tagline: '1 SC daily bonus + welcome offers',
-    review: 'A mobile-based social sportsbook with a sweepstakes coin model. Daily free SC just for logging in, plus welcome offers on your first purchase.',
-    bonus: 'Same 4-way hedge applies once you load your account. Check that all four combo multipliers are close before placing.',
+    tagline: '1 SC daily bonus',
+    review: 'A mobile-based social sportsbook with a sweepstakes coin model. Daily free SC just for logging in.',
+    bonus: 'Hedging is simple here since you can bet on opposing outcomes for the same game directly.',
     link: 'https://app.stimigames.com/join?c=WCXICU',
     cta: 'Join Stimi',
   },
