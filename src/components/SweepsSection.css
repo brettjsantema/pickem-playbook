@@ -27,8 +27,21 @@
   border: 1px solid var(--border-bright);
 }
 
+.sweeps-featured-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.sweeps-featured-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+}
+
 .sweeps-featured-label {
-  font-size: 12px;
+  font-size: 11px;
   color: var(--accent);
   font-weight: 600;
   letter-spacing: 0.2px;
@@ -338,6 +351,7 @@
 }
 
 .sweeps-platforms-divider {
+  scroll-margin-top: 72px;
   border-top: 1px solid var(--border);
   padding-top: 40px;
   margin-bottom: 24px;

@@ -36,15 +36,18 @@ export default function SweepsSection() {
         {/* Featured picks */}
         <div className="sweeps-featured">
           {[
-            { label: 'Best Overall',       name: 'Crown Coins', logo: '/images/logos/crowncoins.png', link: 'https://crowncoinscasino.com/?utm_campaign=9067a285-018f-4af3-a128-df01d53d1767&utm_source=friends' },
-            { label: 'Best Ongoing Promos',name: 'Modo',        logo: '/images/logos/modo.png',        link: 'https://modo.us?referralCode=T5WNX6' },
-            { label: 'Best Signup Bonus',  name: 'Stake.us',    logo: '/images/logos/stake.jpg',       link: 'https://stake.us/?c=BbCSxQls' },
+            { label: 'Best Overall',       name: 'Crown Coins Casino', logo: '/images/logos/crowncoins.png', link: 'https://crowncoinscasino.com/?utm_campaign=9067a285-018f-4af3-a128-df01d53d1767&utm_source=friends' },
+            { label: 'Best Ongoing Promos',name: 'Modo Casino',        logo: '/images/logos/modo.png',        link: 'https://modo.us?referralCode=T5WNX6' },
+            { label: 'Best Signup Bonus',  name: 'Stake.us',           logo: '/images/logos/stake.jpg',       link: 'https://stake.us/?c=BbCSxQls' },
           ].map(f => (
             <div key={f.name} className="sweeps-featured-card">
               <img src={f.logo} alt={f.name} className="sweeps-featured-logo" />
-              <span className="sweeps-featured-label">{f.label}</span>
+              <div className="sweeps-featured-info">
+                <span className="sweeps-featured-name">{f.name}</span>
+                <span className="sweeps-featured-label">{f.label}</span>
+              </div>
               <a href={f.link} className="btn btn-primary sweeps-featured-btn" target="_blank" rel="noopener noreferrer" onClick={() => track('signup_click', { site: f.name, section: 'sweeps-featured' })}>
-                <CashStack size={13} /> Sign Up
+                <CashStack size={13} /> Get Started
               </a>
             </div>
           ))}
@@ -60,7 +63,7 @@ export default function SweepsSection() {
           <span className="sweeps-toc-sep">·</span>
           <a href="#sweeps-games" className="sweeps-toc-link">Game Strategy</a>
           <span className="sweeps-toc-sep">·</span>
-          <a href="#sweeps-sites" className="sweeps-toc-link">Recommended Sites</a>
+          <a href="#sweeps-sites" className="sweeps-toc-link">Site List</a>
         </nav>
 
         <div className="sweeps-guide">
