@@ -41,6 +41,15 @@ const platforms = [
     cta: 'Claim Bonus',
   },
   {
+    name: 'Fliff',
+    logo: '/images/logos/fliff.webp',
+    tagline: 'Daily bonus + welcome offers',
+    review: 'Built like a social casino. Earn Fliff Coins for free daily, with welcome offers available on your first purchases.',
+    bonus: 'Hedging is easy since you can bet on opposing teams for the same game directly.',
+    link: 'https://get.fliffapp.com/QlC3/a9v5tg92',
+    cta: 'Join Fliff',
+  },
+  {
     name: 'Stimi',
     logo: '/images/logos/stimi.avif',
     tagline: '1 SC daily bonus',
