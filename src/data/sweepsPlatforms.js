@@ -22,7 +22,6 @@ const platforms = [
   { name: 'MyPrize',       logo: '/images/logos/myprize.png',       welcomeText: 'Welcome Offers',       link: 'https://myprize.us/invite/player4983577036037' },
   { name: 'Shuffle',       logo: '/images/logos/shuffle.png',       welcomeText: 'Welcome Offers',       link: 'https://shuffle.us?r=gZV4mOD7z9' },
   { name: 'SpinBlitz',     logo: '/images/logos/spinblitz.png',     welcomeText: 'Welcome Offers',       link: 'https://www.spinblitz.com/lp/raf?r=3d210d80%2F2565575372' },
-  { name: 'Rebet',         logo: '/images/logos/rebet.png',         welcomeText: 'Welcome Offers',       link: 'https://prod.d1z93dthu4z3m6.amplifyapp.com?code=U-BRE-SAN-6V&type=refferal_code' },
 ]
 
 export default platforms

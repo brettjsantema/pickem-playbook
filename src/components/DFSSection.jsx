@@ -59,6 +59,15 @@ const platforms = [
     cta: 'Join Stimi',
   },
   {
+    name: 'Rebet',
+    logo: '/images/logos/rebet.png',
+    tagline: 'Daily bonus + welcome offers',
+    review: 'Built like a social casino. You can collect a daily bonus on Rebet, but only if you have $0 cash in your wallet.',
+    bonus: 'To keep farming the daily bonus, you need to place a bet each day to clear your wallet. Make it easy by placing bets on events far in the future, then cashing out later.',
+    link: 'https://prod.d1z93dthu4z3m6.amplifyapp.com?code=U-BRE-SAN-6V&type=refferal_code',
+    cta: 'Join Rebet',
+  },
+  {
     name: 'Novig',
     logo: '/images/logos/novig.png',
     tagline: 'Spend $5, get $50 in Novig coins',
