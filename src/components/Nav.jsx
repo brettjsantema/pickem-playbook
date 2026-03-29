@@ -1,33 +1,34 @@
 import { useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import { CashStack } from 'react-bootstrap-icons'
 import { Trophy, Dice } from './Icons.jsx'
 import './Nav.css'
 
 const guides = [
-  { key: 'sportsbooks', label: "Pick'em Bonus Guide", Icon: Trophy },
-  { key: 'sweeps', label: 'Sweeps Casinos Guide', Icon: Dice },
+  { path: '/bonusguide', label: "Pick'em Bonus Guide", Icon: Trophy },
+  { path: '/sweeps',     label: 'Sweeps Casinos Guide', Icon: Dice },
 ]
 
-export default function Nav({ active, setActive }) {
+export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [guidesOpen, setGuidesOpen] = useState(false)
+  const { pathname } = useLocation()
 
-  function nav(key) {
-    setActive(key)
+  function closeAll() {
     setMenuOpen(false)
     setGuidesOpen(false)
   }
 
-  const guideActive = guides.some(g => g.key === active)
+  const guideActive = guides.some(g => pathname.startsWith(g.path))
 
   return (
     <nav className="nav">
       <div className="container nav-inner">
 
-        <button className="nav-logo" onClick={() => nav(null)}>
+        <Link to="/" className="nav-logo" onClick={closeAll}>
           <CashStack size={18} color="#22c55e" />
           2026 Pick&apos;em Playbook
-        </button>
+        </Link>
 
         <button className="nav-hamburger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
           <span /><span /><span />
@@ -35,12 +36,13 @@ export default function Nav({ active, setActive }) {
 
         <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
           <li>
-            <button
-              className={`nav-link ${!active || active === 'about' ? 'nav-link--active' : ''}`}
-              onClick={() => nav(null)}
+            <Link
+              to="/"
+              className={`nav-link ${pathname === '/' ? 'nav-link--active' : ''}`}
+              onClick={closeAll}
             >
               About
-            </button>
+            </Link>
           </li>
           <li className="nav-dropdown-wrap">
             <button
@@ -52,26 +54,28 @@ export default function Nav({ active, setActive }) {
             {guidesOpen && (
               <ul className="nav-dropdown">
                 {guides.map(g => (
-                  <li key={g.key}>
-                    <button
-                      className={`nav-dropdown-item ${active === g.key ? 'nav-dropdown-item--active' : ''}`}
-                      onClick={() => nav(g.key)}
+                  <li key={g.path}>
+                    <Link
+                      to={g.path}
+                      className={`nav-dropdown-item ${pathname === g.path ? 'nav-dropdown-item--active' : ''}`}
+                      onClick={closeAll}
                     >
                       <g.Icon size={15} color="currentColor" />
                       {g.label}
-                    </button>
+                    </Link>
                   </li>
                 ))}
               </ul>
             )}
           </li>
           <li>
-            <button
-              className={`nav-link ${active === 'faq' ? 'nav-link--active' : ''}`}
-              onClick={() => nav('faq')}
+            <Link
+              to="/faq"
+              className={`nav-link ${pathname === '/faq' ? 'nav-link--active' : ''}`}
+              onClick={closeAll}
             >
               FAQ
-            </button>
+            </Link>
           </li>
         </ul>
 

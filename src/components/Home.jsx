@@ -1,22 +1,23 @@
+import { Link } from 'react-router-dom'
 import { Trophy, Dice } from './Icons.jsx'
 import './Home.css'
 
 const guides = [
   {
-    key: 'sportsbooks',
+    path: '/bonusguide',
     title: "Pick'em Bonus Guide",
     desc: "How to redeem welcome bonuses on pick'em apps like Underdog and PrizePicks without actually gambling.",
     Icon: Trophy,
   },
   {
-    key: 'sweeps',
+    path: '/sweeps',
     title: 'Sweeps Casinos Guide',
     desc: 'The best sweepstakes casinos with daily bonuses and welcome offers.',
     Icon: Dice,
   },
 ]
 
-export default function Home({ setActive }) {
+export default function Home() {
   return (
     <div className="home">
       <div className="container">
@@ -34,14 +35,14 @@ export default function Home({ setActive }) {
 
         <div className="home-guide-grid">
           {guides.map(g => (
-            <button key={g.key} className="home-guide-card" onClick={() => setActive(g.key)}>
+            <Link key={g.path} to={g.path} className="home-guide-card">
               <div className="home-guide-card-heading">
                 <g.Icon size={18} color="var(--accent)" />
                 <h2 className="home-guide-title">{g.title}</h2>
               </div>
               <p className="home-guide-desc">{g.desc}</p>
               <span className="home-guide-cta">Read guide →</span>
-            </button>
+            </Link>
           ))}
         </div>
 

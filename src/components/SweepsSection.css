@@ -253,6 +253,13 @@
   flex-shrink: 0;
 }
 
+.sweeps-card-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
 .sweeps-card-btn {
   width: 100%;
   padding: 12px;

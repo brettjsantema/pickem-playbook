@@ -21,6 +21,7 @@
   background: none;
   border: none;
   color: var(--text);
+  text-decoration: none;
   font-family: inherit;
   font-size: 15px;
   font-weight: 700;
@@ -46,6 +47,7 @@
   background: none;
   border: none;
   color: var(--text-muted);
+  text-decoration: none;
   font-family: inherit;
   font-size: 14px;
   font-weight: 500;
@@ -99,6 +101,7 @@
   background: none;
   border: none;
   color: var(--text-muted);
+  text-decoration: none;
   font-family: inherit;
   font-size: 14px;
   font-weight: 500;

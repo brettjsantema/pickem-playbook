@@ -41,6 +41,15 @@ const platforms = [
     cta: 'Claim Bonus',
   },
   {
+    name: 'Stimi',
+    logo: '/images/logos/stimi.avif',
+    tagline: '1 SC daily bonus + welcome offers',
+    review: 'A mobile-based social sportsbook with a sweepstakes coin model. Daily free SC just for logging in, plus welcome offers on your first purchase.',
+    bonus: 'Same 4-way hedge applies once you load your account. Check that all four combo multipliers are close before placing.',
+    link: 'https://app.stimigames.com/join?c=WCXICU',
+    cta: 'Join Stimi',
+  },
+  {
     name: 'Novig',
     logo: '/images/logos/novig.png',
     tagline: 'Spend $5, get $50 in Novig coins',

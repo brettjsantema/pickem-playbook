@@ -1,34 +1,21 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import { ExclamationTriangleFill, CheckCircleFill, XCircleFill, CashStack, LockFill, UnlockFill, ArrowRight } from 'react-bootstrap-icons'
 import { track } from '@vercel/analytics'
+import platforms, { toSlug } from '../data/sweepsPlatforms.js'
 import './Section.css'
 import './SweepsSection.css'
 
-const platforms = [
-  { name: 'Stake.us',      logo: '/images/logos/stake.jpg',        welcomeText: '25 SC Free on Signup', link: 'https://stake.us/?c=BbCSxQls' },
-  { name: 'Crown Coins',   logo: '/images/logos/crowncoins.png',   welcomeText: 'Welcome Offers',       link: 'https://crowncoinscasino.com/?utm_campaign=9067a285-018f-4af3-a128-df01d53d1767&utm_source=friends' },
-  { name: 'Modo',          logo: '/images/logos/modo.png',         welcomeText: 'Welcome Offers',       link: 'https://modo.us?referralCode=T5WNX6' },
-  { name: 'LuckyHands',    logo: '/images/logos/luckyhands.jpg',   welcomeText: 'Welcome Offers',       link: 'https://luckyhands.com/sign-up?code=e3a41524-0a48-4d3b-b2bd-29c477dc7cc1' },
-  { name: 'McLuck',        logo: '/images/logos/mcluck.png',       welcomeText: 'Welcome Offers',       link: 'https://www.mcluck.com/lp/raf?r=81a258e5%2F2541552073' },
-  { name: 'Spree',         logo: '/images/logos/spree.jpg',        welcomeText: 'Welcome Offers',       link: 'https://spree.com/?r=2084566' },
-  { name: 'Pulsz',         logo: '/images/logos/pulsz.png',        welcomeText: 'Welcome Offers',       link: 'https://www.pulsz.com/?invited_by=1auegr' },
-  { name: 'Pulsz Bingo',   logo: '/images/logos/pulszbingo.png',   welcomeText: 'Welcome Offers',       link: 'https://www.pulszbingo.com/?invited_by=grhbze' },
-  { name: 'PlayFame',      logo: '/images/logos/playfame.png',     welcomeText: 'Welcome Offers',       link: 'https://www.playfame.com/lp/raf?r=51c24eac%2F2547101221' },
-  { name: 'Jackpota',      logo: '/images/logos/jackpota.svg',     welcomeText: 'Welcome Offers',       link: 'https://www.jackpota.com/?r=424322914' },
-  { name: 'MegaBonanza',   logo: '/images/logos/megabonanza.webp', welcomeText: 'Welcome Offers',       link: 'https://www.megabonanza.com/?r=415866674' },
-  { name: 'HelloMillions', logo: '/images/logos/hellomillions.webp',welcomeText: 'Welcome Offers',      link: 'https://www.hellomillions.com/lp/raf?r=5459cd73%2F2553383889' },
-  { name: 'WOW Vegas',     logo: '/images/logos/wowvegas.svg',     welcomeText: 'Welcome Offers',       link: 'https://www.wowvegas.com/?raf=11961191' },
-  { name: 'SpinQuest',     logo: '/images/logos/spinquest.svg',    welcomeText: 'Welcome Offers',       link: 'https://spinquest.com/?u=DNSH33S' },
-  { name: 'Lonestar',      logo: '/images/logos/lonestar.png',     welcomeText: 'Welcome Offers',       link: 'https://lonestarcasino.com/refer/2452423' },
-  { name: 'Realprize',     logo: '/images/logos/realprize.jpg',    welcomeText: 'Welcome Offers',       link: 'https://realprize.com/refer/2185107' },
-  { name: 'MyPrize',       logo: '/images/logos/myprize.png',      welcomeText: 'Welcome Offers',       link: 'https://myprize.us/invite/player4983577036037' },
-  { name: 'Shuffle',       logo: '/images/logos/shuffle.png',      welcomeText: 'Welcome Offers',       link: 'https://shuffle.us?r=gZV4mOD7z9' },
-  { name: 'SpinBlitz',     logo: '/images/logos/spinblitz.png',    welcomeText: 'Welcome Offers',       link: 'https://www.spinblitz.com/lp/raf?r=3d210d80%2F2565575372' },
-  { name: 'Rebet',         logo: '/images/logos/rebet.png',        welcomeText: 'Welcome Offers',       link: 'https://prod.d1z93dthu4z3m6.amplifyapp.com?code=U-BRE-SAN-6V&type=refferal_code' },
-]
-
 export default function SweepsSection() {
   const [unlocked, setUnlocked] = useState(false)
+  const { hash } = useLocation()
+
+  useEffect(() => {
+    if (hash === '#sweeps-sites') {
+      const el = document.getElementById('sweeps-sites')
+      if (el) el.scrollIntoView({ behavior: 'instant' })
+    }
+  }, [hash])
 
   function openAllTabs() {
     if (!unlocked) return
@@ -175,9 +162,14 @@ export default function SweepsSection() {
                   <span>{p.welcomeText}</span>
                 </div>
               </div>
-              <a href={p.link} className="btn btn-primary platform-cta sweeps-card-btn" target="_blank" rel="noopener noreferrer" onClick={() => track('signup_click', { site: p.name, section: 'sweeps' })}>
-                <CashStack size={14} /> Sign Up
-              </a>
+              <div className="sweeps-card-btns">
+                <a href={p.link} className="btn btn-primary platform-cta sweeps-card-btn" target="_blank" rel="noopener noreferrer" onClick={() => track('signup_click', { site: p.name, section: 'sweeps' })}>
+                  <CashStack size={14} /> Sign Up
+                </a>
+                <Link to={`/sweeps/${toSlug(p.name)}`} className="btn btn-secondary sweeps-card-btn">
+                  Guide
+                </Link>
+              </div>
             </div>
           ))}
         </div>
