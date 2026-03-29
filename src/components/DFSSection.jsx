@@ -105,25 +105,44 @@ export default function DFSSection() {
 
             <h3 className="dfs-guide-heading" style={{marginTop: '28px'}}>The 5-way hedge strategy</h3>
             <p>
-              If a site blocks your 4th lineup with a "promotional farming" error, split that bet into two 3-leg parlays. Instead of placing <span className="dfs-bet-combo">Less / Less</span> as a 2-leg, add a third player to cover both of its outcomes:
+              If an app like Chalkboard prevents you from placing the 4th lineup, split that bet into two 3-leg parlays. Instead of placing <span className="dfs-bet-combo">Less / Less</span> as a 2-leg, add a third player to cover both of its outcomes:
             </p>
             <ul className="dfs-bet-list">
               <li><span className="dfs-bet-combo">More / More</span></li>
               <li><span className="dfs-bet-combo">More / Less</span></li>
               <li><span className="dfs-bet-combo">Less / More</span></li>
-              <li><span className="dfs-bet-combo">Less / Less / More</span> <span className="dfs-bet-note">(reduce wager slightly)</span></li>
-              <li><span className="dfs-bet-combo">Less / Less / Less</span> <span className="dfs-bet-note">(reduce wager slightly)</span></li>
+              <li><span className="dfs-bet-combo">Less / Less / More</span> <span className="dfs-bet-note">(reduced wager)</span></li>
+              <li><span className="dfs-bet-combo">Less / Less / Less</span> <span className="dfs-bet-note">(reduced wager)</span></li>
             </ul>
             <p>
-              Lower the wager on both 3-leg bets so the potential payout stays roughly equal across all five lineups.
+              The 3-leg bets should have a reduced wager so the potential payout stays roughly equal across all five outcomes.
             </p>
 
             <h3 className="dfs-guide-heading" style={{marginTop: '28px'}}>PrizePicks bonus strategy</h3>
             <p>
-              PrizePicks multipliers are slightly worse than Underdog, but they hand out a lot of payout boosts and free lineups that more than make up for it.
+              PrizePicks multipliers are slightly worse than Underdog, but they hand out a lot of payout boosts and free lineups through their missions system that more than make up for it. Before running the 4-way hedge, spend some time completing missions first.
+            </p>
+            <div className="dfs-pp-symbols">
+              <div className="dfs-pp-symbol">
+                <img src="/images/prizepicks/goblin.png" alt="Goblin" className="dfs-pp-symbol-img" />
+                <div>
+                  <strong>Goblin</strong>
+                  <p>A prop that is easier than usual to hit, but pays a lower multiplier. Good for completing missions cheaply.</p>
+                </div>
+              </div>
+              <div className="dfs-pp-symbol">
+                <img src="/images/prizepicks/demon.png" alt="Demon" className="dfs-pp-symbol-img" />
+                <div>
+                  <strong>Demon</strong>
+                  <p>A prop that is harder to hit but pays a larger multiplier. Avoid these when hedging.</p>
+                </div>
+              </div>
+            </div>
+            <p>
+              Missions include things like placing a lineup for a certain sport, or placing a lineup containing a goblin or demon. Most of the introductory missions are easy and can be completed with very small bets, like a $1 2-leg parlay. They reward you with payout boosts and bonus lineups. These bonuses usually have a timer, so keep an eye on expiration dates and don't let them sit unused.
             </p>
             <p>
-              Complete easy missions to stack up boosts before running the hedge. For example, if a mission says something like "place a lineup containing all CBB picks", just place a $1 2-leg parlay with 2 goblin props to tick it off. Apply any accumulated payout boosts to your hedge lineups, and use any $5 or $10 bonus lineups as additional hedge bets. Just verify the payouts are roughly equal across all outcomes before locking in.
+              Once you've run through the easy missions and stacked up plenty of boosts, apply the 4-way hedge strategy. Try to save your profit boosts for your biggest hedge. If you're using $5 or $10 bonus lineups, check the potential payout and compare it against your other bets before locking in, since bonus lineup payouts are calculated slightly differently. It'll be difficult to keep all payouts perfectly equal as you layer on the bonuses, but you'll come out ahead even if things end up a bit lopsided.
             </p>
           </div>
 
