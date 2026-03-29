@@ -47,10 +47,11 @@ export default function Home() {
                 <h2 className="home-guide-title">{g.title}</h2>
               </div>
               <p className="home-guide-desc">{g.desc}</p>
-              <div className="home-guide-footer">
-                <span className="home-guide-count">{g.count} {g.countLabel}</span>
-                <span className="home-guide-cta">Read guide →</span>
+              <div className="home-guide-live">
+                <span className="home-guide-live-dot" />
+                <span>{g.count} {g.countLabel}</span>
               </div>
+              <span className="home-guide-cta">Read guide →</span>
             </Link>
           ))}
         </div>
