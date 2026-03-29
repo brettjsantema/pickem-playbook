@@ -27,7 +27,7 @@ const platforms = [
   { name: 'Fortune Coins', logo: '/images/logos/fortunecoins.png', welcomeText: 'Welcome Offers',       link: 'https://www.fortunecoins.com/signup/da50747e-94a0-4981-8bee-0964a8b3dd0b' },
   { name: 'Sportzino',     logo: '/images/logos/sportzino.png',    welcomeText: 'Welcome Offers',       link: 'https://sportzino.com/signup/bc5795c2-7eff-4cb1-9243-13dec997e95a' },
   { name: 'Zula',          logo: '/images/logos/zula.png',         welcomeText: 'Welcome Offers',       link: 'https://www.zulacasino.com/signup/fb2cbdba-e274-4a9e-ade6-591c231c556a' },
-  { name: 'Ace',           logo: '/images/logos/ace.png',          welcomeText: 'Welcome Offers',       link: 'https://www.ace.com/?r=dbbfef82%2F88428884' },
+  { name: 'Ace',           logo: '/images/logos/ace.webp',          welcomeText: 'Welcome Offers',       link: 'https://www.ace.com/?r=dbbfef82%2F88428884' },
   { name: 'Spindoo',       logo: '/images/logos/spindoo.png',      welcomeText: 'Welcome Offers',       link: 'https://www.spindoo.us/?r=33601398' },
   { name: 'Dara',          logo: '/images/logos/dara.jpg',         welcomeText: 'Welcome Offers',       link: 'https://daracasino.com/signup?refferalCode=j4Es0nKdgj' },
   { name: 'Rolla',         logo: '/images/logos/rolla.png',        welcomeText: 'Welcome Offers',       link: 'https://www.rolla.com/?raf=1401515' },
