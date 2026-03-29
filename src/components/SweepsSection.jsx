@@ -149,7 +149,7 @@ export default function SweepsSection() {
           {platforms.map(p => (
             <div key={p.name} className="card platform-card sweeps-card">
               <div className="platform-header">
-                {p.logo && <img src={p.logo} alt={p.name} className={`platform-logo${p.name === 'Jackpota' ? ' platform-logo--contain' : ''}`} />}
+                {p.logo && <img src={p.logo} alt={p.name} className={`platform-logo${['Jackpota', 'Sweep Jungle'].includes(p.name) ? ' platform-logo--contain' : ''}`} />}
                 <h3 className="platform-name">{p.name}</h3>
               </div>
               <div className="sweeps-card-features">
