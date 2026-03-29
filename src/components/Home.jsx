@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Trophy, Dice } from './Icons.jsx'
+import dfsPlatforms from '../data/dfsPlatforms.js'
+import sweepsPlatforms from '../data/sweepsPlatforms.js'
 import './Home.css'
 
 const guides = [
@@ -8,12 +10,16 @@ const guides = [
     title: "Pick'em Bonus Guide",
     desc: "How to redeem welcome bonuses on pick'em apps like Underdog and PrizePicks without actually gambling.",
     Icon: Trophy,
+    count: dfsPlatforms.length,
+    countLabel: 'sportsbooks',
   },
   {
     path: '/sweeps',
     title: 'Sweeps Casinos Guide',
     desc: 'The best sweepstakes casinos with daily bonuses and welcome offers.',
     Icon: Dice,
+    count: sweepsPlatforms.length,
+    countLabel: 'casinos',
   },
 ]
 
@@ -41,7 +47,10 @@ export default function Home() {
                 <h2 className="home-guide-title">{g.title}</h2>
               </div>
               <p className="home-guide-desc">{g.desc}</p>
-              <span className="home-guide-cta">Read guide →</span>
+              <div className="home-guide-footer">
+                <span className="home-guide-count">{g.count} {g.countLabel}</span>
+                <span className="home-guide-cta">Read guide →</span>
+              </div>
             </Link>
           ))}
         </div>
