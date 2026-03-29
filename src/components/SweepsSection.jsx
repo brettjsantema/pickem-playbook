@@ -33,6 +33,24 @@ export default function SweepsSection() {
           <p className="section-subtitle">How to make passive income from daily freebies, and collect on big welcome bonuses.</p>
         </div>
 
+        {/* Featured picks */}
+        <div className="sweeps-featured">
+          {[
+            { label: 'Best Overall',       name: 'Crown Coins', logo: '/images/logos/crowncoins.png', link: 'https://crowncoinscasino.com/?utm_campaign=9067a285-018f-4af3-a128-df01d53d1767&utm_source=friends' },
+            { label: 'Best Ongoing Promos',name: 'Modo',        logo: '/images/logos/modo.png',        link: 'https://modo.us?referralCode=T5WNX6' },
+            { label: 'Best Signup Bonus',  name: 'Stake.us',    logo: '/images/logos/stake.jpg',       link: 'https://stake.us/?c=BbCSxQls' },
+          ].map(f => (
+            <div key={f.name} className="sweeps-featured-card">
+              <img src={f.logo} alt={f.name} className="sweeps-featured-logo" />
+              <span className="sweeps-featured-label">{f.label}</span>
+              <a href={f.link} className="btn btn-primary sweeps-featured-btn" target="_blank" rel="noopener noreferrer" onClick={() => track('signup_click', { site: f.name, section: 'sweeps-featured' })}>
+                <CashStack size={13} /> Sign Up
+              </a>
+            </div>
+          ))}
+        </div>
+        <a href="#sweeps-sites" className="sweeps-view-all">View all sites <span className="sweeps-view-all-arrow">↓</span></a>
+
         <nav className="sweeps-toc">
           <a href="#sweeps-core" className="sweeps-toc-link">Core Concept</a>
           <span className="sweeps-toc-sep">·</span>

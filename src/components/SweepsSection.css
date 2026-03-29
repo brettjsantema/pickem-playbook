@@ -1,3 +1,70 @@
+/* Featured picks */
+.sweeps-featured {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  max-width: 760px;
+  margin: 0 auto 16px;
+}
+
+.sweeps-featured-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.sweeps-featured-logo {
+  width: 52px;
+  height: 52px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid var(--border-bright);
+}
+
+.sweeps-featured-label {
+  font-size: 12px;
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.sweeps-featured-btn {
+  width: 100%;
+  padding: 8px 0;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.sweeps-view-all {
+  display: block;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-decoration: none;
+  margin: 0 auto 28px;
+  transition: color 0.15s;
+}
+.sweeps-view-all:hover { color: var(--accent); }
+
+.sweeps-view-all-arrow {
+  display: inline-block;
+  margin-left: 4px;
+}
+
+@media (max-width: 520px) {
+  .sweeps-featured { grid-template-columns: 1fr; }
+}
+
 /* Table of Contents */
 .sweeps-toc {
   display: flex;
