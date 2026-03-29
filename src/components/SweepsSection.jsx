@@ -6,8 +6,24 @@ import platforms, { toSlug } from '../data/sweepsPlatforms.js'
 import './Section.css'
 import './SweepsSection.css'
 
+const SIZES = ['normal', 'compact', 'dense']
+
+function GridIcon({ size }) {
+  const n = size === 'normal' ? 2 : size === 'compact' ? 3 : 4
+  const gap = 1
+  const cell = (16 - gap * (n - 1)) / n
+  const cells = []
+  for (let r = 0; r < n; r++) {
+    for (let c = 0; c < n; c++) {
+      cells.push(<rect key={`${r}-${c}`} x={c * (cell + gap)} y={r * (cell + gap)} width={cell} height={cell} rx="0.5" fill="currentColor" />)
+    }
+  }
+  return <svg width="16" height="16" viewBox="0 0 16 16">{cells}</svg>
+}
+
 export default function SweepsSection() {
   const [unlocked, setUnlocked] = useState(false)
+  const [cardSize, setCardSize] = useState('normal')
   const { hash } = useLocation()
 
   useEffect(() => {
@@ -165,36 +181,67 @@ export default function SweepsSection() {
         <div id="sweeps-sites" className="sweeps-platforms-divider">
           <h3 className="sweeps-platforms-heading">Recommended Sites</h3>
           <div className="sweeps-platforms-subline" />
+          <div className="sweeps-size-toggle">
+            {SIZES.map(s => (
+              <button
+                key={s}
+                className={`sweeps-size-btn ${cardSize === s ? 'sweeps-size-btn--active' : ''}`}
+                onClick={() => setCardSize(s)}
+                title={s}
+              >
+                <GridIcon size={s} />
+              </button>
+            ))}
+          </div>
         </div>
-        <div className="platform-grid platform-grid--4col">
-          {platforms.map(p => (
-            <div key={p.name} className="card platform-card sweeps-card">
-              <div className="platform-header">
-                {p.logo && <img src={p.logo} alt={p.name} className={`platform-logo${['Jackpota', 'Sweep Jungle', 'Ace', 'Spindoo'].includes(p.name) ? ' platform-logo--contain' : ''}`} />}
-                <h3 className="platform-name">{p.name}</h3>
-              </div>
-              <div className="sweeps-card-features">
-                <div className="sweeps-card-feature">
-                  <CheckCircleFill size={12} className="sweeps-feature-icon" />
-                  <span>Daily Bonus</span>
+
+        {cardSize === 'normal' ? (
+          <div className="platform-grid platform-grid--4col">
+            {platforms.map(p => (
+              <div key={p.name} className="card platform-card sweeps-card">
+                <div className="platform-header">
+                  {p.logo && <img src={p.logo} alt={p.name} className={`platform-logo${['Jackpota', 'Sweep Jungle', 'Ace', 'Spindoo'].includes(p.name) ? ' platform-logo--contain' : ''}`} />}
+                  <h3 className="platform-name">{p.name}</h3>
                 </div>
-                <div className="sweeps-card-feature">
-                  <CheckCircleFill size={12} className="sweeps-feature-icon" />
-                  <span>{p.welcomeText}</span>
+                <div className="sweeps-card-features">
+                  <div className="sweeps-card-feature">
+                    <CheckCircleFill size={12} className="sweeps-feature-icon" />
+                    <span>Daily Bonus</span>
+                  </div>
+                  <div className="sweeps-card-feature">
+                    <CheckCircleFill size={12} className="sweeps-feature-icon" />
+                    <span>{p.welcomeText}</span>
+                  </div>
+                </div>
+                <div className="sweeps-card-btns">
+                  <a href={p.link} className="btn btn-primary platform-cta sweeps-card-btn" target="_blank" rel="noopener noreferrer" onClick={() => track('signup_click', { site: p.name, section: 'sweeps' })}>
+                    <CashStack size={14} /> Sign Up
+                  </a>
+                  {p.hasGuide
+                    ? <Link to={`/sweeps/${toSlug(p.name)}`} className="btn btn-secondary sweeps-card-btn">Guide</Link>
+                    : <span className="btn btn-secondary sweeps-card-btn sweeps-card-btn--soon">Coming soon</span>
+                  }
                 </div>
               </div>
-              <div className="sweeps-card-btns">
-                <a href={p.link} className="btn btn-primary platform-cta sweeps-card-btn" target="_blank" rel="noopener noreferrer" onClick={() => track('signup_click', { site: p.name, section: 'sweeps' })}>
-                  <CashStack size={14} /> Sign Up
-                </a>
-                {p.hasGuide
-                  ? <Link to={`/sweeps/${toSlug(p.name)}`} className="btn btn-secondary sweeps-card-btn">Guide</Link>
-                  : <span className="btn btn-secondary sweeps-card-btn sweeps-card-btn--soon">Coming soon</span>
-                }
-              </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        ) : (
+          <div className={`platform-grid platform-grid--${cardSize === 'compact' ? '6col' : '8col'}`}>
+            {platforms.map(p => (
+              <a
+                key={p.name}
+                href={p.link}
+                className="sweeps-card-mini"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => track('signup_click', { site: p.name, section: 'sweeps' })}
+              >
+                {p.logo && <img src={p.logo} alt={p.name} className={`sweeps-card-mini-logo${['Jackpota', 'Sweep Jungle', 'Ace', 'Spindoo'].includes(p.name) ? ' platform-logo--contain' : ''}`} />}
+                <span className="sweeps-card-mini-name">{p.name}</span>
+              </a>
+            ))}
+          </div>
+        )}
 
         {/* Tab Launcher */}
         <div className="sweeps-launcher-divider" />
