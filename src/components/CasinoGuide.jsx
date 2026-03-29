@@ -8,29 +8,34 @@ function LuckyHandsGuide({ platform }) {
   return (
     <>
       <p>
-        LuckyHands offers straightforward welcome offers and a daily login bonus. It is a good beginner site — the interface is clean, the playthrough requirements are simple, and redemptions process much faster than most sweepstakes casinos.
+        LuckyHands offers straightforward welcome offers and a daily login bonus. It is a good beginner site with redemptions that process much faster than most sweepstakes casinos.
       </p>
-
-      <div className="casino-guide-details">
-        <div className="casino-guide-detail-row">
-          <span className="casino-guide-detail-label">Min. redemption</span>
-          <span className="casino-guide-detail-val">50 SC</span>
-        </div>
-        <div className="casino-guide-detail-row">
-          <span className="casino-guide-detail-label">Redemption speed</span>
-          <span className="casino-guide-detail-val">Fast — much quicker than most sites</span>
-        </div>
-        <div className="casino-guide-detail-row">
-          <span className="casino-guide-detail-label">Recommended games</span>
-          <span className="casino-guide-detail-val">Plinko, Mines</span>
-        </div>
-      </div>
 
       <div className="casino-guide-two-col">
         <div className="casino-guide-text-col">
+          <div className="casino-guide-details">
+            <div className="casino-guide-detail-row">
+              <span className="casino-guide-detail-label">Min. redemption</span>
+              <span className="casino-guide-detail-val">50 SC</span>
+            </div>
+            <div className="casino-guide-detail-row">
+              <span className="casino-guide-detail-label">Redemption speed</span>
+              <span className="casino-guide-detail-val">Fast, much quicker than most sites</span>
+            </div>
+            <div className="casino-guide-detail-row">
+              <span className="casino-guide-detail-label">Playthrough requirement</span>
+              <span className="casino-guide-detail-val">1x</span>
+            </div>
+            <div className="casino-guide-detail-row">
+              <span className="casino-guide-detail-label">Recommended games</span>
+              <span className="casino-guide-detail-val">Plinko, Mines</span>
+            </div>
+          </div>
+
           <p>
-            For the welcome offers, buy a GC package and you will receive a matching SC bonus. Complete the 1x playthrough by sticking to plinko or mines with small bet sizes. Both games let you keep variance low and grind through the requirement without much risk.
+            For the welcome offers, buy the ones that give you tons of bonus SC, like $10 for 20 SC or $20 for 30 SC. Complete the 1x playthrough by sticking to plinko or mines with small bet sizes. You should get through your playthrough very easily and redeem for a nice profit. If you are not quite at 50 SC yet, you can wait and collect daily bonuses, or just buy a small regular pack of SC in the shop if you are eager to redeem.
           </p>
+
           <div className="casino-guide-callout">
             <CheckCircleFill size={13} className="casino-guide-callout-icon" />
             <span><strong>My result:</strong> I deposited $10 and $20 across two welcome deals, fulfilled the playthrough on plinko and mines, and withdrew $52.</span>
@@ -42,7 +47,7 @@ function LuckyHandsGuide({ platform }) {
             alt="LuckyHands recommended games"
             className="casino-guide-screenshot"
           />
-          <p className="casino-guide-img-caption">The 3 recommended games on LuckyHands</p>
+          <p className="casino-guide-img-caption">My 3 recommended games on LuckyHands</p>
         </div>
       </div>
     </>

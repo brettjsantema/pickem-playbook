@@ -53,11 +53,10 @@
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 16px 20px;
-  margin: 20px 0 24px;
+  margin: 0 0 20px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  max-width: 560px;
 }
 
 .casino-guide-detail-row {
