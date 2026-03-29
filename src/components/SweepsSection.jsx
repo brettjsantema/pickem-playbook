@@ -17,7 +17,7 @@ const platforms = [
   { name: 'Jackpota',      logo: '/images/logos/jackpota.svg',     welcomeText: 'Welcome Offers',       link: 'https://www.jackpota.com/?r=424322914' },
   { name: 'MegaBonanza',   logo: '/images/logos/megabonanza.webp', welcomeText: 'Welcome Offers',       link: 'https://www.megabonanza.com/?r=415866674' },
   { name: 'HelloMillions', logo: '/images/logos/hellomillions.webp',welcomeText: 'Welcome Offers',      link: 'https://www.hellomillions.com/lp/raf?r=5459cd73%2F2553383889' },
-  { name: 'WOW Vegas',     logo: '/images/logos/wowvegas.svg',     welcomeText: 'Welcome Offers',       link: 'https://www.wowvegas.com/' },
+  { name: 'WOW Vegas',     logo: '/images/logos/wowvegas.svg',     welcomeText: 'Welcome Offers',       link: 'https://www.wowvegas.com/?raf=11961191' },
   { name: 'SpinQuest',     logo: '/images/logos/spinquest.svg',    welcomeText: 'Welcome Offers',       link: 'https://spinquest.com/?u=DNSH33S' },
   { name: 'Lonestar',      logo: '/images/logos/lonestar.png',     welcomeText: 'Welcome Offers',       link: 'https://lonestarcasino.com/refer/2452423' },
   { name: 'Realprize',     logo: '/images/logos/realprize.jpg',    welcomeText: 'Welcome Offers',       link: 'https://realprize.com/refer/2185107' },
