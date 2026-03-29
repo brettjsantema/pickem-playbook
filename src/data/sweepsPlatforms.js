@@ -22,6 +22,11 @@ const platforms = [
   { name: 'MyPrize',       logo: '/images/logos/myprize.png',       welcomeText: 'Welcome Offers',       link: 'https://myprize.us/invite/player4983577036037' },
   { name: 'Shuffle',       logo: '/images/logos/shuffle.png',       welcomeText: 'Welcome Offers',       link: 'https://shuffle.us?r=gZV4mOD7z9' },
   { name: 'SpinBlitz',     logo: '/images/logos/spinblitz.png',     welcomeText: 'Welcome Offers',       link: 'https://www.spinblitz.com/lp/raf?r=3d210d80%2F2565575372' },
+  { name: 'Sweet Sweeps',  logo: '/images/logos/sweetsweeps.webp', welcomeText: 'Welcome Offers',       link: 'https://sweetsweeps.com?referralCode=REFMTk1MjEy' },
+  { name: 'Sweep Jungle',  logo: '/images/logos/sweepjungle.webp', welcomeText: 'Welcome Offers',       link: 'https://sweepjungle.com/?ref=7B5943DFF86DFC46&modal=register' },
+  { name: 'Fortune Coins', logo: '/images/logos/fortunecoins.png', welcomeText: 'Welcome Offers',       link: 'https://www.fortunecoins.com/signup/da50747e-94a0-4981-8bee-0964a8b3dd0b' },
+  { name: 'Sportzino',     logo: '/images/logos/sportzino.png',    welcomeText: 'Welcome Offers',       link: 'https://sportzino.com/signup/bc5795c2-7eff-4cb1-9243-13dec997e95a' },
+  { name: 'Zula',          logo: '/images/logos/zula.png',         welcomeText: 'Welcome Offers',       link: 'https://www.zulacasino.com/signup/fb2cbdba-e274-4a9e-ade6-591c231c556a' },
 ]
 
 export default platforms
