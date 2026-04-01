@@ -4,7 +4,7 @@ export function toSlug(name) {
 
 const platforms = [
   { name: 'Stake.us',      logo: '/images/logos/stake.jpg',         welcomeText: '25 SC Free on Signup', link: 'https://stake.us/?c=BbCSxQls' },
-  { name: 'Crown Coins',   logo: '/images/logos/crowncoins.png',    welcomeText: 'Welcome Offers',       link: 'https://crowncoinscasino.com/?utm_campaign=9067a285-018f-4af3-a128-df01d53d1767&utm_source=friends', hasGuide: true },
+  { name: 'Crown Coins',   logo: '/images/logos/crowncoins.png',    welcomeText: 'Welcome Offers',       link: 'https://crowncoinscasino.com/?utm_campaign=9067a285-018f-4af3-a128-df01d53d1767&utm_source=friends', hasGuide: true, isNew: true },
   { name: 'Modo',          logo: '/images/logos/modo.png',          welcomeText: 'Welcome Offers',       link: 'https://modo.us?referralCode=T5WNX6' },
   { name: 'LuckyHands',    logo: '/images/logos/luckyhands.jpg',    welcomeText: 'Welcome Offers',       link: 'https://luckyhands.com/sign-up?code=e3a41524-0a48-4d3b-b2bd-29c477dc7cc1', hasGuide: true },
   { name: 'McLuck',        logo: '/images/logos/mcluck.png',        welcomeText: 'Welcome Offers',       link: 'https://www.mcluck.com/lp/raf?r=81a258e5%2F2541552073' },

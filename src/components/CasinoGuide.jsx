@@ -61,14 +61,22 @@ function CrownCoinsGuide() {
         Crown Coins is my pick for best overall sweepstakes casino. They put a lot of effort into constant deals and promos, the welcome offers are fantastic, daily bonuses and missions are solid, and the VIP program adds even more on top. The interface also feels more polished than most other sites.
       </p>
 
-      <div className="casino-guide-details">
+      <div className="casino-guide-details" style={{marginTop: '20px'}}>
+        <div className="casino-guide-detail-row">
+          <span className="casino-guide-detail-label">Min. redemption</span>
+          <span className="casino-guide-detail-val">50 SC</span>
+        </div>
+        <div className="casino-guide-detail-row">
+          <span className="casino-guide-detail-label">Redemption speed</span>
+          <span className="casino-guide-detail-val">About 1 day</span>
+        </div>
         <div className="casino-guide-detail-row">
           <span className="casino-guide-detail-label">Playthrough requirement</span>
           <span className="casino-guide-detail-val">1x</span>
         </div>
         <div className="casino-guide-detail-row">
-          <span className="casino-guide-detail-label">Top games</span>
-          <span className="casino-guide-detail-val">Turbo Mines, Magic Dice, Fruity Girl</span>
+          <span className="casino-guide-detail-label">Recommended games</span>
+          <span className="casino-guide-detail-val">Magic Dice, Turbo Mines</span>
         </div>
       </div>
 

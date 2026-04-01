@@ -218,7 +218,10 @@ export default function SweepsSection() {
                     <CashStack size={14} /> Sign Up
                   </a>
                   {p.hasGuide
-                    ? <Link to={`/sweeps/${toSlug(p.name)}`} className="btn btn-secondary sweeps-card-btn">Guide</Link>
+                    ? <div className="sweeps-guide-btn-wrap">
+                        {p.isNew && <span className="sweeps-guide-new-badge">NEW</span>}
+                        <Link to={`/sweeps/${toSlug(p.name)}`} className="btn btn-secondary sweeps-card-btn">Guide</Link>
+                      </div>
                     : <span className="btn btn-secondary sweeps-card-btn sweeps-card-btn--soon">Coming soon</span>
                   }
                 </div>

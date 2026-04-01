@@ -333,6 +333,32 @@
   flex-shrink: 0;
 }
 
+.sweeps-guide-btn-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.sweeps-guide-new-badge {
+  position: absolute;
+  top: -9px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  color: #000;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  padding: 2px 7px;
+  border-radius: 20px;
+  box-shadow: 0 0 8px rgba(0, 255, 136, 0.6);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.sweeps-guide-btn-wrap .btn {
+  width: 100%;
+}
+
 .sweeps-card-btn--soon {
   opacity: 0.4;
   cursor: default;
