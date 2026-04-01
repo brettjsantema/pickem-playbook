@@ -58,7 +58,7 @@ const platforms = [
     logo: '/images/logos/sleeper.png',
     tagline: 'Free $20 on signup + 100% match up to $100',
     review: 'Pick\'em app with a strong social and community focus. Clean mobile app with real-time chat built in.',
-    bonus: 'Claim the free $20 first, then deposit up to $100 for the match. Standard 4-way hedge applies.',
+    bonus: 'Claim the free $20 first, then deposit up to $100 for the match. Note: if you try the 4-way hedge, Sleeper will block you on the third or fourth lineup. The best workaround is to find a stat that is heavily correlated with another. For example, Wembanyama averages a double-double with 24.5 points and 11.4 rebounds, so you can bet Over on double-double for 2 legs and Under on rebounds for the other 2. This does not give full coverage, but Wemby would need to score under 10 points for both to lose, which has only happened a handful of times in his career.',
     link: 'https://sleeper.onelink.me/s6xz/prgg?promo=RF-TXCY99',
     cta: 'Claim Bonus',
   },
