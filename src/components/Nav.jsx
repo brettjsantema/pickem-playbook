@@ -85,7 +85,7 @@ export default function Nav() {
               rel="noopener noreferrer"
               aria-label="Reddit community"
             >
-              <img src="/images/reddit.png" alt="Reddit" width={18} height={18} />
+              <img src="/images/reddit.png" alt="Reddit" width={26} height={26} />
             </a>
           </li>
         </ul>
