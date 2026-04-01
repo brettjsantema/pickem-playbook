@@ -340,9 +340,9 @@
 
 .sweeps-guide-new-badge {
   position: absolute;
-  top: -9px;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 0;
+  left: 0;
+  transform: translate(-35%, -50%);
   background: var(--accent);
   color: #000;
   font-size: 9px;
