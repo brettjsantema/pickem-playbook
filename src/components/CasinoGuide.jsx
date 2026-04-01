@@ -96,7 +96,6 @@ function CrownCoinsGuide() {
         </div>
         <div className="casino-guide-img-col">
           <img src="/images/guide/crown/games.png" alt="Crown Coins recommended games" className="casino-guide-screenshot" />
-          <p className="casino-guide-img-caption">Turbo Mines, Magic Dice, and Fruity Girl</p>
         </div>
       </div>
 
@@ -106,10 +105,6 @@ function CrownCoinsGuide() {
         <div className="casino-guide-text-col">
           <p>Crown Coins gives you a full track of daily missions for both GC and SC. The catch is that your next mission is hidden until you complete the current one, and there is a big reward at the end of the track.</p>
           <p>The SC track escalates fast. By mission 5 of 10, the requirement can be something like "Win a total of 3,000 SC." The SC rewards per mission also tend to be underwhelming, and the wheel rewards are unreliable. Even if the max prize on a wheel is 200 SC, the minimum could be 0.5 SC. Do not chase wheels.</p>
-          <div className="casino-guide-callout">
-            <CheckCircleFill size={13} className="casino-guide-callout-icon" />
-            <span>Complete the GC mission track consistently. It is much more forgiving than the SC track and builds VIP points at the same time.</span>
-          </div>
         </div>
         <div className="casino-guide-img-col">
           <img src="/images/guide/crown/missions.png" alt="Crown Coins daily missions" className="casino-guide-screenshot" />
