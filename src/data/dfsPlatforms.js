@@ -59,7 +59,7 @@ const platforms = [
     tagline: 'Free $20 on signup + 100% match up to $100',
     review: 'Pick\'em app with a strong social and community focus. Clean mobile app with real-time chat built in.',
     bonus: 'Claim the free $20 first, then deposit up to $100 for the match. Standard 4-way hedge applies.',
-    link: 'http://sleeper.com/i/KNGLxPn12kLrw',
+    link: 'https://sleeper.onelink.me/s6xz/prgg?promo=RF-TXCY99',
     cta: 'Claim Bonus',
   },
   {
