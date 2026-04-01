@@ -132,12 +132,34 @@
   margin-left: 6px;
   transition: background 0.15s, box-shadow 0.15s;
   flex-shrink: 0;
+  overflow: hidden;
 }
 .nav-reddit-btn:hover {
   background: #ff6120;
   box-shadow: 0 0 10px rgba(255, 69, 0, 0.5);
 }
 .nav-reddit-btn img {
+  display: block;
+}
+
+.nav-discord-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: #5865f2;
+  border-radius: 7px;
+  margin-left: 6px;
+  transition: background 0.15s, box-shadow 0.15s;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.nav-discord-btn:hover {
+  background: #6b77f4;
+  box-shadow: 0 0 10px rgba(88, 101, 242, 0.5);
+}
+.nav-discord-btn img {
   display: block;
 }
 

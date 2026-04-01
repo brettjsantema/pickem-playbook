@@ -85,7 +85,18 @@ export default function Nav() {
               rel="noopener noreferrer"
               aria-label="Reddit community"
             >
-              <img src="/images/reddit.png" alt="Reddit" width={26} height={26} />
+              <img src="/images/reddit.png" alt="Reddit" width={34} height={34} />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://discord.gg/pgt4a3hH2"
+              className="nav-discord-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Discord community"
+            >
+              <img src="/images/discord.png" alt="Discord" width={33} height={33} />
             </a>
           </li>
         </ul>
