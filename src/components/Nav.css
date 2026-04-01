@@ -121,6 +121,26 @@
   text-shadow: 0 0 8px rgba(0, 255, 136, 0.3);
 }
 
+.nav-reddit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: #ff4500;
+  border-radius: 7px;
+  margin-left: 6px;
+  transition: background 0.15s, box-shadow 0.15s;
+  flex-shrink: 0;
+}
+.nav-reddit-btn:hover {
+  background: #ff6120;
+  box-shadow: 0 0 10px rgba(255, 69, 0, 0.5);
+}
+.nav-reddit-btn img {
+  display: block;
+}
+
 .nav-hamburger {
   display: none;
   flex-direction: column;

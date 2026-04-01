@@ -77,6 +77,17 @@ export default function Nav() {
               FAQ
             </Link>
           </li>
+          <li>
+            <a
+              href="https://www.reddit.com/r/PickemPlaybook/"
+              className="nav-reddit-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Reddit community"
+            >
+              <img src="/images/reddit.png" alt="Reddit" width={18} height={18} />
+            </a>
+          </li>
         </ul>
 
       </div>
