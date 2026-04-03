@@ -333,6 +333,44 @@
   flex-shrink: 0;
 }
 
+.sweeps-warning-note {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  color: var(--text-muted);
+  opacity: 0.6;
+  margin-bottom: 12px;
+  text-align: center;
+  justify-content: center;
+}
+
+.sweeps-warning-note-icon {
+  color: var(--yellow);
+  flex-shrink: 0;
+}
+
+.sweeps-card-warnings {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+.sweeps-card-warning {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  font-size: 13px;
+  color: var(--yellow);
+  opacity: 0.85;
+}
+
+.sweeps-card-warning-icon {
+  flex-shrink: 0;
+}
+
 .sweeps-guide-btn-wrap {
   position: relative;
   width: 100%;

@@ -1,15 +1,15 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { ExclamationTriangleFill, CheckCircleFill, XCircleFill, CashStack, LockFill, UnlockFill, ArrowRight } from 'react-bootstrap-icons'
+import { ExclamationTriangleFill, CheckCircleFill, XCircleFill, CashStack, LockFill, UnlockFill, ArrowRight, ExclamationCircleFill } from 'react-bootstrap-icons'
 import { track } from '@vercel/analytics'
 import platforms, { toSlug } from '../data/sweepsPlatforms.js'
 import './Section.css'
 import './SweepsSection.css'
 
-const SIZES = ['normal', 'compact', 'dense']
+const SIZES = ['normal', 'compact']
 
 function GridIcon({ size }) {
-  const n = size === 'normal' ? 2 : size === 'compact' ? 3 : 4
+  const n = size === 'normal' ? 2 : 4
   const gap = 1
   const cell = (16 - gap * (n - 1)) / n
   const cells = []
@@ -195,6 +195,11 @@ export default function SweepsSection() {
           </div>
         </div>
 
+        <p className="sweeps-warning-note">
+          <ExclamationCircleFill size={12} className="sweeps-warning-note-icon" />
+          Sites marked with a warning are still profitable. The warnings are just things to be aware of before signing up.
+        </p>
+
         {cardSize === 'normal' ? (
           <div className="platform-grid platform-grid--4col">
             {platforms.map(p => (
@@ -213,6 +218,16 @@ export default function SweepsSection() {
                     <span>{p.welcomeText}</span>
                   </div>
                 </div>
+                {p.warnings && (
+                  <div className="sweeps-card-warnings">
+                    {p.warnings.map(w => (
+                      <div key={w} className="sweeps-card-warning">
+                        <ExclamationCircleFill size={12} className="sweeps-card-warning-icon" />
+                        <span>{w}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
                 <div className="sweeps-card-btns">
                   <a href={p.link} className="btn btn-primary platform-cta sweeps-card-btn" target="_blank" rel="noopener noreferrer" onClick={() => track('signup_click', { site: p.name, section: 'sweeps' })}>
                     <CashStack size={14} /> Sign Up
@@ -229,7 +244,7 @@ export default function SweepsSection() {
             ))}
           </div>
         ) : (
-          <div className={`platform-grid platform-grid--${cardSize === 'compact' ? '6col' : '8col'}`}>
+          <div className="platform-grid platform-grid--8col">
             {platforms.map(p => (
               <a
                 key={p.name}
