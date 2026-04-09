@@ -21,6 +21,7 @@ export default function App() {
           <Route path="/sweeps/:casino" element={<CasinoGuide />} />
           <Route path="/faq" element={<FAQSection />} />
           <Route path="/articles/best-online-casinos-2026" element={<ArticleTopCasinos />} />
+          <Route path="/articles/top-online-casinos-2026" element={<ArticleTopCasinos />} />
         </Routes>
       </main>
       <Footer />
