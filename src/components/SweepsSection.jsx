@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { ExclamationTriangleFill, CheckCircleFill, XCircleFill, CashStack, LockFill, UnlockFill, ArrowRight, ExclamationCircleFill } from 'react-bootstrap-icons'
 import { track } from '@vercel/analytics'
 import platforms, { toSlug } from '../data/sweepsPlatforms.js'
+import useSEO from '../hooks/useSEO.js'
 import './Section.css'
 import './SweepsSection.css'
 
@@ -22,6 +23,11 @@ function GridIcon({ size }) {
 }
 
 export default function SweepsSection() {
+  useSEO({
+    title: 'Best Sweepstakes Casinos 2026 | PickemPlaybook.com',
+    description: `Full guide to the best sweepstakes casinos in 2026. ${platforms.length} sites reviewed — sign up for free, collect daily bonuses, and cash out real money.`,
+    url: '/sweeps',
+  })
   const [unlocked, setUnlocked] = useState(false)
   const [cardSize, setCardSize] = useState('normal')
   const { hash } = useLocation()

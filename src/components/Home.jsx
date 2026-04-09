@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { Trophy, Dice } from './Icons.jsx'
 import dfsPlatforms from '../data/dfsPlatforms.js'
 import sweepsPlatforms from '../data/sweepsPlatforms.js'
+import useSEO from '../hooks/useSEO.js'
 import './Home.css'
 
 const guides = [
@@ -24,6 +25,11 @@ const guides = [
 ]
 
 export default function Home() {
+  useSEO({
+    title: "PickemPlaybook.com | Free Money from Gambling Apps",
+    description: "Guides for DFS pick'em bonuses, sweepstakes casinos, and prediction markets. Real strategies, real referral bonuses — no deposit required to get started.",
+    url: '/',
+  })
   return (
     <div className="home">
       <div className="container">

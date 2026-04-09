@@ -1,6 +1,8 @@
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { CashStack } from 'react-bootstrap-icons'
 import { track } from '@vercel/analytics'
+import useSEO from '../hooks/useSEO.js'
 import './ArticleTopCasinos.css'
 
 function getUpdatedText() {
@@ -163,6 +165,38 @@ const tierColors = {
 }
 
 export default function ArticleTopCasinos() {
+  useSEO({
+    title: 'Best Online Casinos April 2026 | PickemPlaybook.com',
+    description: 'Ranked tier list of the best sweepstakes casinos in April 2026. Sign up for free, collect daily bonuses, and redeem for real cash — no deposit required.',
+    url: '/articles/best-online-casinos-2026',
+    type: 'article',
+  })
+
+  useEffect(() => {
+    const schema = {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: 'Best Online Casinos April 2026',
+      description: 'Ranked tier list of the best sweepstakes casinos in April 2026.',
+      url: 'https://pickemplaybook.com/articles/best-online-casinos-2026',
+      publisher: {
+        '@type': 'Organization',
+        name: 'PickemPlaybook.com',
+        url: 'https://pickemplaybook.com',
+      },
+      dateModified: new Date().toISOString().split('T')[0],
+    }
+    let el = document.getElementById('jsonld-article')
+    if (!el) {
+      el = document.createElement('script')
+      el.id = 'jsonld-article'
+      el.type = 'application/ld+json'
+      document.head.appendChild(el)
+    }
+    el.textContent = JSON.stringify(schema)
+    return () => el.remove()
+  }, [])
+
   return (
     <div className="article-wrap container">
       <div className="article-meta">
