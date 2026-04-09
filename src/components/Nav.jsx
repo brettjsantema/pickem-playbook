@@ -81,8 +81,8 @@ export default function Nav() {
               <ul className="nav-dropdown">
                 <li>
                   <Link
-                    to="/articles/top-online-casinos-2026"
-                    className={`nav-dropdown-item ${pathname === '/articles/top-online-casinos-2026' ? 'nav-dropdown-item--active' : ''}`}
+                    to="/articles/best-online-casinos-2026"
+                    className={`nav-dropdown-item ${pathname === '/articles/best-online-casinos-2026' ? 'nav-dropdown-item--active' : ''}`}
                     onClick={closeAll}
                   >
                     Best Online Casinos April 2026
