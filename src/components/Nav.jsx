@@ -12,11 +12,13 @@ const guides = [
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [guidesOpen, setGuidesOpen] = useState(false)
+  const [articlesOpen, setArticlesOpen] = useState(false)
   const { pathname } = useLocation()
 
   function closeAll() {
     setMenuOpen(false)
     setGuidesOpen(false)
+    setArticlesOpen(false)
   }
 
   const guideActive = guides.some(g => pathname.startsWith(g.path))
@@ -65,6 +67,27 @@ export default function Nav() {
                     </Link>
                   </li>
                 ))}
+              </ul>
+            )}
+          </li>
+          <li className="nav-dropdown-wrap">
+            <button
+              className={`nav-link nav-link--dropdown ${pathname.startsWith('/articles') ? 'nav-link--active' : ''}`}
+              onClick={() => setArticlesOpen(!articlesOpen)}
+            >
+              Articles <span className={`nav-chevron ${articlesOpen ? 'open' : ''}`}>▾</span>
+            </button>
+            {articlesOpen && (
+              <ul className="nav-dropdown">
+                <li>
+                  <Link
+                    to="/articles/top-online-casinos-2026"
+                    className={`nav-dropdown-item ${pathname === '/articles/top-online-casinos-2026' ? 'nav-dropdown-item--active' : ''}`}
+                    onClick={closeAll}
+                  >
+                    Best Online Casinos April 2026
+                  </Link>
+                </li>
               </ul>
             )}
           </li>

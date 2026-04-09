@@ -6,6 +6,7 @@ import DFSSection from './components/DFSSection.jsx'
 import SweepsSection from './components/SweepsSection.jsx'
 import CasinoGuide from './components/CasinoGuide.jsx'
 import FAQSection from './components/FAQSection.jsx'
+import ArticleTopCasinos from './components/ArticleTopCasinos.jsx'
 import Footer from './components/Footer.jsx'
 
 export default function App() {
@@ -19,6 +20,7 @@ export default function App() {
           <Route path="/sweeps" element={<SweepsSection />} />
           <Route path="/sweeps/:casino" element={<CasinoGuide />} />
           <Route path="/faq" element={<FAQSection />} />
+          <Route path="/articles/top-online-casinos-2026" element={<ArticleTopCasinos />} />
         </Routes>
       </main>
       <Footer />
