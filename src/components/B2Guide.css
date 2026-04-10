@@ -1,0 +1,108 @@
+.b2-guide-subtitle {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.b2-site-logos {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin: 20px 0 28px;
+  flex-wrap: wrap;
+}
+
+.b2-site-logo-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.b2-site-logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.b2-site-logo-name {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.b2-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin: 16px 0 28px;
+}
+
+.b2-stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 14px;
+}
+
+.b2-stat-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 9px;
+  object-fit: cover;
+  margin-bottom: 8px;
+}
+
+.b2-stat-name {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.b2-settings-list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.b2-settings-list li {
+  font-size: 14px;
+  color: var(--text-muted);
+  padding-left: 14px;
+  position: relative;
+}
+
+.b2-settings-list li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+.b2-cta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.b2-cta-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+@media (max-width: 700px) {
+  .b2-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .b2-cta-grid {
+    grid-template-columns: 1fr;
+  }
+}

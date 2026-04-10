@@ -238,10 +238,10 @@ export default function SweepsSection() {
                   <a href={p.link} className="btn btn-primary platform-cta sweeps-card-btn" target="_blank" rel="noopener noreferrer" onClick={() => track('signup_click', { site: p.name, section: 'sweeps' })}>
                     <CashStack size={14} /> Sign Up
                   </a>
-                  {p.hasGuide
+                  {p.hasGuide || p.b2Guide
                     ? <div className="sweeps-guide-btn-wrap">
                         {p.isNew && <span className="sweeps-guide-new-badge">NEW</span>}
-                        <Link to={`/sweeps/${toSlug(p.name)}`} className="btn btn-secondary sweeps-card-btn">Guide</Link>
+                        <Link to={p.b2Guide ? '/sweeps/b2-casinos' : `/sweeps/${toSlug(p.name)}`} className="btn btn-secondary sweeps-card-btn">Guide</Link>
                       </div>
                     : <span className="btn btn-secondary sweeps-card-btn sweeps-card-btn--soon">Coming soon</span>
                   }
