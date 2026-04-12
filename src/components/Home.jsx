@@ -35,14 +35,39 @@ export default function Home() {
       <div className="container">
 
         <div className="home-hero">
-          <h1 className="home-hero-title">Free money from gambling apps.</h1>
-          <div className="home-hero-row">
-            <img src="/images/cash1.png" alt="" className="hero-cash hero-cash--left" />
-            <p className="home-hero-sub">
-              Sportsbooks and casinos hand out large welcome bonuses to new users. With basic strategy, you can get the most out of them with little to no risk. Pick a guide to get started!
-            </p>
-            <img src="/images/cash3.png" alt="" className="hero-cash hero-cash--right" />
+          <div className="hero-dollars" aria-hidden="true">
+            {[
+              { left: '5%',  delay: '0s',    dur: '7s',  size: 28, opacity: 0.18 },
+              { left: '14%', delay: '1.2s',  dur: '9s',  size: 18, opacity: 0.12 },
+              { left: '23%', delay: '3.5s',  dur: '8s',  size: 34, opacity: 0.20 },
+              { left: '33%', delay: '0.7s',  dur: '11s', size: 16, opacity: 0.10 },
+              { left: '42%', delay: '2.1s',  dur: '7.5s',size: 26, opacity: 0.15 },
+              { left: '51%', delay: '4.8s',  dur: '10s', size: 22, opacity: 0.13 },
+              { left: '60%', delay: '1.6s',  dur: '8.5s',size: 32, opacity: 0.19 },
+              { left: '70%', delay: '0.3s',  dur: '9.5s',size: 20, opacity: 0.11 },
+              { left: '80%', delay: '3.0s',  dur: '7s',  size: 28, opacity: 0.16 },
+              { left: '90%', delay: '5.5s',  dur: '10s', size: 18, opacity: 0.12 },
+              { left: '9%',  delay: '6.2s',  dur: '8s',  size: 24, opacity: 0.14 },
+              { left: '47%', delay: '7.0s',  dur: '11s', size: 30, opacity: 0.17 },
+              { left: '75%', delay: '2.8s',  dur: '9s',  size: 14, opacity: 0.09 },
+            ].map((d, i) => (
+              <span
+                key={i}
+                className="hero-dollar"
+                style={{
+                  left: d.left,
+                  fontSize: d.size + 'px',
+                  opacity: d.opacity,
+                  animationDelay: d.delay,
+                  animationDuration: d.dur,
+                }}
+              >$</span>
+            ))}
           </div>
+          <h1 className="home-hero-title">Turn sportsbook promos into easy profit.</h1>
+          <p className="home-hero-sub">
+            Sportsbooks and casinos hand out large welcome bonuses to new users. With basic strategy, you can get the most out of them with little to no risk. Pick a guide to get started!
+          </p>
         </div>
 
         <div className="home-guide-grid">
