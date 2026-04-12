@@ -145,20 +145,47 @@ function JackpotGoGuide() {
 
       <div className="casino-guide-details" style={{marginTop: '20px'}}>
         <div className="casino-guide-detail-row">
-          <span className="casino-guide-detail-label">Main feature</span>
-          <span className="casino-guide-detail-val">Weekly subscription rewards tracks</span>
+          <span className="casino-guide-detail-label">Min. redemption</span>
+          <span className="casino-guide-detail-val">None</span>
+        </div>
+        <div className="casino-guide-detail-row">
+          <span className="casino-guide-detail-label">Redemption speed</span>
+          <span className="casino-guide-detail-val">Fast</span>
+        </div>
+        <div className="casino-guide-detail-row">
+          <span className="casino-guide-detail-label">Playthrough requirement</span>
+          <span className="casino-guide-detail-val">1x</span>
+        </div>
+        <div className="casino-guide-detail-row">
+          <span className="casino-guide-detail-label">Recommended game</span>
+          <span className="casino-guide-detail-val">Lightning Fishooter</span>
         </div>
         <div className="casino-guide-detail-row">
           <span className="casino-guide-detail-label">Redemption fee</span>
           <span className="casino-guide-detail-val">Yes, but largely offset by deals</span>
         </div>
-        <div className="casino-guide-detail-row">
-          <span className="casino-guide-detail-label">Free redemptions</span>
-          <span className="casino-guide-detail-val">Available on Tuesdays</span>
+      </div>
+
+      <h3 className="casino-guide-section-heading">Lightning Fishooter</h3>
+
+      <div className="casino-guide-two-col">
+        <div className="casino-guide-text-col">
+          <p>
+            Lightning Fishooter has one of the highest RTPs of any game on the site -- seemingly above 98%. The trick is setting it up correctly so you are barely spending anything per shot while still grinding through your balance efficiently.
+          </p>
+          <p>Exact settings to use:</p>
+          <ul style={{listStyle: 'none', padding: 0, margin: '10px 0', display: 'flex', flexDirection: 'column', gap: '6px'}}>
+            <li style={{fontSize: '14px', paddingLeft: '14px', position: 'relative'}}><span style={{position: 'absolute', left: 0, color: 'var(--accent)'}}>–</span>Bet size: <strong>0.01 (minimum)</strong></li>
+            <li style={{fontSize: '14px', paddingLeft: '14px', position: 'relative'}}><span style={{position: 'absolute', left: 0, color: 'var(--accent)'}}>–</span>Target: <strong>All fish valued below 8x</strong></li>
+            <li style={{fontSize: '14px', paddingLeft: '14px', position: 'relative'}}><span style={{position: 'absolute', left: 0, color: 'var(--accent)'}}>–</span>Check the box for: <strong>Total shots number</strong></li>
+          </ul>
+          <p>
+            It takes a long time to grind through a large balance this way, but you can just leave the game running in the background. I recommend spreading your gameplay across multiple days -- this lets you rack up progress on Daily Challenges at the same time, squeezing extra value out of each session.
+          </p>
         </div>
-        <div className="casino-guide-detail-row">
-          <span className="casino-guide-detail-label">Buy-In Rebate</span>
-          <span className="casino-guide-detail-val">Unlocked after purchases on 3 of 5 days</span>
+        <div className="casino-guide-img-col">
+          <img src="/images/guide/jackpotgo/lightningfishooter.webp" alt="Lightning Fishooter settings" className="casino-guide-screenshot" />
+          <p className="casino-guide-img-caption">Lightning Fishooter -- set bet to 0.01 and target fish below 8x</p>
         </div>
       </div>
 
@@ -176,6 +203,12 @@ function JackpotGoGuide() {
         <span>Buy all 3 subscription tiers each week. They each pay out more than they cost when you claim every day.</span>
       </div>
 
+      <h3 className="casino-guide-section-heading">Seasonal Rewards Track</h3>
+
+      <p>
+        Under Daily Challenges, there is a seasonal rewards track with a free pass and a deluxe pass. The free pass is available to everyone. If you complete the free track all the way through, you unlock everything in the deluxe pass immediately -- so only buy the deluxe pass once you have fully completed the free rewards track. If the deluxe pass looks worth it at that point, it is.
+      </p>
+
       <h3 className="casino-guide-section-heading">The Redemption Fee</h3>
 
       <p>
@@ -187,13 +220,16 @@ function JackpotGoGuide() {
 
       <div className="casino-guide-callout">
         <CheckCircleFill size={13} className="casino-guide-callout-icon" />
-        <span>Grab the $1 fee-waiver deal on your first day. Do not skip it. And redeem on Tuesdays for fee-free withdrawals.</span>
+        <span>Grab the $1 fee-waiver deal on your first day. Do not skip it. Redeem on Tuesdays for fee-free withdrawals.</span>
       </div>
 
-      <h3 className="casino-guide-section-heading">Buy-In Rebate</h3>
+      <h3 className="casino-guide-section-heading">Buy-In Rebate and Daily Deals</h3>
 
       <p>
-        Jackpot Go also has a Buy-In Rebate that gets unlocked when you make a purchase on any 3 days within a 5-day window. The exact calculation is not entirely transparent, but in practice it appears to cover a meaningful chunk of the redemption fee. Think of it as an additional safety net on top of the Tuesday free redemptions and the first-day fee waiver -- between all three, the redemption fee should not significantly eat into your profit.
+        Jackpot Go has a Buy-In Rebate that unlocks when you make a purchase on any 3 days within a 5-day window. The exact calculation is not fully transparent, but in practice it appears to cover a meaningful chunk of the redemption fee. Between the first-day waiver, Tuesday free redemptions, and the rebate, the fee should not significantly eat into your profit.
+      </p>
+      <p>
+        Also worth picking up are the "Pick One" daily deals that appear in the store. These are small, targeted offers that tend to be good value. Check for them each day alongside your daily bonus claim.
       </p>
     </>
   )
