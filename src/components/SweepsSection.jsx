@@ -58,11 +58,12 @@ export default function SweepsSection() {
         {/* Featured picks */}
         <div className="sweeps-featured">
           {[
-            { label: 'Best Overall',       name: 'Crown Coins Casino', logo: '/images/logos/crowncoins.png', link: 'https://crowncoinscasino.com/?utm_campaign=9067a285-018f-4af3-a128-df01d53d1767&utm_source=friends' },
+            { label: 'My Favorite',        name: 'Jackpot Go',         logo: '/images/logos/jackpotgo.png',   link: '#',                                                                                                           tag: 'My Favorite' },
             { label: 'Best Ongoing Promos',name: 'Modo Casino',        logo: '/images/logos/modo.png',        link: 'https://modo.us?referralCode=T5WNX6' },
-            { label: 'Best Signup Bonus',  name: 'Stake.us',           logo: '/images/logos/stake.jpg',       link: 'https://stake.us/?c=BbCSxQls' },
+            { label: 'Best Overall',       name: 'Crown Coins Casino', logo: '/images/logos/crowncoins.png',  link: 'https://crowncoinscasino.com/?utm_campaign=9067a285-018f-4af3-a128-df01d53d1767&utm_source=friends' },
           ].map(f => (
             <div key={f.name} className="sweeps-featured-card">
+              {f.tag && <span className="sweeps-featured-tag">{f.tag}</span>}
               <img src={f.logo} alt={f.name} className="sweeps-featured-logo" />
               <div className="sweeps-featured-info">
                 <span className="sweeps-featured-name">{f.name}</span>
@@ -221,8 +222,14 @@ export default function SweepsSection() {
                   </div>
                   <div className="sweeps-card-feature">
                     <CheckCircleFill size={12} className="sweeps-feature-icon" />
-                    <span>{p.welcomeText}</span>
+                    <span className={p.name === 'Jackpot Go' ? 'sweeps-feature-highlight' : ''}>{p.welcomeText}</span>
                   </div>
+                  {p.b2Features && (
+                    <div className="sweeps-card-feature">
+                      <CheckCircleFill size={12} className="sweeps-feature-icon" />
+                      <span>Quick Redemptions</span>
+                    </div>
+                  )}
                 </div>
                 {p.warnings && (
                   <div className="sweeps-card-warnings">
@@ -241,7 +248,7 @@ export default function SweepsSection() {
                   {p.hasGuide || p.b2Guide
                     ? <div className="sweeps-guide-btn-wrap">
                         {p.isNew && <span className="sweeps-guide-new-badge">NEW</span>}
-                        <Link to={p.b2Guide ? '/sweeps/b2-casinos' : `/sweeps/${toSlug(p.name)}`} className="btn btn-secondary sweeps-card-btn">Guide</Link>
+                        <Link to={p.b2Guide ? '/sweeps/b2-casinos' : `/sweeps/${toSlug(p.name)}`} className="btn btn-secondary sweeps-card-btn">{p.b2Guide ? 'B2 Casinos Guide' : 'Guide'}</Link>
                       </div>
                     : <span className="btn btn-secondary sweeps-card-btn sweeps-card-btn--soon">Coming soon</span>
                   }
