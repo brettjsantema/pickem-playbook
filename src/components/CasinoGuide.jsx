@@ -136,9 +136,73 @@ function CrownCoinsGuide() {
   )
 }
 
+function JackpotGoGuide() {
+  return (
+    <>
+      <p>
+        Jackpot Go has one of the slickest interfaces of any sweepstakes casino, and it runs on a model that is genuinely different from the rest. Instead of one-time welcome packs, the main value here comes from weekly subscription tiers that pay out both upfront and daily as long as you log in to claim. If you are already in the habit of farming daily bonuses across multiple sites, this fits right into that routine.
+      </p>
+
+      <div className="casino-guide-details" style={{marginTop: '20px'}}>
+        <div className="casino-guide-detail-row">
+          <span className="casino-guide-detail-label">Main feature</span>
+          <span className="casino-guide-detail-val">Weekly subscription rewards tracks</span>
+        </div>
+        <div className="casino-guide-detail-row">
+          <span className="casino-guide-detail-label">Redemption fee</span>
+          <span className="casino-guide-detail-val">Yes, but largely offset by deals</span>
+        </div>
+        <div className="casino-guide-detail-row">
+          <span className="casino-guide-detail-label">Free redemptions</span>
+          <span className="casino-guide-detail-val">Available on Tuesdays</span>
+        </div>
+        <div className="casino-guide-detail-row">
+          <span className="casino-guide-detail-label">Buy-In Rebate</span>
+          <span className="casino-guide-detail-val">Unlocked after purchases on 3 of 5 days</span>
+        </div>
+      </div>
+
+      <h3 className="casino-guide-section-heading">Weekly Subscriptions</h3>
+
+      <p>
+        Jackpot Go offers 3 subscription tiers each week. Each one gives you a flat SC amount upfront when you activate it, plus a smaller daily SC reward for each day you log in and claim it during the week. All 3 tiers are worth buying. The math consistently works out in your favor -- you put in less than you get back, even accounting for the redemption fee.
+      </p>
+      <p>
+        The key is not forgetting to claim your daily reward. If you are already logging into multiple sweeps sites each day, just add Jackpot Go to the rotation. Missing a day means leaving SC on the table from a subscription you already paid for.
+      </p>
+
+      <div className="casino-guide-callout">
+        <CheckCircleFill size={13} className="casino-guide-callout-icon" />
+        <span>Buy all 3 subscription tiers each week. They each pay out more than they cost when you claim every day.</span>
+      </div>
+
+      <h3 className="casino-guide-section-heading">The Redemption Fee</h3>
+
+      <p>
+        Unlike most sweepstakes casinos, Jackpot Go charges a fee when you redeem SC for cash. This is the main catch. However, on your first day on the site, you should see a $1 deal that gives you $100 worth of redemption fees waived. That covers your first $2,000 or so in redemptions, which should get you through the early weeks without paying any fees.
+      </p>
+      <p>
+        On top of that, every Tuesday they offer a free redemption deal. Make it a habit to redeem on Tuesdays when possible.
+      </p>
+
+      <div className="casino-guide-callout">
+        <CheckCircleFill size={13} className="casino-guide-callout-icon" />
+        <span>Grab the $1 fee-waiver deal on your first day. Do not skip it. And redeem on Tuesdays for fee-free withdrawals.</span>
+      </div>
+
+      <h3 className="casino-guide-section-heading">Buy-In Rebate</h3>
+
+      <p>
+        Jackpot Go also has a Buy-In Rebate that gets unlocked when you make a purchase on any 3 days within a 5-day window. The exact calculation is not entirely transparent, but in practice it appears to cover a meaningful chunk of the redemption fee. Think of it as an additional safety net on top of the Tuesday free redemptions and the first-day fee waiver -- between all three, the redemption fee should not significantly eat into your profit.
+      </p>
+    </>
+  )
+}
+
 const guideComponents = {
   'luckyhands': LuckyHandsGuide,
   'crown-coins': CrownCoinsGuide,
+  'jackpot-go': JackpotGoGuide,
 }
 
 export default function CasinoGuide() {
