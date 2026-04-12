@@ -58,7 +58,7 @@ export default function SweepsSection() {
         {/* Featured picks */}
         <div className="sweeps-featured">
           {[
-            { label: 'My Favorite',        name: 'Jackpot Go',         logo: '/images/logos/jackpotgo.png',   link: '#',                                                                                                           tag: 'My Favorite' },
+            { label: 'My Favorite',        name: 'Jackpot Go',         logo: '/images/logos/jackpotgo.png',   link: 'https://game.jackpotgo.com?invite_code=XC7DJZXM', tag: 'My Favorite' },
             { label: 'Best Ongoing Promos',name: 'Modo Casino',        logo: '/images/logos/modo.png',        link: 'https://modo.us?referralCode=T5WNX6' },
             { label: 'Best Overall',       name: 'Crown Coins Casino', logo: '/images/logos/crowncoins.png',  link: 'https://crowncoinscasino.com/?utm_campaign=9067a285-018f-4af3-a128-df01d53d1767&utm_source=friends' },
           ].map(f => (
