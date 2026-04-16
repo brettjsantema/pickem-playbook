@@ -42,16 +42,40 @@ export default function SweepsSection() {
         {/* Featured picks */}
         <div className="sweeps-featured">
           {[
-            { label: 'Great Rewards Track',        name: 'Jackpot Go',         logo: '/images/logos/jackpotgo.png',   link: 'https://game.jackpotgo.com?invite_code=XC7DJZXM', tag: 'My Favorite' },
-            { label: 'Best Ongoing Promos',name: 'Modo Casino',        logo: '/images/logos/modo.png',        link: 'https://modo.us?referralCode=T5WNX6' },
-            { label: 'Best Overall',       name: 'Crown Coins Casino', logo: '/images/logos/crowncoins.png',  link: 'https://crowncoinscasino.com/?utm_campaign=9067a285-018f-4af3-a128-df01d53d1767&utm_source=friends' },
+            {
+              tag: 'Cash Cow', name: 'Pulsz', logo: '/images/logos/pulsz.png',
+              link: 'https://www.pulsz.com/?invited_by=1auegr',
+              bullets: ['Beginner-friendly site with constant 15% off packages', 'Easy 95% return with Dice'],
+              verified: 'Ongoing discounts confirmed active as of April 16th 2026',
+            },
+            {
+              tag: 'Cash Cow', name: 'Pulsz Bingo', logo: '/images/logos/pulszbingo.png',
+              link: 'https://www.pulszbingo.com/?invited_by=grhbze',
+              bullets: ['Pulsz sister site with the same games and interface', 'Constant 10% off packages'],
+              verified: 'Ongoing discounts confirmed active as of April 16th 2026',
+            },
+            {
+              name: 'Jackpot Go', logo: '/images/logos/jackpotgo.png',
+              link: 'https://game.jackpotgo.com?invite_code=XC7DJZXM',
+              bullets: ['Great Rewards Track', 'Weekly milestones with SC prizes'],
+            },
           ].map(f => (
             <div key={f.name} className="sweeps-featured-card">
               {f.tag && <span className="sweeps-featured-tag">{f.tag}</span>}
               <img src={f.logo} alt={f.name} className="sweeps-featured-logo" />
               <div className="sweeps-featured-info">
                 <span className="sweeps-featured-name">{f.name}</span>
-                <span className="sweeps-featured-label">{f.label}</span>
+                {f.bullets && (
+                  <ul className="sweeps-featured-bullets">
+                    {f.bullets.map(b => <li key={b}>{b}</li>)}
+                  </ul>
+                )}
+                {f.verified && (
+                  <span className="sweeps-featured-verified">
+                    <CheckCircleFill size={10} className="sweeps-featured-verified-icon" />
+                    {f.verified}
+                  </span>
+                )}
               </div>
               <a href={f.link} className="btn btn-primary sweeps-featured-btn" target="_blank" rel="noopener noreferrer" onClick={() => track('signup_click', { site: f.name, section: 'sweeps-featured' })}>
                 <CashStack size={13} /> Get Started
