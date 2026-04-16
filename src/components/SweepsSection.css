@@ -355,22 +355,6 @@
   flex-shrink: 0;
 }
 
-.sweeps-warning-note {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  font-size: 12px;
-  color: var(--text-muted);
-  opacity: 0.6;
-  margin-bottom: 12px;
-  text-align: center;
-  justify-content: center;
-}
-
-.sweeps-warning-note-icon {
-  color: var(--yellow);
-  flex-shrink: 0;
-}
 
 .sweeps-card-warnings {
   display: flex;
@@ -453,27 +437,6 @@
   position: relative;
 }
 
-.sweeps-size-toggle {
-  position: absolute;
-  right: 0;
-  top: 48px;
-  display: flex;
-  gap: 4px;
-}
-
-.sweeps-size-btn {
-  background: none;
-  border: 1px solid var(--border);
-  color: var(--text-muted);
-  border-radius: 6px;
-  padding: 5px 7px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  transition: color 0.15s, border-color 0.15s;
-}
-.sweeps-size-btn:hover { color: var(--text); border-color: var(--border-bright); }
-.sweeps-size-btn--active { color: var(--accent); border-color: var(--accent); }
 
 /* Mini cards (compact / dense modes) */
 .sweeps-card-mini {
@@ -529,6 +492,28 @@
   border-radius: 2px;
   margin: 0 auto;
   opacity: 0.7;
+}
+
+/* Desktop/mobile grid visibility */
+.sweeps-grid-mobile { display: none; }
+
+@media (max-width: 520px) {
+  .sweeps-grid-desktop { display: none; }
+  .sweeps-grid-mobile  { display: block; }
+
+  .sweeps-card-mini {
+    padding: 10px 4px;
+    gap: 6px;
+  }
+
+  .sweeps-card-mini-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .sweeps-card-mini-name {
+    font-size: 9px;
+  }
 }
 
 /* Tab Launcher */

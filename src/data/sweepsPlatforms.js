@@ -10,7 +10,7 @@ const platforms = [
   { name: 'LuckyHands',    logo: '/images/logos/luckyhands.jpg',    welcomeText: 'Welcome Offers',       link: 'https://luckyhands.com/sign-up?code=e3a41524-0a48-4d3b-b2bd-29c477dc7cc1', hasGuide: true },
   // Row 2
   { name: 'Spree',         logo: '/images/logos/spree.jpg',         welcomeText: 'Welcome Offers',       link: 'https://spree.com/?r=2084566' },
-  { name: 'Sweet Sweeps',  logo: '/images/logos/sweetsweeps.webp',  welcomeText: 'Welcome Offers',       link: 'https://sweetsweeps.com?referralCode=REFMTk1MjEy', warnings: ['2x playthrough', '4-8% fee on purchases', '1.5% fee on redemptions'] },
+  { name: 'Sweet Sweeps',  logo: '/images/logos/sweetsweeps.webp',  welcomeText: 'Welcome Offers',       link: 'https://sweetsweeps.com?referralCode=REFMTk1MjEy', warnings: ['Sales tax + 1.5% redemption fee'] },
   { name: 'Pulsz',         logo: '/images/logos/pulsz.png',         welcomeText: 'Welcome Offers',       link: 'https://www.pulsz.com/?invited_by=1auegr' },
   { name: 'Pulsz Bingo',   logo: '/images/logos/pulszbingo.png',    welcomeText: 'Welcome Offers',       link: 'https://www.pulszbingo.com/?invited_by=grhbze' },
   // Row 3 - B2 sites

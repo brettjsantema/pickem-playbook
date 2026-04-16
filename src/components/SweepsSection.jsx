@@ -7,21 +7,6 @@ import useSEO from '../hooks/useSEO.js'
 import './Section.css'
 import './SweepsSection.css'
 
-const SIZES = ['normal', 'compact']
-
-function GridIcon({ size }) {
-  const n = size === 'normal' ? 2 : 4
-  const gap = 1
-  const cell = (16 - gap * (n - 1)) / n
-  const cells = []
-  for (let r = 0; r < n; r++) {
-    for (let c = 0; c < n; c++) {
-      cells.push(<rect key={`${r}-${c}`} x={c * (cell + gap)} y={r * (cell + gap)} width={cell} height={cell} rx="0.5" fill="currentColor" />)
-    }
-  }
-  return <svg width="16" height="16" viewBox="0 0 16 16">{cells}</svg>
-}
-
 export default function SweepsSection() {
   useSEO({
     title: 'Best Sweepstakes Casinos 2026 | PickemPlaybook.com',
@@ -29,7 +14,6 @@ export default function SweepsSection() {
     url: '/sweeps',
   })
   const [unlocked, setUnlocked] = useState(false)
-  const [cardSize, setCardSize] = useState('normal')
   const { hash } = useLocation()
 
   useEffect(() => {
@@ -188,26 +172,10 @@ export default function SweepsSection() {
         <div id="sweeps-sites" className="sweeps-platforms-divider">
           <h3 className="sweeps-platforms-heading">Recommended Sites</h3>
           <div className="sweeps-platforms-subline" />
-          <div className="sweeps-size-toggle">
-            {SIZES.map(s => (
-              <button
-                key={s}
-                className={`sweeps-size-btn ${cardSize === s ? 'sweeps-size-btn--active' : ''}`}
-                onClick={() => setCardSize(s)}
-                title={s}
-              >
-                <GridIcon size={s} />
-              </button>
-            ))}
-          </div>
         </div>
 
-        <p className="sweeps-warning-note">
-          <ExclamationCircleFill size={12} className="sweeps-warning-note-icon" />
-          Sites marked with a warning are still profitable. The warnings are just things to be aware of before signing up.
-        </p>
-
-        {cardSize === 'normal' ? (
+        {/* Desktop: full cards */}
+        <div className="sweeps-grid-desktop">
           <div className="platform-grid platform-grid--4col">
             {platforms.map(p => (
               <div key={p.name} className="card platform-card sweeps-card">
@@ -256,7 +224,10 @@ export default function SweepsSection() {
               </div>
             ))}
           </div>
-        ) : (
+        </div>
+
+        {/* Mobile: compact 4-column mini cards */}
+        <div className="sweeps-grid-mobile">
           <div className="platform-grid platform-grid--8col">
             {platforms.map(p => (
               <a
@@ -272,7 +243,7 @@ export default function SweepsSection() {
               </a>
             ))}
           </div>
-        )}
+        </div>
 
         {/* Tab Launcher */}
         <div className="sweeps-launcher-divider" />
