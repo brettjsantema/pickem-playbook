@@ -55,7 +55,7 @@ export default function SweepsSection() {
               verified: 'Ongoing discounts confirmed active as of April 16th 2026',
             },
             {
-              tag: 'Snazzy interface', name: 'Jackpot Go', logo: '/images/logos/jackpotgo.png',
+              tag: 'My Favorite', name: 'Jackpot Go', logo: '/images/logos/jackpotgo.png',
               link: 'https://game.jackpotgo.com?invite_code=XC7DJZXM',
               bullets: ['Great Rewards Track', 'Weekly milestones with SC prizes'],
             },
