@@ -51,7 +51,7 @@ export default function SweepsSection() {
             {
               tag: 'Flash Deals', name: 'WOW Vegas', logo: '/images/logos/wowvegas.svg',
               link: 'https://www.wowvegas.com/?raf=11961191', domain: 'wowvegas.com',
-              bullets: ['100% extra flash deal today'],
+              bullets: ['100% extra flash deal today', 'Classic site with daily free spins'],
               verified: 'Updated today, April 17th 2026',
             },
             {
@@ -71,13 +71,13 @@ export default function SweepsSection() {
                     {f.bullets.map(b => <li key={b}>{b}</li>)}
                   </ul>
                 )}
-                {f.verified && (
-                  <span className="sweeps-featured-verified">
-                    <CheckCircleFill size={10} className="sweeps-featured-verified-icon" />
-                    {f.verified}
-                  </span>
-                )}
               </div>
+              {f.verified && (
+                <span className="sweeps-featured-verified">
+                  <CheckCircleFill size={10} className="sweeps-featured-verified-icon" />
+                  {f.verified}
+                </span>
+              )}
               <a href={f.link} className="btn btn-primary sweeps-featured-btn" target="_blank" rel="noopener noreferrer" onClick={() => track('signup_click', { site: f.name, section: 'sweeps-featured' })}>
                 {f.domain} <BoxArrowUpRight size={11} />
               </a>
