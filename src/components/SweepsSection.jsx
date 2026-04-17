@@ -63,7 +63,9 @@ export default function SweepsSection() {
           ].map(f => (
             <div key={f.name} className="sweeps-featured-card">
               {f.tag && <span className="sweeps-featured-tag">{f.tag}</span>}
-              <img src={f.logo} alt={f.name} className={`sweeps-featured-logo${f.logoZoom ? ' sweeps-featured-logo--zoom' : ''}`} />
+              <div className="sweeps-featured-logo-frame">
+                <img src={f.logo} alt={f.name} className={`sweeps-featured-logo${f.logoZoom ? ' sweeps-featured-logo--zoom' : ''}`} />
+              </div>
               <div className="sweeps-featured-info">
                 <span className="sweeps-featured-name">{f.name}</span>
                 {f.bullets && (
