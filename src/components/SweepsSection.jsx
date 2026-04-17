@@ -43,21 +43,22 @@ export default function SweepsSection() {
         <div className="sweeps-featured">
           {[
             {
-              tag: 'Cash Cow', name: 'Pulsz', logo: '/images/logos/pulsz.png',
-              link: 'https://www.pulsz.com/?invited_by=1auegr',
-              bullets: ['Beginner-friendly site with constant 15% off packages', 'Easy 95% return with Dice'],
-              verified: 'Ongoing discounts confirmed active as of April 16th 2026',
+              tag: 'Weekend Deals', name: 'Sweet Sweeps', logo: '/images/logos/sweetsweeps.webp',
+              link: 'https://sweetsweeps.com?referralCode=REFMTk1MjEy',
+              bullets: ['Weekend discount packs and streak builder with free spins', 'Easy 96% return with Gravity Plinko'],
+              verified: 'Updated today, April 17th 2026',
             },
             {
-              tag: 'Cash Cow', name: 'Pulsz Bingo', logo: '/images/logos/pulszbingo.png',
-              link: 'https://www.pulszbingo.com/?invited_by=grhbze',
-              bullets: ['Pulsz sister site with the same games and interface', 'Constant 10% off packages'],
-              verified: 'Ongoing discounts confirmed active as of April 16th 2026',
+              tag: 'Flash Deals', name: 'WOW Vegas', logo: '/images/logos/wowvegas.svg',
+              link: 'https://www.wowvegas.com/?raf=11961191',
+              bullets: ['100% extra flash deal today'],
+              verified: 'Updated today, April 17th 2026',
             },
             {
               tag: 'My Favorite', name: 'Jackpot Go', logo: '/images/logos/jackpotgo.png',
               link: 'https://game.jackpotgo.com?invite_code=XC7DJZXM',
               bullets: ['Great Rewards Track', 'Weekly milestones with SC prizes'],
+              verified: 'Updated today, April 17th 2026',
             },
           ].map(f => (
             <div key={f.name} className="sweeps-featured-card">
