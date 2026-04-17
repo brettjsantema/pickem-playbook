@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { ExclamationTriangleFill, CheckCircleFill, XCircleFill, CashStack, LockFill, UnlockFill, ArrowRight, ExclamationCircleFill } from 'react-bootstrap-icons'
+import { ExclamationTriangleFill, CheckCircleFill, XCircleFill, CashStack, LockFill, UnlockFill, ArrowRight, ExclamationCircleFill, BoxArrowUpRight } from 'react-bootstrap-icons'
 import { track } from '@vercel/analytics'
 import platforms, { toSlug } from '../data/sweepsPlatforms.js'
 import useSEO from '../hooks/useSEO.js'
@@ -44,19 +44,19 @@ export default function SweepsSection() {
           {[
             {
               tag: 'Weekend Deals', name: 'Sweet Sweeps', logo: '/images/logos/sweetsweeps.webp',
-              link: 'https://sweetsweeps.com?referralCode=REFMTk1MjEy',
+              link: 'https://sweetsweeps.com?referralCode=REFMTk1MjEy', domain: 'sweetsweeps.com',
               bullets: ['Weekend discount packs and streak builder with free spins', 'Easy 96% return with Gravity Plinko'],
               verified: 'Updated today, April 17th 2026',
             },
             {
               tag: 'Flash Deals', name: 'WOW Vegas', logo: '/images/logos/wowvegas.svg',
-              link: 'https://www.wowvegas.com/?raf=11961191',
+              link: 'https://www.wowvegas.com/?raf=11961191', domain: 'wowvegas.com',
               bullets: ['100% extra flash deal today'],
               verified: 'Updated today, April 17th 2026',
             },
             {
               tag: 'My Favorite', name: 'Jackpot Go', logo: '/images/logos/jackpotgo.png',
-              link: 'https://game.jackpotgo.com?invite_code=XC7DJZXM',
+              link: 'https://game.jackpotgo.com?invite_code=XC7DJZXM', domain: 'game.jackpotgo.com',
               bullets: ['Great Rewards Track', 'Weekly milestones with SC prizes'],
               verified: 'Updated today, April 17th 2026',
             },
@@ -79,7 +79,7 @@ export default function SweepsSection() {
                 )}
               </div>
               <a href={f.link} className="btn btn-primary sweeps-featured-btn" target="_blank" rel="noopener noreferrer" onClick={() => track('signup_click', { site: f.name, section: 'sweeps-featured' })}>
-                <CashStack size={13} /> Get Started
+                {f.domain} <BoxArrowUpRight size={11} />
               </a>
             </div>
           ))}
