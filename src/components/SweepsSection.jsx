@@ -43,13 +43,13 @@ export default function SweepsSection() {
         <div className="sweeps-featured">
           {[
             {
-              tag: 'Weekend Deals', name: 'Sweet Sweeps', logo: '/images/logos/sweetsweeps.webp',
+              tag: 'Weekend Deals', name: 'Sweet Sweeps', logo: '/images/logos/sweetsweeps.webp', logoZoom: true,
               link: 'https://sweetsweeps.com?referralCode=REFMTk1MjEy', domain: 'sweetsweeps.com',
               bullets: ['Weekend discount packs and streak builder with free spins', 'Easy 96% return with Gravity Plinko'],
               verified: 'Updated today, April 17th 2026',
             },
             {
-              tag: 'Flash Deals', name: 'WOW Vegas', logo: '/images/logos/wowvegas.svg',
+              tag: 'Flash Deals', name: 'WOW Vegas', logo: '/images/logos/wowvegas.svg', logoZoom: true,
               link: 'https://www.wowvegas.com/?raf=11961191', domain: 'wowvegas.com',
               bullets: ['100% extra flash deal today', 'Classic site with daily free spins'],
               verified: 'Updated today, April 17th 2026',
@@ -63,7 +63,7 @@ export default function SweepsSection() {
           ].map(f => (
             <div key={f.name} className="sweeps-featured-card">
               {f.tag && <span className="sweeps-featured-tag">{f.tag}</span>}
-              <img src={f.logo} alt={f.name} className="sweeps-featured-logo" />
+              <img src={f.logo} alt={f.name} className={`sweeps-featured-logo${f.logoZoom ? ' sweeps-featured-logo--zoom' : ''}`} />
               <div className="sweeps-featured-info">
                 <span className="sweeps-featured-name">{f.name}</span>
                 {f.bullets && (

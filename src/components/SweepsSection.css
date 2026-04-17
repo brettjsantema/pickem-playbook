@@ -49,6 +49,10 @@
   border: 1px solid var(--border-bright);
 }
 
+.sweeps-featured-logo--zoom {
+  transform: scale(1.25);
+}
+
 .sweeps-featured-info {
   display: flex;
   flex-direction: column;
