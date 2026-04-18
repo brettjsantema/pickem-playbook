@@ -1,10 +1,32 @@
+/* Featured wrap with decorations */
+.sweeps-featured-wrap {
+  position: relative;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.sweeps-featured-deco {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.sweeps-featured-deco-sign {
+  position: absolute;
+  font-weight: 800;
+  color: #00ff88;
+  user-select: none;
+  line-height: 1;
+}
+
 /* Featured picks */
 .sweeps-featured {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
-  max-width: 760px;
-  margin: 0 auto 16px;
+  margin-bottom: 16px;
 }
 
 .sweeps-featured-card {
@@ -55,6 +77,11 @@
   height: 52px;
 }
 
+.sweeps-featured-logo-frame--small {
+  width: 72px;
+  height: 36px;
+}
+
 .sweeps-featured-logo {
   width: 100%;
   height: 100%;
@@ -67,8 +94,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 760px;
-  margin: 0 auto 10px;
+  margin-bottom: 10px;
   padding-bottom: 10px;
   border-bottom: 1px solid var(--border);
 }

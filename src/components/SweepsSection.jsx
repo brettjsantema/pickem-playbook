@@ -40,6 +40,18 @@ export default function SweepsSection() {
         </div>
 
         {/* Featured picks */}
+        <div className="sweeps-featured-wrap">
+        <div className="sweeps-featured-deco" aria-hidden="true">
+          {[
+            { left: '2%',  top: '10%', size: 22, opacity: 0.10, rot: -15 },
+            { left: '6%',  top: '60%', size: 14, opacity: 0.07, rot: 10  },
+            { left: '92%', top: '15%', size: 18, opacity: 0.09, rot: 12  },
+            { left: '96%', top: '65%', size: 26, opacity: 0.11, rot: -8  },
+            { left: '48%', top: '4%',  size: 16, opacity: 0.07, rot: 5   },
+          ].map((d, i) => (
+            <span key={i} className="sweeps-featured-deco-sign" style={{ left: d.left, top: d.top, fontSize: d.size, opacity: d.opacity, transform: `rotate(${d.rot}deg)` }}>$</span>
+          ))}
+        </div>
         <div className="sweeps-featured-header">
           <span className="sweeps-featured-title">Today's featured sites</span>
           <span className="sweeps-featured-date">April 18th, 2026</span>
@@ -50,24 +62,21 @@ export default function SweepsSection() {
               tag: 'New', name: 'Luck Party', logo: '/images/logos/luckparty.webp', logoWide: true,
               link: 'https://luckparty.com/signup/fa9c08ee-1071-4057-8f6d-590fe0192680', domain: 'luckparty.com',
               bullets: ['Extra 15% discount deal when you sign up', 'Extra coupons this weekend, generous daily amount'],
-              verified: 'Updated today, April 18th 2026',
             },
             {
               tag: 'New', name: 'Moozi', logo: '/images/logos/moozi.webp', logoWide: true,
               link: 'https://moozi.com/signup?referral_code=2611347992', domain: 'moozi.com',
               bullets: ['Generous newcomer bonus', 'Easy verification and frequent sales'],
-              verified: 'Updated today, April 18th 2026',
             },
             {
-              tag: 'Classic Site', name: 'Zula', logo: '/images/logos/zula-wide.png', logoWide: true,
+              tag: 'Classic Site', name: 'Zula', logo: '/images/logos/zula-wide.png', logoWide: true, logoSmall: true,
               link: 'https://www.zulacasino.com/signup/fb2cbdba-e274-4a9e-ade6-591c231c556a', domain: 'zulacasino.com',
               bullets: ['Generous free daily amount', 'Great welcome offers'],
-              verified: 'Updated today, April 18th 2026',
             },
           ].map(f => (
             <div key={f.name} className="sweeps-featured-card">
               {f.tag && <span className="sweeps-featured-tag">{f.tag}</span>}
-              <div className={`sweeps-featured-logo-frame${f.logoWide ? ' sweeps-featured-logo-frame--wide' : ''}`}>
+              <div className={`sweeps-featured-logo-frame${f.logoWide ? ' sweeps-featured-logo-frame--wide' : ''}${f.logoSmall ? ' sweeps-featured-logo-frame--small' : ''}`}>
                 <img src={f.logo} alt={f.name} className="sweeps-featured-logo" />
               </div>
               <div className="sweeps-featured-info">
@@ -78,18 +87,13 @@ export default function SweepsSection() {
                   </ul>
                 )}
               </div>
-              {f.verified && (
-                <span className="sweeps-featured-verified">
-                  <CheckCircleFill size={10} className="sweeps-featured-verified-icon" />
-                  {f.verified}
-                </span>
-              )}
               <a href={f.link} className="btn btn-primary sweeps-featured-btn" target="_blank" rel="noopener noreferrer" onClick={() => track('signup_click', { site: f.name, section: 'sweeps-featured' })}>
                 {f.domain} <BoxArrowUpRight size={11} />
               </a>
             </div>
           ))}
         </div>
+        </div>{/* /sweeps-featured-wrap */}
         <a href="#sweeps-sites" className="sweeps-view-all">View all sites <span className="sweeps-view-all-arrow">↓</span></a>
 
         <nav className="sweeps-toc">
