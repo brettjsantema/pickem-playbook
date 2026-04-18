@@ -43,11 +43,11 @@ export default function SweepsSection() {
         <div className="sweeps-featured-wrap">
         <div className="sweeps-featured-deco" aria-hidden="true">
           {[
-            { left: '2%',  top: '10%', size: 22, opacity: 0.10, rot: -15 },
-            { left: '6%',  top: '60%', size: 14, opacity: 0.07, rot: 10  },
-            { left: '92%', top: '15%', size: 18, opacity: 0.09, rot: 12  },
-            { left: '96%', top: '65%', size: 26, opacity: 0.11, rot: -8  },
-            { left: '48%', top: '4%',  size: 16, opacity: 0.07, rot: 5   },
+            { left: '1%',  top: '8%',  size: 36, opacity: 0.18, rot: -15 },
+            { left: '4%',  top: '58%', size: 22, opacity: 0.13, rot: 10  },
+            { left: '91%', top: '12%', size: 28, opacity: 0.16, rot: 12  },
+            { left: '94%', top: '60%', size: 40, opacity: 0.20, rot: -8  },
+            { left: '46%', top: '2%',  size: 24, opacity: 0.12, rot: 5   },
           ].map((d, i) => (
             <span key={i} className="sweeps-featured-deco-sign" style={{ left: d.left, top: d.top, fontSize: d.size, opacity: d.opacity, transform: `rotate(${d.rot}deg)` }}>$</span>
           ))}

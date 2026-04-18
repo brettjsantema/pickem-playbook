@@ -19,6 +19,7 @@
   color: #00ff88;
   user-select: none;
   line-height: 1;
+  text-shadow: 0 0 12px rgba(0, 255, 136, 0.5);
 }
 
 /* Featured picks */
@@ -77,9 +78,9 @@
   height: 52px;
 }
 
-.sweeps-featured-logo-frame--small {
-  width: 72px;
-  height: 36px;
+.sweeps-featured-logo-frame--small .sweeps-featured-logo {
+  object-fit: contain;
+  transform: scale(0.75);
 }
 
 .sweeps-featured-logo {
