@@ -50,6 +50,11 @@
   flex-shrink: 0;
 }
 
+.sweeps-featured-logo-frame--wide {
+  width: 104px;
+  height: 52px;
+}
+
 .sweeps-featured-logo {
   width: 100%;
   height: 100%;
@@ -57,9 +62,29 @@
   display: block;
 }
 
-.sweeps-featured-logo--zoom {
-  transform: scale(1.25);
-  transform-origin: center;
+/* Featured header */
+.sweeps-featured-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 760px;
+  margin: 0 auto 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.sweeps-featured-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.sweeps-featured-date {
+  font-size: 11px;
+  color: var(--text-muted);
+  opacity: 0.6;
 }
 
 .sweeps-featured-info {

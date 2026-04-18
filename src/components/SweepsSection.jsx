@@ -40,31 +40,35 @@ export default function SweepsSection() {
         </div>
 
         {/* Featured picks */}
+        <div className="sweeps-featured-header">
+          <span className="sweeps-featured-title">Today's featured sites</span>
+          <span className="sweeps-featured-date">April 18th, 2026</span>
+        </div>
         <div className="sweeps-featured">
           {[
             {
-              tag: 'Weekend Deals', name: 'Sweet Sweeps', logo: '/images/logos/sweetsweeps.webp', logoZoom: true,
-              link: 'https://sweetsweeps.com?referralCode=REFMTk1MjEy', domain: 'sweetsweeps.com',
-              bullets: ['Weekend discount packs and streak builder with free spins', 'Easy 96% return with Gravity Plinko'],
-              verified: 'Updated today, April 17th 2026',
+              tag: 'New', name: 'Luck Party', logo: '/images/logos/luckparty.webp', logoWide: true,
+              link: 'https://luckparty.com/signup/fa9c08ee-1071-4057-8f6d-590fe0192680', domain: 'luckparty.com',
+              bullets: ['Extra 15% discount deal when you sign up', 'Extra coupons this weekend, generous daily amount'],
+              verified: 'Updated today, April 18th 2026',
             },
             {
-              tag: 'Flash Deals', name: 'WOW Vegas', logo: '/images/logos/wowvegas.svg', logoZoom: true,
-              link: 'https://www.wowvegas.com/?raf=11961191', domain: 'wowvegas.com',
-              bullets: ['100% extra flash deal today', 'Classic site with daily free spins'],
-              verified: 'Updated today, April 17th 2026',
+              tag: 'New', name: 'Moozi', logo: '/images/logos/moozi.webp', logoWide: true,
+              link: 'https://moozi.com/signup?referral_code=2611347992', domain: 'moozi.com',
+              bullets: ['Generous newcomer bonus', 'Easy verification and frequent sales'],
+              verified: 'Updated today, April 18th 2026',
             },
             {
-              tag: 'My Favorite', name: 'Jackpot Go', logo: '/images/logos/jackpotgo.png',
-              link: 'https://game.jackpotgo.com?invite_code=XC7DJZXM', domain: 'game.jackpotgo.com',
-              bullets: ['Great Rewards Track', 'Weekly milestones with SC prizes'],
-              verified: 'Updated today, April 17th 2026',
+              tag: 'Classic Site', name: 'Zula', logo: '/images/logos/zula-wide.png', logoWide: true,
+              link: 'https://www.zulacasino.com/signup/fb2cbdba-e274-4a9e-ade6-591c231c556a', domain: 'zulacasino.com',
+              bullets: ['Generous free daily amount', 'Great welcome offers'],
+              verified: 'Updated today, April 18th 2026',
             },
           ].map(f => (
             <div key={f.name} className="sweeps-featured-card">
               {f.tag && <span className="sweeps-featured-tag">{f.tag}</span>}
-              <div className="sweeps-featured-logo-frame">
-                <img src={f.logo} alt={f.name} className={`sweeps-featured-logo${f.logoZoom ? ' sweeps-featured-logo--zoom' : ''}`} />
+              <div className={`sweeps-featured-logo-frame${f.logoWide ? ' sweeps-featured-logo-frame--wide' : ''}`}>
+                <img src={f.logo} alt={f.name} className="sweeps-featured-logo" />
               </div>
               <div className="sweeps-featured-info">
                 <span className="sweeps-featured-name">{f.name}</span>
