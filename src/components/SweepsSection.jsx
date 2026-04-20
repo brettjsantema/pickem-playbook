@@ -54,10 +54,15 @@ export default function SweepsSection() {
         </div>
         <div className="sweeps-featured-header">
           <span className="sweeps-featured-title">Today's featured sites</span>
-          <span className="sweeps-featured-date">April 18th, 2026</span>
+          <span className="sweeps-featured-date">April 19th, 2026</span>
         </div>
         <div className="sweeps-featured">
           {[
+            {
+              tag: 'New', name: 'The Win Zone', logo: '/images/logos/thewinzone.svg', logoWide: true,
+              link: 'https://www.thewinzone.com/s/2KUr31', domain: 'thewinzone.com',
+              bullets: ['Frequent sales and instant redeems', '25SC for $9.99 welcome offer'],
+            },
             {
               tag: 'New', name: 'Luck Party', logo: '/images/logos/luckparty.webp', logoWide: true,
               link: 'https://luckparty.com/signup/fa9c08ee-1071-4057-8f6d-590fe0192680', domain: 'luckparty.com',
@@ -67,11 +72,6 @@ export default function SweepsSection() {
               tag: 'New', name: 'Moozi', logo: '/images/logos/moozi.webp', logoWide: true,
               link: 'https://moozi.com/signup?referral_code=2611347992', domain: 'moozi.com',
               bullets: ['Generous newcomer bonus', 'Easy verification and frequent sales'],
-            },
-            {
-              tag: 'Classic Site', name: 'Zula', logo: '/images/logos/zula-wide.png', logoWide: true, logoSmall: true,
-              link: 'https://www.zulacasino.com/signup/fb2cbdba-e274-4a9e-ade6-591c231c556a', domain: 'zulacasino.com',
-              bullets: ['Generous free daily amount', 'Great welcome offers'],
             },
           ].map(f => (
             <div key={f.name} className="sweeps-featured-card">
