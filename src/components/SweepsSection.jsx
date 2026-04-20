@@ -59,7 +59,7 @@ export default function SweepsSection() {
         <div className="sweeps-featured">
           {[
             {
-              tag: 'New', name: 'The Win Zone', logo: '/images/logos/thewinzone.svg', logoWide: true,
+              tag: 'New', name: 'The Win Zone', logo: '/images/logos/thewinzone.svg', logoWide: true, logoSmall: true,
               link: 'https://www.thewinzone.com/s/2KUr31', domain: 'thewinzone.com',
               bullets: ['Frequent sales and instant redeems', '25SC for $9.99 welcome offer'],
             },
