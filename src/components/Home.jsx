@@ -29,11 +29,11 @@ const guides = [
   {
     path: '/rips',
     title: 'Rips by Triumph',
-    desc: 'Open Pokemon card packs on your phone. Use our referral link and you both get a free mystery card.',
+    desc: 'Open Pokémon card packs on your phone. Refer friends & you both get a free pack.',
     Icon: PackCard,
     accent: '#f97316',
     glow: 'rgba(249, 115, 22, 0.18)',
-    freeLabel: 'Get a free pack',
+    freeLabel: 'Open a free pack!',
   },
 ]
 

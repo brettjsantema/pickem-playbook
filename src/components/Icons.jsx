@@ -78,13 +78,15 @@ export function Dice({ size = 20, color = 'currentColor' }) {
 }
 
 export function PackCard({ size = 20, color = 'currentColor' }) {
+  // Card pack with zig-zag tear edge at the top
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="4" y="2" width="16" height="20" rx="2" />
-      <path d="M4 8h16" />
-      <path d="M9 2v6" />
-      <path d="M15 2v6" />
-      <circle cx="12" cy="15" r="2.5" />
+      {/* Pack body */}
+      <path d="M4 7h16v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7Z" />
+      {/* Zig-zag tear across the top */}
+      <polyline points="4,7 6.5,4 9,7 11.5,4 14,7 16.5,4 20,7" />
+      {/* Star/shine on pack face */}
+      <path d="M12 11v4M10 13h4" strokeWidth="1.5" />
     </svg>
   )
 }
