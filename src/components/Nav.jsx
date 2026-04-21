@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { CashStack } from 'react-bootstrap-icons'
-import { Trophy, Dice } from './Icons.jsx'
+import { Trophy, Dice, PackCard } from './Icons.jsx'
 import './Nav.css'
 
 const guides = [
   { path: '/bonusguide', label: "Pick'em Bonus Guide", Icon: Trophy },
   { path: '/sweeps',     label: 'Sweeps Casinos Guide', Icon: Dice },
+  { path: '/rips',       label: 'Rips by Triumph',      Icon: PackCard },
 ]
 
 export default function Nav() {

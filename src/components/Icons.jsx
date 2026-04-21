@@ -77,6 +77,18 @@ export function Dice({ size = 20, color = 'currentColor' }) {
   )
 }
 
+export function PackCard({ size = 20, color = 'currentColor' }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="4" y="2" width="16" height="20" rx="2" />
+      <path d="M4 8h16" />
+      <path d="M9 2v6" />
+      <path d="M15 2v6" />
+      <circle cx="12" cy="15" r="2.5" />
+    </svg>
+  )
+}
+
 export function TrendingUp({ size = 20, color = 'currentColor' }) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">

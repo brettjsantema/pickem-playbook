@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Trophy, Dice } from './Icons.jsx'
+import { Trophy, Dice, PackCard } from './Icons.jsx'
 import dfsPlatforms from '../data/dfsPlatforms.js'
 import sweepsPlatforms from '../data/sweepsPlatforms.js'
 import useSEO from '../hooks/useSEO.js'
@@ -13,6 +13,8 @@ const guides = [
     Icon: Trophy,
     count: dfsPlatforms.length,
     countLabel: 'sportsbooks',
+    accent: '#60a5fa',
+    glow: 'rgba(96, 165, 250, 0.18)',
   },
   {
     path: '/sweeps',
@@ -21,6 +23,16 @@ const guides = [
     Icon: Dice,
     count: sweepsPlatforms.length,
     countLabel: 'casinos',
+    accent: '#00ff88',
+    glow: 'rgba(0, 255, 136, 0.18)',
+  },
+  {
+    path: '/rips',
+    title: 'Rips by Triumph',
+    desc: 'Open Pokemon card packs on your phone. Use our referral link and you both get a free mystery card.',
+    Icon: PackCard,
+    accent: '#f97316',
+    glow: 'rgba(249, 115, 22, 0.18)',
   },
 ]
 
@@ -72,16 +84,18 @@ export default function Home() {
 
         <div className="home-guide-grid">
           {guides.map(g => (
-            <Link key={g.path} to={g.path} className="home-guide-card">
+            <Link key={g.path} to={g.path} className="home-guide-card" style={{ '--card-accent': g.accent, '--card-glow': g.glow }}>
               <div className="home-guide-card-heading">
-                <g.Icon size={18} color="var(--accent)" />
+                <g.Icon size={18} color={g.accent} />
                 <h2 className="home-guide-title">{g.title}</h2>
               </div>
               <p className="home-guide-desc">{g.desc}</p>
-              <div className="home-guide-live">
-                <span className="home-guide-live-dot" />
-                <span>{g.count} {g.countLabel}</span>
-              </div>
+              {g.count != null && (
+                <div className="home-guide-live">
+                  <span className="home-guide-live-dot" />
+                  <span>{g.count} {g.countLabel}</span>
+                </div>
+              )}
               <span className="home-guide-cta">Read guide →</span>
             </Link>
           ))}
