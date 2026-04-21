@@ -66,7 +66,7 @@ export default function SweepsSection() {
             </div>
             <div className="sweeps-triumph-body">
               <span className="sweeps-triumph-name">Rips by Triumph</span>
-              <p className="sweeps-triumph-desc">This doesn't necessarily belong in the sweeps casino section, but Rips by Triumph is a new app where you can open a free Pokémon card pack — so I wanted to give them some special attention by featuring them here.</p>
+              <p className="sweeps-triumph-desc">This doesn't necessarily belong in the sweeps casino section, but Rips by Triumph is a hot new app where you can open a free Pokémon card pack when you sign up, so I wanted to give them some special attention by featuring them here!</p>
             </div>
             <div className="sweeps-triumph-cta-wrap">
               <span className="sweeps-triumph-cta">Get Free Pack <BoxArrowUpRight size={11} /></span>
