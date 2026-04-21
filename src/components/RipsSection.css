@@ -89,6 +89,18 @@
   line-height: 1.75;
 }
 
+.rips-code {
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  color: var(--orange);
+  background: var(--orange-subtle);
+  border: 1px solid var(--orange-border);
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
 /* CTA button */
 .rips-cta-btn {
   display: inline-flex;

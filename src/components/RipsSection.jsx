@@ -26,12 +26,13 @@ export default function RipsSection() {
         {/* Referral promo */}
         <div className="rips-promo">
           <div className="rips-promo-img-wrap">
-            <img src="/images/triumph_freepack.webp" alt="Free pack referral promo" className="rips-promo-img" />
+            <img src="/images/triumph_freepack.png" alt="Free pack referral promo" className="rips-promo-img" />
           </div>
           <div className="rips-promo-body">
             <span className="rips-pill">Free Card Pack</span>
             <h3 className="rips-promo-heading">Use my signup link to get a free card pack</h3>
             <p className="rips-promo-desc">Download the app, and we both get a free pack. Cards are revealed in the app, and once revealed you can either cash out or have them shipped to you.</p>
+            <p className="rips-promo-desc">The link above should apply the referral automatically. If it doesn't, you can enter code <strong className="rips-code">OCRCYCJ</strong> manually when signing up.</p>
             <a href={REFERRAL} className="rips-cta-btn" target="_blank" rel="noopener noreferrer">
               Get a Free Pack
             </a>
