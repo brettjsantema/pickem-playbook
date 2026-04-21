@@ -7,7 +7,7 @@ const REFERRAL = 'https://rips.onelink.me/Wj0m/e5vx6k8s'
 export default function RipsSection() {
   useSEO({
     title: 'Rips by Triumph Referral & Guide | PickemPlaybook.com',
-    description: 'Open Pokemon card packs on your phone with Rips by Triumph. Use our referral link and you both get a free mystery card — cash out winnings to PayPal, Venmo, or bank.',
+    description: 'Open Pokémon card packs on your phone with Rips by Triumph. Refer a friend and you both get a free mystery card. Cash out winnings to PayPal, Venmo, or bank.',
     url: '/rips',
   })
 
@@ -20,7 +20,7 @@ export default function RipsSection() {
             <img src="/images/logos/ripsbytriumph.webp" alt="Rips by Triumph" className="rips-logo" />
           </div>
           <h2 className="section-title rips-title">Rips by Triumph</h2>
-          <p className="section-subtitle">Open Pokemon card packs on your phone — sell your pulls instantly or have them shipped to you.</p>
+          <p className="section-subtitle">Open Pokémon card packs on your phone. Sell your pulls instantly or have them shipped to you.</p>
         </div>
 
         {/* Referral promo */}
@@ -30,10 +30,10 @@ export default function RipsSection() {
           </div>
           <div className="rips-promo-body">
             <span className="rips-pill">Free Mystery Card</span>
-            <h3 className="rips-promo-heading">Use our referral link — you both get a free mystery card</h3>
-            <p className="rips-promo-desc">Sign up through our link and Rips drops a free mystery card in both of our accounts. Cards are revealed in the app, and once revealed you can either cash out immediately or have them shipped to you.</p>
+            <h3 className="rips-promo-heading">Use my signup link to get a free mystery card</h3>
+            <p className="rips-promo-desc">Download the app, and we both get a free pack. Cards are revealed in the app, and once revealed you can either cash out or have them shipped to you.</p>
             <a href={REFERRAL} className="rips-cta-btn" target="_blank" rel="noopener noreferrer">
-              Get Free Card → rips.onelink.me
+              Get a Free Pack
             </a>
           </div>
         </div>
@@ -46,14 +46,14 @@ export default function RipsSection() {
               <span className="rips-step-num">1</span>
               <div>
                 <strong>Download the app</strong>
-                <p>Rips by Triumph is available on iOS. Sign up using our referral link and a free mystery card lands in your account.</p>
+                <p>Rips by Triumph is available on iOS. Sign up using my link and a free pack lands in your account.</p>
               </div>
             </div>
             <div className="rips-step">
               <span className="rips-step-num">2</span>
               <div>
                 <strong>Open card packs</strong>
-                <p>Buy and open Pokemon card packs live in the app. Each pack rip is shown in real time — you see exactly what you pull.</p>
+                <p>Buy and open Pokémon card packs digitally in the app.</p>
               </div>
             </div>
             <div className="rips-step">
@@ -69,9 +69,9 @@ export default function RipsSection() {
         {/* CTA */}
         <div className="rips-bottom-cta">
           <a href={REFERRAL} className="rips-cta-btn rips-cta-btn--large" target="_blank" rel="noopener noreferrer">
-            Download Rips &amp; Claim Free Card →
+            Download Rips &amp; Claim Free Pack →
           </a>
-          <p className="rips-cta-note">iOS only · No purchase required to claim referral card</p>
+          <p className="rips-cta-note">iOS only · No purchase required to claim free pack</p>
         </div>
 
       </div>

@@ -66,6 +66,7 @@
   width: 100%;
   display: block;
   object-fit: cover;
+  object-position: center 12%;
 }
 
 .rips-promo-body {
@@ -92,6 +93,7 @@
 .rips-cta-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   background: var(--orange);
   color: #000;
@@ -101,7 +103,9 @@
   border-radius: 8px;
   text-decoration: none;
   transition: background 0.15s, box-shadow 0.15s, transform 0.15s;
-  align-self: flex-start;
+  align-self: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .rips-cta-btn:hover {

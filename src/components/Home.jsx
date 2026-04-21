@@ -33,6 +33,7 @@ const guides = [
     Icon: PackCard,
     accent: '#f97316',
     glow: 'rgba(249, 115, 22, 0.18)',
+    freeLabel: 'Get a free pack',
   },
 ]
 
@@ -90,12 +91,17 @@ export default function Home() {
                 <h2 className="home-guide-title">{g.title}</h2>
               </div>
               <p className="home-guide-desc">{g.desc}</p>
-              {g.count != null && (
+              {g.freeLabel ? (
+                <div className="home-guide-live">
+                  <span className="home-guide-live-dot" />
+                  <span>{g.freeLabel}</span>
+                </div>
+              ) : g.count != null ? (
                 <div className="home-guide-live">
                   <span className="home-guide-live-dot" />
                   <span>{g.count} {g.countLabel}</span>
                 </div>
-              )}
+              ) : null}
               <span className="home-guide-cta">Read guide →</span>
             </Link>
           ))}
