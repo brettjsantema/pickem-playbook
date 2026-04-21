@@ -60,16 +60,12 @@
   border-radius: 10px;
   overflow: hidden;
   border: 1px solid var(--orange-border);
-  height: 100%;
-  position: relative;
 }
 
 .rips-promo-img {
   width: 100%;
   display: block;
-  height: 140%;
   object-fit: cover;
-  margin-top: -15%;
 }
 
 .rips-promo-body {
