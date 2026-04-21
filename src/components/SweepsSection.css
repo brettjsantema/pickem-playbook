@@ -22,12 +22,112 @@
   text-shadow: 0 0 12px rgba(0, 255, 136, 0.5);
 }
 
+/* Triumph spotlight card */
+.sweeps-triumph-card {
+  display: block;
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid rgba(249, 115, 22, 0.45);
+  border-radius: var(--radius);
+  padding: 20px 20px 20px 20px;
+  margin-bottom: 12px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 0 20px rgba(249, 115, 22, 0.12);
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.sweeps-triumph-card:hover {
+  border-color: rgba(249, 115, 22, 0.8);
+  box-shadow: 0 0 32px rgba(249, 115, 22, 0.22);
+  transform: translateY(-2px);
+}
+
+.sweeps-triumph-tag {
+  position: absolute;
+  top: -9px;
+  left: 12px;
+  background: #f97316;
+  color: #000;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  padding: 2px 8px;
+  border-radius: 20px;
+  pointer-events: none;
+  white-space: nowrap;
+  box-shadow: 0 0 8px rgba(249, 115, 22, 0.5);
+}
+
+.sweeps-triumph-inner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.sweeps-triumph-logo-wrap {
+  flex-shrink: 0;
+}
+
+.sweeps-triumph-logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 1px solid rgba(249, 115, 22, 0.3);
+}
+
+.sweeps-triumph-body {
+  flex: 1;
+}
+
+.sweeps-triumph-name {
+  display: block;
+  font-size: 14px;
+  font-weight: 800;
+  color: #f97316;
+  margin-bottom: 4px;
+}
+
+.sweeps-triumph-desc {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.sweeps-triumph-cta-wrap {
+  flex-shrink: 0;
+}
+
+.sweeps-triumph-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #f97316;
+  color: #000;
+  font-size: 13px;
+  font-weight: 800;
+  padding: 9px 16px;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+
+@media (max-width: 520px) {
+  .sweeps-triumph-inner { flex-wrap: wrap; }
+  .sweeps-triumph-cta-wrap { width: 100%; }
+  .sweeps-triumph-cta { width: 100%; justify-content: center; box-sizing: border-box; }
+}
+
 /* Featured picks */
 .sweeps-featured {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   margin-bottom: 16px;
+}
+
+.sweeps-featured--2col {
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .sweeps-featured-card {

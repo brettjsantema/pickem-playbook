@@ -54,29 +54,43 @@ export default function SweepsSection() {
         </div>
         <div className="sweeps-featured-header">
           <span className="sweeps-featured-title">Today's featured sites</span>
-          <span className="sweeps-featured-date">April 19th, 2026</span>
+          <span className="sweeps-featured-date">April 21st, 2026</span>
         </div>
-        <div className="sweeps-featured">
+
+        {/* Triumph Rips — spotlight card */}
+        <a href="https://rips.onelink.me/Wj0m/e5vx6k8s" className="sweeps-triumph-card" target="_blank" rel="noopener noreferrer" onClick={() => track('signup_click', { site: 'Rips by Triumph', section: 'sweeps-featured' })}>
+          <span className="sweeps-triumph-tag">Free Pack</span>
+          <div className="sweeps-triumph-inner">
+            <div className="sweeps-triumph-logo-wrap">
+              <img src="/images/logos/ripsbytriumph.webp" alt="Rips by Triumph" className="sweeps-triumph-logo" />
+            </div>
+            <div className="sweeps-triumph-body">
+              <span className="sweeps-triumph-name">Rips by Triumph</span>
+              <p className="sweeps-triumph-desc">This doesn't necessarily belong in the sweeps casino section, but Rips by Triumph is a new app where you can open a free Pokémon card pack — so I wanted to give them some special attention by featuring them here.</p>
+            </div>
+            <div className="sweeps-triumph-cta-wrap">
+              <span className="sweeps-triumph-cta">Get Free Pack <BoxArrowUpRight size={11} /></span>
+            </div>
+          </div>
+        </a>
+
+        {/* Regular 2-card row */}
+        <div className="sweeps-featured sweeps-featured--2col">
           {[
             {
-              tag: 'New', name: 'The Win Zone', logo: '/images/logos/thewinzone.svg', logoWide: true, logoSmall: true,
-              link: 'https://www.thewinzone.com/s/2KUr31', domain: 'thewinzone.com',
-              bullets: ['Frequent sales and instant redeems', '25SC for $9.99 welcome offer'],
+              tag: 'Savings Surge Deal', name: 'Modo', logo: '/images/logos/modo.png',
+              link: 'https://modo.us?referralCode=T5WNX6', domain: 'modo.us',
+              bullets: ['Constant deals that can be easily cleared with mines, dice, or table games', 'Build up Modo stars to redeem for even more free SC'],
             },
             {
-              tag: 'New', name: 'Luck Party', logo: '/images/logos/luckparty.webp', logoWide: true,
-              link: 'https://luckparty.com/signup/fa9c08ee-1071-4057-8f6d-590fe0192680', domain: 'luckparty.com',
-              bullets: ['Extra 15% discount deal when you sign up', 'Extra coupons this weekend, generous daily amount'],
-            },
-            {
-              tag: 'New', name: 'Moozi', logo: '/images/logos/moozi.webp', logoWide: true,
-              link: 'https://moozi.com/signup?referral_code=2611347992', domain: 'moozi.com',
-              bullets: ['Generous newcomer bonus', 'Easy verification and frequent sales'],
+              tag: 'Huge Welcome Offers', name: 'Spree', logo: '/images/logos/spree.jpg',
+              link: 'https://spree.com/?r=2084566', domain: 'spree.com',
+              bullets: ['Great site with large welcome offers', 'Easy 96% return with Gravity Plinko'],
             },
           ].map(f => (
             <div key={f.name} className="sweeps-featured-card">
               {f.tag && <span className="sweeps-featured-tag">{f.tag}</span>}
-              <div className={`sweeps-featured-logo-frame${f.logoWide ? ' sweeps-featured-logo-frame--wide' : ''}${f.logoSmall ? ' sweeps-featured-logo-frame--small' : ''}`}>
+              <div className={`sweeps-featured-logo-frame${f.logoWide ? ' sweeps-featured-logo-frame--wide' : ''}`}>
                 <img src={f.logo} alt={f.name} className="sweeps-featured-logo" />
               </div>
               <div className="sweeps-featured-info">

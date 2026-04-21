@@ -29,8 +29,8 @@ export default function RipsSection() {
             <img src="/images/triumph_freepack.webp" alt="Free pack referral promo" className="rips-promo-img" />
           </div>
           <div className="rips-promo-body">
-            <span className="rips-pill">Free Mystery Card</span>
-            <h3 className="rips-promo-heading">Use my signup link to get a free mystery card</h3>
+            <span className="rips-pill">Free Card Pack</span>
+            <h3 className="rips-promo-heading">Use my signup link to get a free card pack</h3>
             <p className="rips-promo-desc">Download the app, and we both get a free pack. Cards are revealed in the app, and once revealed you can either cash out or have them shipped to you.</p>
             <a href={REFERRAL} className="rips-cta-btn" target="_blank" rel="noopener noreferrer">
               Get a Free Pack
