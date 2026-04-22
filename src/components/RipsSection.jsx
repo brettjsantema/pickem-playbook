@@ -13,6 +13,21 @@ export default function RipsSection() {
 
   return (
     <section className="section rips-section">
+      <svg className="rips-bg-svg" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="triumph-t" width="100" height="100" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+            {/* Bar: 3 horizontal lines — the crossbar of the T */}
+            <line x1="0" y1="0"  x2="100" y2="0"  stroke="#f97316" strokeOpacity="0.13" strokeWidth="1.5"/>
+            <line x1="0" y1="5"  x2="100" y2="5"  stroke="#f97316" strokeOpacity="0.13" strokeWidth="1.5"/>
+            <line x1="0" y1="10" x2="100" y2="10" stroke="#f97316" strokeOpacity="0.13" strokeWidth="1.5"/>
+            {/* Stem: 3 vertical lines starting at y=10 (bottom bar), T-junctioning in */}
+            <line x1="45" y1="10" x2="45" y2="100" stroke="#f97316" strokeOpacity="0.13" strokeWidth="1.5"/>
+            <line x1="50" y1="10" x2="50" y2="100" stroke="#f97316" strokeOpacity="0.13" strokeWidth="1.5"/>
+            <line x1="55" y1="10" x2="55" y2="100" stroke="#f97316" strokeOpacity="0.13" strokeWidth="1.5"/>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#triumph-t)"/>
+      </svg>
       <div className="container">
 
         <div className="section-header">
