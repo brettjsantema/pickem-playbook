@@ -1,9 +1,21 @@
 import { Link } from 'react-router-dom'
-import { Trophy, Dice, PackCard } from './Icons.jsx'
+import { Trophy, Dice } from './Icons.jsx'
 import dfsPlatforms from '../data/dfsPlatforms.js'
 import sweepsPlatforms from '../data/sweepsPlatforms.js'
 import useSEO from '../hooks/useSEO.js'
 import './Home.css'
+
+function Pokeball({ size = 20, color = 'currentColor' }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M2 12a10 10 0 0 1 20 0" fill={color} fillOpacity="0.25"/>
+      <circle cx="12" cy="12" r="10"/>
+      <path d="M2 12h8.5M13.5 12H22"/>
+      <circle cx="12" cy="12" r="2" fill={color}/>
+      <circle cx="12" cy="12" r="2"/>
+    </svg>
+  )
+}
 
 const guides = [
   {
@@ -30,7 +42,7 @@ const guides = [
     path: '/rips',
     title: 'Rips by Triumph',
     desc: 'Open Pokémon card packs on your phone. Refer friends & you both get a free pack.',
-    Icon: PackCard,
+    Icon: Pokeball,
     accent: '#f97316',
     glow: 'rgba(249, 115, 22, 0.18)',
     freeLabel: 'Open a free pack!',
