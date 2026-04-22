@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "sweeps": "node tools/server.cjs",
     "build": "node node_modules/vite/bin/vite.js build",
     "preview": "vite preview"
   },
