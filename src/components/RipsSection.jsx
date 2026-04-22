@@ -75,6 +75,13 @@ export default function RipsSection() {
             <div className="rips-step">
               <span className="rips-step-num">3</span>
               <div>
+                <strong>Refer friends and get more packs!</strong>
+                <p>Free Pokémon cards are hard to refuse, so you can share your link with friends, post on social media, or advertise in Pokémon or trading card communities to keep collecting more cards.</p>
+              </div>
+            </div>
+            <div className="rips-step">
+              <span className="rips-step-num">4</span>
+              <div>
                 <strong>Cash out or ship</strong>
                 <p>Sell your cards instantly back to Rips at market rate, or have the physical cards shipped to your door. Earnings withdraw to PayPal, Venmo, or your bank account.</p>
               </div>
