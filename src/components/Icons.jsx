@@ -77,6 +77,18 @@ export function Dice({ size = 20, color = 'currentColor' }) {
   )
 }
 
+export function Pokeball({ size = 20, color = 'currentColor' }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M2 12a10 10 0 0 1 20 0" fill={color} fillOpacity="0.25"/>
+      <circle cx="12" cy="12" r="10"/>
+      <path d="M2 12h8.5M13.5 12H22"/>
+      <circle cx="12" cy="12" r="2" fill={color}/>
+      <circle cx="12" cy="12" r="2"/>
+    </svg>
+  )
+}
+
 export function PackCard({ size = 20, color = 'currentColor' }) {
   // Card pack with zig-zag tear edge at the top
   return (
