@@ -15,6 +15,7 @@ export default function Nav() {
   const [guidesOpen, setGuidesOpen] = useState(false)
   const [articlesOpen, setArticlesOpen] = useState(false)
   const { pathname } = useLocation()
+  const isRips = pathname === '/rips'
 
   function closeAll() {
     setMenuOpen(false)
@@ -25,11 +26,11 @@ export default function Nav() {
   const guideActive = guides.some(g => pathname.startsWith(g.path))
 
   return (
-    <nav className="nav">
+    <nav className={`nav${isRips ? ' nav--orange' : ''}`}>
       <div className="container nav-inner">
 
         <Link to="/" className="nav-logo" onClick={closeAll}>
-          <CashStack size={18} color="#22c55e" />
+          <CashStack size={18} color={isRips ? '#f97316' : '#22c55e'} />
           2026 Pick&apos;em Playbook
         </Link>
 

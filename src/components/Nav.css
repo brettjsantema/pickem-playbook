@@ -121,6 +121,26 @@
   text-shadow: 0 0 8px rgba(0, 255, 136, 0.3);
 }
 
+/* Orange theme (Rips page) */
+.nav--orange {
+  border-bottom-color: rgba(249, 115, 22, 0.3);
+}
+.nav--orange .nav-logo:hover {
+  color: #f97316;
+  text-shadow: 0 0 16px rgba(249, 115, 22, 0.4);
+}
+.nav--orange .nav-link--active {
+  color: #f97316;
+  text-shadow: 0 0 10px rgba(249, 115, 22, 0.35);
+}
+.nav--orange .nav-link:hover {
+  color: var(--text);
+}
+.nav--orange .nav-dropdown-item--active {
+  color: #f97316;
+  text-shadow: 0 0 8px rgba(249, 115, 22, 0.3);
+}
+
 .nav-reddit-btn {
   display: flex;
   align-items: center;
