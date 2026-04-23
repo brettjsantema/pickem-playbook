@@ -54,7 +54,7 @@ export default function SweepsSection() {
         </div>
         <div className="sweeps-featured-header">
           <span className="sweeps-featured-title">Today's featured sites</span>
-          <span className="sweeps-featured-date">April 21st, 2026</span>
+          <span className="sweeps-featured-date">April 22nd, 2026</span>
         </div>
 
         {/* Triumph Rips — spotlight card */}
