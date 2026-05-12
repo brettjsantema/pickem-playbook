@@ -51,19 +51,17 @@
   padding: 5px 14px;
   color: var(--accent);
   letter-spacing: 0.5px;
-  text-shadow: 0 0 8px rgba(0, 255, 136, 0.25);
 }
 
 /* Green callout */
 .dfs-callout {
-  background: rgba(0, 255, 136, 0.05);
-  border: 1px solid rgba(0, 255, 136, 0.2);
+  background: var(--accent-dim);
+  border: 1px solid rgba(22, 163, 74, 0.25);
   border-radius: var(--radius);
   padding: 16px 20px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  box-shadow: 0 0 20px rgba(0, 255, 136, 0.05);
 }
 
 .dfs-callout-item {
@@ -79,7 +77,7 @@
   color: var(--accent);
   flex-shrink: 0;
   margin-top: 3px;
-  filter: drop-shadow(0 0 4px rgba(0, 255, 136, 0.5));
+  filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.12));
 }
 
 .dfs-callout strong {
@@ -179,7 +177,7 @@
   border-radius: var(--radius);
   border: 1px solid var(--border-bright);
   display: block;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+  box-shadow: var(--shadow-paper);
 }
 
 /* Platforms */

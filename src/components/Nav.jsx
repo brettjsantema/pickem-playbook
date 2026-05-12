@@ -1,13 +1,11 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { CashStack } from 'react-bootstrap-icons'
-import { Trophy, Dice, Pokeball } from './Icons.jsx'
 import './Nav.css'
 
 const guides = [
-  { path: '/bonusguide', label: "Pick'em Bonus Guide", Icon: Trophy },
-  { path: '/sweeps',     label: 'Sweeps Casinos Guide', Icon: Dice },
-  { path: '/rips',       label: 'Rips by Triumph',      Icon: Pokeball },
+  { path: '/bonusguide', label: "Pick'em Bonus Guide", sticker: '/images/stickers/sportsbooks.png' },
+  { path: '/sweeps',     label: 'Sweeps Casinos Guide', sticker: '/images/stickers/sweeps.png' },
+  { path: '/rips',       label: 'Rips by Triumph',      sticker: '/images/stickers/rips.png' },
 ]
 
 export default function Nav() {
@@ -16,6 +14,18 @@ export default function Nav() {
   const [articlesOpen, setArticlesOpen] = useState(false)
   const { pathname } = useLocation()
   const isRips = pathname === '/rips'
+  const navRef = useRef(null)
+
+  useEffect(() => {
+    function handleClickOutside(e) {
+      if (navRef.current && !navRef.current.contains(e.target)) {
+        setGuidesOpen(false)
+        setArticlesOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [])
 
   function closeAll() {
     setMenuOpen(false)
@@ -26,12 +36,12 @@ export default function Nav() {
   const guideActive = guides.some(g => pathname.startsWith(g.path))
 
   return (
-    <nav className={`nav${isRips ? ' nav--orange' : ''}`}>
+    <nav className={`nav${isRips ? ' nav--orange' : ''}`} ref={navRef}>
       <div className="container nav-inner">
 
         <Link to="/" className="nav-logo" onClick={closeAll}>
-          <CashStack size={18} color={isRips ? '#f97316' : '#22c55e'} />
-          2026 Pick&apos;em Playbook
+          <img src="/images/stickers/cash.png" alt="" width={28} height={28} />
+          Pick&apos;em Playbook
         </Link>
 
         <button className="nav-hamburger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
@@ -51,7 +61,7 @@ export default function Nav() {
           <li className="nav-dropdown-wrap">
             <button
               className={`nav-link nav-link--dropdown ${guideActive ? 'nav-link--active' : ''}`}
-              onClick={() => setGuidesOpen(!guidesOpen)}
+              onClick={() => { setGuidesOpen(o => !o); setArticlesOpen(false) }}
             >
               Guides <span className={`nav-chevron ${guidesOpen ? 'open' : ''}`}>▾</span>
             </button>
@@ -64,7 +74,7 @@ export default function Nav() {
                       className={`nav-dropdown-item ${pathname === g.path ? 'nav-dropdown-item--active' : ''}`}
                       onClick={closeAll}
                     >
-                      <g.Icon size={15} color="currentColor" />
+                      <img src={g.sticker} alt="" className="nav-dropdown-sticker" width={18} height={18} />
                       {g.label}
                     </Link>
                   </li>
@@ -75,7 +85,7 @@ export default function Nav() {
           <li className="nav-dropdown-wrap">
             <button
               className={`nav-link nav-link--dropdown ${pathname.startsWith('/articles') ? 'nav-link--active' : ''}`}
-              onClick={() => setArticlesOpen(!articlesOpen)}
+              onClick={() => { setArticlesOpen(o => !o); setGuidesOpen(false) }}
             >
               Articles <span className={`nav-chevron ${articlesOpen ? 'open' : ''}`}>▾</span>
             </button>
@@ -110,7 +120,7 @@ export default function Nav() {
               rel="noopener noreferrer"
               aria-label="Reddit community"
             >
-              <img src="/images/reddit.png" alt="Reddit" width={34} height={34} />
+              <img src="/images/stickers/reddit.png" alt="Reddit" width={34} height={34} />
             </a>
           </li>
           <li>
@@ -121,7 +131,7 @@ export default function Nav() {
               rel="noopener noreferrer"
               aria-label="Discord community"
             >
-              <img src="/images/discord.png" alt="Discord" width={33} height={33} />
+              <img src="/images/stickers/discord.png" alt="Discord" width={33} height={33} />
             </a>
           </li>
         </ul>

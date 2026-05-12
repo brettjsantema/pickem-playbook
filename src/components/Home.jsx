@@ -1,58 +1,45 @@
 import { Link } from 'react-router-dom'
-import { Trophy, Dice } from './Icons.jsx'
 import dfsPlatforms from '../data/dfsPlatforms.js'
 import sweepsPlatforms from '../data/sweepsPlatforms.js'
 import useSEO from '../hooks/useSEO.js'
 import './Home.css'
 
-function Pokeball({ size = 20, color = 'currentColor' }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M2 12a10 10 0 0 1 20 0" fill={color} fillOpacity="0.25"/>
-      <circle cx="12" cy="12" r="10"/>
-      <path d="M2 12h8.5M13.5 12H22"/>
-      <circle cx="12" cy="12" r="2" fill={color}/>
-      <circle cx="12" cy="12" r="2"/>
-    </svg>
-  )
-}
-
 const guides = [
   {
     path: '/bonusguide',
     title: "Pick'em Bonus Guide",
-    desc: "How to redeem welcome bonuses on pick'em apps like Underdog and PrizePicks without actually gambling.",
-    Icon: Trophy,
+    desc: "How to redeem welcome bonuses on pick'em apps like Underdog and PrizePicks by hedging bets.",
+    sticker: '/images/stickers/sportsbooks.png',
     count: dfsPlatforms.length,
-    countLabel: 'sportsbooks',
-    accent: '#60a5fa',
-    glow: 'rgba(96, 165, 250, 0.18)',
+    countLabel: 'sportsbooks covered',
+    tag: 'DFS / Pick\'em',
+    rotate: '-1.2deg',
   },
   {
     path: '/sweeps',
     title: 'Sweeps Casinos Guide',
     desc: 'The best sweepstakes casinos with daily bonuses and welcome offers.',
-    Icon: Dice,
+    sticker: '/images/stickers/sweeps.png',
     count: sweepsPlatforms.length,
-    countLabel: 'casinos',
-    accent: '#00ff88',
-    glow: 'rgba(0, 255, 136, 0.18)',
+    countLabel: 'casinos listed',
+    tag: 'Sweepstakes',
+    rotate: '0.8deg',
   },
   {
     path: '/rips',
     title: 'Rips by Triumph',
-    desc: 'Open Pokémon card packs on your phone. Refer friends & you both get a free pack.',
-    Icon: Pokeball,
-    accent: '#f97316',
-    glow: 'rgba(249, 115, 22, 0.18)',
-    freeLabel: 'Open a free pack!',
+    desc: 'Open Pokémon card packs on your phone. Refer friends and you both get a free pack.',
+    sticker: '/images/stickers/rips.png',
+    freeLabel: 'Free pack available!',
+    tag: 'Trading Cards',
+    rotate: '-0.5deg',
   },
 ]
 
 export default function Home() {
   useSEO({
-    title: "PickemPlaybook.com | Free Money from Gambling Apps",
-    description: "Guides for DFS pick'em bonuses, sweepstakes casinos, and prediction markets. Real strategies, real referral bonuses — no deposit required to get started.",
+    title: "PickemPlaybook.com | Sportsbook & Casino Bonus Guides",
+    description: "Guides for sportsbooks and casino bonuses.",
     url: '/',
   })
   return (
@@ -60,67 +47,47 @@ export default function Home() {
       <div className="container">
 
         <div className="home-hero">
-          <div className="hero-dollars" aria-hidden="true">
-            {[
-              { left: '5%',  delay: '0s',    dur: '7s',  size: 28, opacity: 0.18 },
-              { left: '14%', delay: '1.2s',  dur: '9s',  size: 18, opacity: 0.12 },
-              { left: '23%', delay: '3.5s',  dur: '8s',  size: 34, opacity: 0.20 },
-              { left: '33%', delay: '0.7s',  dur: '11s', size: 16, opacity: 0.10 },
-              { left: '42%', delay: '2.1s',  dur: '7.5s',size: 26, opacity: 0.15 },
-              { left: '51%', delay: '4.8s',  dur: '10s', size: 22, opacity: 0.13 },
-              { left: '60%', delay: '1.6s',  dur: '8.5s',size: 32, opacity: 0.19 },
-              { left: '70%', delay: '0.3s',  dur: '9.5s',size: 20, opacity: 0.11 },
-              { left: '80%', delay: '3.0s',  dur: '7s',  size: 28, opacity: 0.16 },
-              { left: '90%', delay: '5.5s',  dur: '10s', size: 18, opacity: 0.12 },
-              { left: '9%',  delay: '6.2s',  dur: '8s',  size: 24, opacity: 0.14 },
-              { left: '47%', delay: '7.0s',  dur: '11s', size: 30, opacity: 0.17 },
-              { left: '75%', delay: '2.8s',  dur: '9s',  size: 14, opacity: 0.09 },
-            ].map((d, i) => (
-              <span
-                key={i}
-                className="hero-dollar"
-                style={{
-                  left: d.left,
-                  fontSize: d.size + 'px',
-                  opacity: d.opacity,
-                  animationDelay: d.delay,
-                  animationDuration: d.dur,
-                }}
-              >$</span>
-            ))}
-          </div>
-          <h1 className="home-hero-title">Turn sportsbook promos into easy profit.</h1>
+<h1 className="home-hero-title">The Full List of Profitable Sportsbook & Casino Offers.</h1>
           <p className="home-hero-sub">
-            Sportsbooks and casinos hand out large welcome bonuses to new users. With basic strategy, you can get the most out of them with little to no risk. Pick a guide to get started!
+            Follow step-by-step guides to clear playthrough requirements with hedging and low-variance games.
           </p>
         </div>
 
         <div className="home-guide-grid">
           {guides.map(g => (
-            <Link key={g.path} to={g.path} className="home-guide-card" style={{ '--card-accent': g.accent, '--card-glow': g.glow }}>
-              <div className="home-guide-card-heading">
-                <g.Icon size={18} color={g.accent} />
-                <h2 className="home-guide-title">{g.title}</h2>
+            <Link
+              key={g.path}
+              to={g.path}
+              className="home-guide-card card"
+              style={{ '--rotate': g.rotate }}
+            >
+              <div className="home-guide-card-body">
+                <div className="home-guide-title-row">
+                  <h2 className="home-guide-title">{g.title}</h2>
+                  <img
+                    src={g.sticker}
+                    alt=""
+                    className="home-guide-sticker sticker"
+                    width={36}
+                    height={36}
+                  />
+                </div>
+                <p className="home-guide-desc">{g.desc}</p>
               </div>
-              <p className="home-guide-desc">{g.desc}</p>
-              {g.freeLabel ? (
-                <div className="home-guide-live">
-                  <span className="home-guide-live-dot" />
-                  <span>{g.freeLabel}</span>
-                </div>
-              ) : g.count != null ? (
-                <div className="home-guide-live">
-                  <span className="home-guide-live-dot" />
-                  <span>{g.count} {g.countLabel}</span>
-                </div>
-              ) : null}
-              <span className="home-guide-cta">Read guide →</span>
+              <div className="home-guide-footer">
+                {g.freeLabel ? (
+                  <span className="home-guide-badge home-guide-badge--orange">{g.freeLabel}</span>
+                ) : g.count != null ? (
+                  <span className="home-guide-badge">{g.count} {g.countLabel}</span>
+                ) : null}
+                <span className="home-guide-cta">Read the guide →</span>
+              </div>
             </Link>
           ))}
         </div>
 
-        <div className="home-about">
-          <h2 className="home-about-title">About</h2>
+        <div className="home-about card">
+          <h2 className="home-about-title">About this site</h2>
           <p>
             Sportsbooks and casinos are throwing loads of signup bonuses at new users right now. Most only require a 1x playthrough, and with a little strategy you can hedge your bets and play high-EV games to take the gambling out of it entirely. I've easily pulled in over $1,000 in just a few weeks from welcome offers.
           </p>

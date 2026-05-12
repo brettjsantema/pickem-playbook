@@ -5,35 +5,65 @@
 }
 
 :root {
-  --bg:            #080b0f;
-  --bg-card:       #0d1117;
-  --bg-elevated:   #111927;
-  --border:        #1e2936;
-  --border-bright: #2a3f52;
+  /* Paper tones */
+  --bg:            #f5f0e8;
+  --bg-card:       #faf7f2;
+  --bg-elevated:   #fff9f0;
+  --bg-sticky:     #fef9c3;
+  --bg-sticky-blue: #dbeafe;
+  --bg-sticky-pink: #fce7f3;
+  --bg-sticky-green: #dcfce7;
 
-  --text:          #f4f7fa;
-  --text-muted:    #cdd5de;
+  /* Ink colors */
+  --border:        #c9b99a;
+  --border-bright: #a89070;
+  --text:          #2c2416;
+  --text-muted:    #6b5b45;
+  --text-faint:    #a89070;
 
-  --accent:        #00ff88;
-  --accent-hover:  #00cc70;
-  --accent-dim:    rgba(0, 255, 136, 0.08);
-  --accent-glow:   rgba(0, 255, 136, 0.25);
+  /* Marker/highlighter accents */
+  --accent:        #16a34a;
+  --accent-hover:  #15803d;
+  --accent-dim:    rgba(22, 163, 74, 0.12);
+  --accent-glow:   rgba(22, 163, 74, 0.2);
 
-  --blue:          #4cc9f0;
-  --yellow:        #f5c842;
+  --yellow-hl:     #fde047;
+  --pink-hl:       #f9a8d4;
+  --blue-hl:       #93c5fd;
+  --orange-hl:     #fb923c;
+  --green-hl:      #4ade80;
 
-  --radius:  8px;
-  --shadow:  0 8px 32px rgba(0, 0, 0, 0.8);
-  --glow-sm: 0 0 12px rgba(0, 255, 136, 0.2);
-  --glow-md: 0 0 24px rgba(0, 255, 136, 0.3), 0 0 60px rgba(0, 255, 136, 0.1);
+  --blue:          #3b82f6;
+  --yellow:        #ca8a04;
+  --orange:        #ea580c;
+
+  /* Paper feel */
+  --radius:        4px;
+  --radius-sticky: 3px;
+  --shadow-paper:  2px 3px 8px rgba(0,0,0,0.12), 1px 1px 0 rgba(0,0,0,0.06);
+  --shadow-sticker: 2px 3px 6px rgba(0,0,0,0.18);
+  --shadow-lift:   3px 5px 16px rgba(0,0,0,0.18);
+
+  /* Fonts */
+  --font-hand:     'Caveat', cursive;
+  --font-marker:   'Patrick Hand', cursive;
+  --font-body:     'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 html { scroll-behavior: smooth; }
 
 body {
   background: var(--bg);
+  background-image:
+    /* subtle paper grain lines */
+    repeating-linear-gradient(
+      transparent,
+      transparent 27px,
+      rgba(180, 160, 130, 0.18) 27px,
+      rgba(180, 160, 130, 0.18) 28px
+    );
   color: var(--text);
-  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: var(--font-body);
   font-size: 16px;
   line-height: 1.6;
   min-height: 100vh;
@@ -41,36 +71,29 @@ body {
   overflow-x: hidden;
 }
 
-/* Diamond grid background */
+/* Left margin red line */
 body::before {
   content: '';
   position: fixed;
-  inset: 0;
-  background-image:
-    repeating-linear-gradient(
-      -45deg,
-      transparent,
-      transparent 18px,
-      rgba(0, 255, 136, 0.015) 18px,
-      rgba(0, 255, 136, 0.015) 20px
-    ),
-    repeating-linear-gradient(
-      45deg,
-      transparent,
-      transparent 18px,
-      rgba(0, 255, 136, 0.015) 18px,
-      rgba(0, 255, 136, 0.015) 20px
-    );
+  top: 0;
+  left: 72px;
+  width: 2px;
+  height: 100%;
+  background: rgba(220, 80, 80, 0.18);
   pointer-events: none;
   z-index: 0;
 }
 
-/* Ensure content sits above grid */
 nav, main, footer { position: relative; z-index: 1; }
 
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
-h1, h2, h3, h4 { line-height: 1.2; font-weight: 700; }
+h1, h2, h3, h4 {
+  line-height: 1.2;
+  font-weight: 700;
+  font-family: var(--font-hand);
+  color: var(--text);
+}
 p { color: var(--text-muted); }
 
 .container {
@@ -79,68 +102,100 @@ p { color: var(--text-muted); }
   padding: 0 24px;
 }
 
-/* Buttons */
+/* -----------------------------------------------
+   Buttons — hand-drawn outline style
+----------------------------------------------- */
 .btn {
   display: inline-block;
-  padding: 11px 24px;
-  border-radius: 6px;
-  font-family: inherit;
+  padding: 9px 20px;
+  border-radius: 2px;
+  font-family: var(--font-marker);
   font-weight: 600;
   font-size: 14px;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: transform 0.15s, box-shadow 0.15s;
   text-decoration: none;
   text-align: center;
-  letter-spacing: 0.3px;
+  position: relative;
 }
-.btn:hover { text-decoration: none; transform: translateY(-1px); }
-.btn:active { transform: translateY(0); }
+.btn:hover {
+  text-decoration: none;
+  transform: translateY(-2px) rotate(-0.3deg);
+  box-shadow: var(--shadow-lift);
+}
+.btn:active { transform: translateY(0) rotate(0deg); }
 
 .btn-primary {
-  background: transparent;
-  color: var(--accent);
-  border: 1px solid var(--accent);
-  box-shadow: 0 0 10px rgba(0, 255, 136, 0.15), inset 0 0 10px rgba(0, 255, 136, 0.04);
+  background: var(--accent);
+  color: #fff;
+  border: 2px solid #0f6b2e;
+  box-shadow: var(--shadow-paper);
 }
 .btn-primary:hover {
-  background: rgba(0, 255, 136, 0.08);
-  box-shadow: 0 0 20px rgba(0, 255, 136, 0.35), inset 0 0 20px rgba(0, 255, 136, 0.06);
-  border-color: var(--accent);
+  background: var(--accent-hover);
 }
 
 .btn-secondary {
-  background: transparent;
+  background: var(--bg-card);
   color: var(--text-muted);
-  border: 1px solid var(--border-bright);
+  border: 2px solid var(--border);
+  box-shadow: var(--shadow-paper);
 }
 .btn-secondary:hover {
   color: var(--text);
-  border-color: var(--text-muted);
-  background: rgba(255,255,255,0.04);
+  border-color: var(--border-bright);
 }
 
 .btn-ghost {
   background: transparent;
   color: var(--text-muted);
-  border: 1px solid var(--border);
+  border: 2px dashed var(--border);
 }
 .btn-ghost:hover {
   border-color: var(--border-bright);
   color: var(--text);
 }
 
-/* Cards */
+/* -----------------------------------------------
+   Cards — index card / sticky note style
+----------------------------------------------- */
 .card {
   background: var(--bg-card);
-  border: 1px solid var(--border);
+  border: 2px solid var(--border);
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  box-shadow: var(--shadow-paper);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+}
+.card::after {
+  /* tape strip across top */
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-1deg);
+  width: 48px;
+  height: 16px;
+  background: rgba(253, 224, 71, 0.55);
+  border: 1px solid rgba(200, 160, 0, 0.2);
+  border-radius: 1px;
+  pointer-events: none;
 }
 .card:hover {
-  border-color: var(--accent);
-  box-shadow: var(--shadow), var(--glow-sm);
-  transform: translateY(-2px);
+  transform: translateY(-3px) rotate(0.3deg);
+  box-shadow: var(--shadow-lift);
 }
 
 section { padding: 56px 0; }
+
+/* -----------------------------------------------
+   Sticker utility
+----------------------------------------------- */
+.sticker {
+  display: inline-block;
+  filter: drop-shadow(var(--shadow-sticker));
+  transition: transform 0.2s;
+}
+.sticker:hover {
+  transform: scale(1.12) rotate(2deg);
+}

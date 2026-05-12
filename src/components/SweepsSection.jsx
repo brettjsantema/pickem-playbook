@@ -54,38 +54,21 @@ export default function SweepsSection() {
         </div>
         <div className="sweeps-featured-header">
           <span className="sweeps-featured-title">Today's featured sites</span>
-          <span className="sweeps-featured-date">April 22nd, 2026</span>
+          <span className="sweeps-featured-date">May 12th, 2026</span>
         </div>
-
-        {/* Triumph Rips — spotlight card */}
-        <a href="https://rips.onelink.me/Wj0m/e5vx6k8s" className="sweeps-triumph-card" target="_blank" rel="noopener noreferrer" onClick={() => track('signup_click', { site: 'Rips by Triumph', section: 'sweeps-featured' })}>
-          <span className="sweeps-triumph-tag">Free Pack</span>
-          <div className="sweeps-triumph-inner">
-            <div className="sweeps-triumph-logo-wrap">
-              <img src="/images/logos/ripsbytriumph.webp" alt="Rips by Triumph" className="sweeps-triumph-logo" />
-            </div>
-            <div className="sweeps-triumph-body">
-              <span className="sweeps-triumph-name">Rips by Triumph</span>
-              <p className="sweeps-triumph-desc">This doesn't necessarily belong in the sweeps casino section, but Rips by Triumph is a hot new app where you can open a free Pokémon card pack when you sign up, so I wanted to give them some special attention by featuring them here!</p>
-            </div>
-            <div className="sweeps-triumph-cta-wrap">
-              <span className="sweeps-triumph-cta">Get Free Pack <BoxArrowUpRight size={11} /></span>
-            </div>
-          </div>
-        </a>
 
         {/* Regular 2-card row */}
         <div className="sweeps-featured sweeps-featured--2col">
           {[
             {
-              tag: 'Savings Surge Deal', name: 'Modo', logo: '/images/logos/modo.png',
-              link: 'https://modo.us?referralCode=T5WNX6', domain: 'modo.us',
-              bullets: ['Constant deals that can be easily cleared with mines, dice, or table games', 'Build up Modo stars to redeem for even more free SC'],
+              tag: 'Hot Right Now', name: 'JackpotGo', logo: '/images/logos/jackpotgo.png',
+              link: 'https://jackpotgo.com/referral?code=PPLAYBOOK', domain: 'jackpotgo.com',
+              bullets: ['Generous daily login bonuses', 'Great selection of high-RTP slots and table games'],
             },
             {
-              tag: 'Huge Welcome Offers', name: 'Spree', logo: '/images/logos/spree.jpg',
-              link: 'https://spree.com/?r=2084566', domain: 'spree.com',
-              bullets: ['Great site with large welcome offers', 'Easy 96% return with Gravity Plinko'],
+              tag: 'New & Worth Trying', name: 'The Win Zone', logo: '/images/logos/thewinzone.svg',
+              link: 'https://thewinzone.com', domain: 'thewinzone.com',
+              bullets: ['Big welcome offer for new signups', 'Low wagering requirements on SC bonuses'],
             },
           ].map(f => (
             <div key={f.name} className="sweeps-featured-card">

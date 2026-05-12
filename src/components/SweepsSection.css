@@ -15,11 +15,12 @@
 
 .sweeps-featured-deco-sign {
   position: absolute;
-  font-weight: 800;
-  color: #00ff88;
+  font-family: var(--font-hand);
+  font-weight: 700;
+  color: var(--accent);
   user-select: none;
   line-height: 1;
-  text-shadow: 0 0 12px rgba(0, 255, 136, 0.5);
+  opacity: 0.15;
 }
 
 /* Triumph spotlight card */
@@ -148,13 +149,14 @@
   top: -9px;
   left: 12px;
   background: var(--accent);
-  color: #000;
-  font-size: 9px;
-  font-weight: 800;
-  letter-spacing: 0.8px;
+  color: #fff;
+  font-family: var(--font-marker);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
   padding: 2px 8px;
-  border-radius: 20px;
-  box-shadow: 0 0 8px rgba(0, 255, 136, 0.5);
+  border-radius: 2px;
+  box-shadow: var(--shadow-sticker);
   pointer-events: none;
   white-space: nowrap;
 }
@@ -392,8 +394,8 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  background: rgba(0, 255, 136, 0.05);
-  border: 1px solid rgba(0, 255, 136, 0.2);
+  background: var(--accent-dim);
+  border: 1px solid rgba(22, 163, 74, 0.25);
   border-radius: var(--radius);
   padding: 12px 16px;
   font-size: 14px;
@@ -408,7 +410,6 @@
 .sweeps-callout-icon {
   color: var(--accent);
   flex-shrink: 0;
-  filter: drop-shadow(0 0 4px rgba(0, 255, 136, 0.5));
 }
 
 /* Math box */
@@ -597,7 +598,7 @@
   letter-spacing: 0.8px;
   padding: 2px 7px;
   border-radius: 20px;
-  box-shadow: 0 0 8px rgba(0, 255, 136, 0.6);
+  box-shadow: var(--shadow-sticker);
   pointer-events: none;
   z-index: 1;
 }
@@ -659,7 +660,7 @@
 }
 .sweeps-card-mini:hover {
   border-color: var(--accent);
-  box-shadow: var(--glow-sm);
+  box-shadow: var(--shadow-lift);
   transform: translateY(-2px);
 }
 
@@ -781,7 +782,7 @@
 .sweeps-lock-btn--unlocked {
   border-color: var(--accent);
   color: var(--accent);
-  box-shadow: 0 0 8px rgba(0, 255, 136, 0.25);
+  box-shadow: var(--shadow-paper);
 }
 
 .sweeps-open-btn {
@@ -805,13 +806,13 @@
 .sweeps-open-btn--active {
   border-color: var(--accent);
   color: var(--accent);
-  background: rgba(0, 255, 136, 0.06);
-  box-shadow: var(--glow-sm);
+  background: var(--accent-dim);
+  box-shadow: var(--shadow-paper);
   cursor: pointer;
   opacity: 1;
 }
 
 .sweeps-open-btn--active:hover {
-  background: rgba(0, 255, 136, 0.12);
-  box-shadow: var(--glow-md);
+  background: rgba(22, 163, 74, 0.18);
+  box-shadow: var(--shadow-lift);
 }
