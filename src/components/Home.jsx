@@ -47,7 +47,7 @@ export default function Home() {
       <div className="container">
 
         <div className="home-hero">
-<h1 className="home-hero-title">The Full List of Profitable Sportsbook & Casino Offers.</h1>
+<h1 className="home-hero-title">The Full List of Profitable Sportsbook & Casino Offers</h1>
           <p className="home-hero-sub">
             Follow step-by-step guides to clear playthrough requirements with hedging and low-variance games.
           </p>
@@ -89,16 +89,13 @@ export default function Home() {
         <div className="home-about card">
           <h2 className="home-about-title">About this site</h2>
           <p>
-            Sportsbooks and casinos are throwing loads of signup bonuses at new users right now. Most only require a 1x playthrough, and with a little strategy you can hedge your bets and play high-EV games to take the gambling out of it entirely. I've easily pulled in over $1,000 in just a few weeks from welcome offers.
+            Sportsbooks and casinos offer aggressive signup bonuses to new users. Most only require a 1x playthrough, and with a little strategy you can hedge your bets and play low-volatility games to secure a profit. 
           </p>
           <p>
-            The catch is these deals are only available to new users, so there's only so many to claim. This site is a list of the best ones I've found, with step-by-step guides on how to redeem each offer.
+            The catch is these deals are only available to new users, so there's only so many sites to sign up for. This site is a list of all the best ones I've found, with step-by-step guides on how to fulfill the playthrough requirements most easily.
           </p>
           <p>
-            These deals exist because casinos have a high customer acquisition cost. They count on people getting hooked, but this site is about the opposite: claim the offer, get paid, and move on to the next one.
-          </p>
-          <p>
-            The links here are referral links, which usually get you an extra bonus on top of the standard offer. It helps me out too, so it's a win-win.
+            These deals exist because gambling apps have a high customer acquisition cost, and they count on people continuing to play, but this site is about the opposite: take advantage of profitable deals, and then move on to another app. 
           </p>
         </div>
 

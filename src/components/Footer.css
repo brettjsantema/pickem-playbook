@@ -1,14 +1,14 @@
 .footer {
   border-top: 2px dashed var(--border);
-  padding: 28px 0 32px;
-  margin-top: 16px;
+  padding: 12px 0 14px;
+  margin-top: 8px;
 }
 
 .footer-inner {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 4px;
   text-align: center;
 }
 
