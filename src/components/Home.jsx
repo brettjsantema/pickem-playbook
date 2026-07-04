@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import dfsPlatforms from '../data/dfsPlatforms.js'
 import sweepsPlatforms from '../data/sweepsPlatforms.js'
 import useSEO from '../hooks/useSEO.js'
+import { getRouteMeta } from '../data/routeMeta.js'
 import './Home.css'
 
 const guides = [
@@ -37,11 +38,7 @@ const guides = [
 ]
 
 export default function Home() {
-  useSEO({
-    title: "PickemPlaybook.com | Sportsbook & Casino Bonus Guides",
-    description: "Guides for sportsbooks and casino bonuses.",
-    url: '/',
-  })
+  useSEO(getRouteMeta('/'))
   return (
     <div className="home">
       <div className="container">

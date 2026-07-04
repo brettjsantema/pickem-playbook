@@ -2,21 +2,18 @@ import { ExclamationTriangleFill, CheckCircleFill } from 'react-bootstrap-icons'
 import { track } from '@vercel/analytics'
 import platforms from '../data/dfsPlatforms.js'
 import useSEO from '../hooks/useSEO.js'
+import { getRouteMeta } from '../data/routeMeta.js'
 import './Section.css'
 import './DFSSection.css'
 
 export default function DFSSection() {
-  useSEO({
-    title: "Pick'em Bonus Guide 2026 | PickemPlaybook.com",
-    description: "How to claim and hedge DFS pick'em signup bonuses on Underdog, PrizePicks, Sleeper, and more. Step-by-step strategies to lock in guaranteed profit.",
-    url: '/bonusguide',
-  })
+  useSEO(getRouteMeta('/bonusguide'))
   return (
     <section className="section">
       <div className="container">
 
         <div className="section-header">
-          <h2 className="section-title">Pick'em Bonus Guide</h2>
+          <h1 className="section-title">Pick'em Bonus Guide</h1>
           <p className="section-subtitle">How to claim deposit bonuses on pick'em apps without actually gambling.</p>
         </div>
 

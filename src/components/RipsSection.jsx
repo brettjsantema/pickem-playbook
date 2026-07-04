@@ -1,15 +1,12 @@
 import useSEO from '../hooks/useSEO.js'
+import { getRouteMeta } from '../data/routeMeta.js'
 import './Section.css'
 import './RipsSection.css'
 
 const REFERRAL = 'https://rips.onelink.me/Wj0m/e5vx6k8s'
 
 export default function RipsSection() {
-  useSEO({
-    title: 'Rips by Triumph Referral & Guide | PickemPlaybook.com',
-    description: 'Open Pokémon card packs on your phone with Rips by Triumph. Refer a friend and you both get a free mystery card. Cash out winnings to PayPal, Venmo, or bank.',
-    url: '/rips',
-  })
+  useSEO(getRouteMeta('/rips'))
 
   return (
     <section className="section rips-section">
@@ -34,7 +31,7 @@ export default function RipsSection() {
           <div className="rips-logo-wrap">
             <img src="/images/logos/ripsbytriumph.webp" alt="Rips by Triumph" className="rips-logo" />
           </div>
-          <h2 className="section-title rips-title">Rips by Triumph</h2>
+          <h1 className="section-title rips-title">Rips by Triumph</h1>
           <p className="section-subtitle">Open Pokémon card packs on your phone. Sell your pulls instantly or have them shipped to you.</p>
         </div>
 

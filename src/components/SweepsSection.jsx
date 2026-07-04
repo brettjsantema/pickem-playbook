@@ -4,15 +4,12 @@ import { ExclamationTriangleFill, CheckCircleFill, XCircleFill, CashStack, LockF
 import { track } from '@vercel/analytics'
 import platforms, { toSlug } from '../data/sweepsPlatforms.js'
 import useSEO from '../hooks/useSEO.js'
+import { getRouteMeta } from '../data/routeMeta.js'
 import './Section.css'
 import './SweepsSection.css'
 
 export default function SweepsSection() {
-  useSEO({
-    title: 'Best Sweepstakes Casinos 2026 | PickemPlaybook.com',
-    description: `Full guide to the best sweepstakes casinos in 2026. ${platforms.length} sites reviewed — sign up for free, collect daily bonuses, and cash out real money.`,
-    url: '/sweeps',
-  })
+  useSEO(getRouteMeta('/sweeps'))
   const [unlocked, setUnlocked] = useState(false)
   const { hash } = useLocation()
 
@@ -35,7 +32,7 @@ export default function SweepsSection() {
       <div className="container">
 
         <div className="section-header">
-          <h2 className="section-title">Sweepstakes Casinos Guide</h2>
+          <h1 className="section-title">Sweepstakes Casinos Guide</h1>
           <p className="section-subtitle">How to make passive income from daily freebies, and collect on big welcome bonuses.</p>
         </div>
 

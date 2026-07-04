@@ -2,6 +2,8 @@ import { useParams, Link } from 'react-router-dom'
 import { CashStack, ArrowLeft, CheckCircleFill } from 'react-bootstrap-icons'
 import { track } from '@vercel/analytics'
 import platforms, { toSlug } from '../data/sweepsPlatforms.js'
+import useSEO from '../hooks/useSEO.js'
+import { getRouteMeta } from '../data/routeMeta.js'
 import './CasinoGuide.css'
 
 function LuckyHandsGuide({ platform }) {
@@ -244,6 +246,7 @@ const guideComponents = {
 export default function CasinoGuide() {
   const { casino } = useParams()
   const platform = platforms.find(p => toSlug(p.name) === casino)
+  useSEO(getRouteMeta(`/sweeps/${casino}`))
 
   if (!platform) {
     return (
@@ -267,7 +270,7 @@ export default function CasinoGuide() {
           {platform.logo && (
             <img src={platform.logo} alt={platform.name} className="casino-guide-logo" />
           )}
-          <h2 className="section-title">{platform.name} Guide</h2>
+          <h1 className="section-title">{platform.name} Guide</h1>
         </div>
 
         {GuideContent

@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import { CashStack, ArrowLeft, CheckCircleFill, ExclamationTriangleFill } from 'react-bootstrap-icons'
 import { track } from '@vercel/analytics'
+import useSEO from '../hooks/useSEO.js'
+import { getRouteMeta } from '../data/routeMeta.js'
 import './CasinoGuide.css'
 import './B2Guide.css'
 
@@ -12,6 +14,7 @@ const b2Sites = [
 ]
 
 export default function B2Guide() {
+  useSEO(getRouteMeta('/sweeps/b2-casinos'))
   return (
     <section className="section">
       <div className="container">
@@ -20,7 +23,7 @@ export default function B2Guide() {
         </Link>
 
         <div className="casino-guide-header">
-          <h2 className="section-title">B2 Casinos Guide</h2>
+          <h1 className="section-title">B2 Casinos Guide</h1>
           <p className="b2-guide-subtitle">McLuck, PlayFame, HelloMillions, SpinBlitz</p>
         </div>
 

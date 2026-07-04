@@ -1,26 +1,9 @@
-import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { CashStack } from 'react-bootstrap-icons'
 import { track } from '@vercel/analytics'
 import useSEO from '../hooks/useSEO.js'
+import { getRouteMeta, MONTH_YEAR } from '../data/routeMeta.js'
 import './ArticleTopCasinos.css'
-
-function getUpdatedText() {
-  const now = new Date()
-  now.setDate(now.getDate() - 1)
-  const day = now.getDate()
-  const month = now.getMonth()
-  const year = now.getFullYear()
-  const seed = day * 31 + month * 373 + year
-  const minutes = seed % 241 // 0-240 min span = 7:00am to 11:00am
-  const totalMin = 7 * 60 + minutes
-  const hour = Math.floor(totalMin / 60)
-  const min = (totalMin % 60).toString().padStart(2, '0')
-  const hour12 = hour > 12 ? hour - 12 : hour
-  const ampm = hour >= 12 ? 'PM' : 'AM'
-  const months = ['January','February','March','April','May','June','July','August','September','October','November','December']
-  return `Updated ${months[month]} ${day}, ${year} at ${hour12}:${min} ${ampm} CST`
-}
 
 const tiers = [
   {
@@ -165,45 +148,15 @@ const tierColors = {
 }
 
 export default function ArticleTopCasinos() {
-  useSEO({
-    title: 'Best Online Casinos April 2026 | PickemPlaybook.com',
-    description: 'Ranked tier list of the best sweepstakes casinos in April 2026. Sign up for free, collect daily bonuses, and redeem for real cash — no deposit required.',
-    url: '/articles/best-online-casinos-2026',
-    type: 'article',
-  })
-
-  useEffect(() => {
-    const schema = {
-      '@context': 'https://schema.org',
-      '@type': 'Article',
-      headline: 'Best Online Casinos April 2026',
-      description: 'Ranked tier list of the best sweepstakes casinos in April 2026.',
-      url: 'https://pickemplaybook.com/articles/best-online-casinos-2026',
-      publisher: {
-        '@type': 'Organization',
-        name: 'PickemPlaybook.com',
-        url: 'https://pickemplaybook.com',
-      },
-      dateModified: new Date().toISOString().split('T')[0],
-    }
-    let el = document.getElementById('jsonld-article')
-    if (!el) {
-      el = document.createElement('script')
-      el.id = 'jsonld-article'
-      el.type = 'application/ld+json'
-      document.head.appendChild(el)
-    }
-    el.textContent = JSON.stringify(schema)
-    return () => el.remove()
-  }, [])
+  useSEO(getRouteMeta('/articles/best-online-casinos-2026'))
 
   return (
     <div className="article-wrap container">
       <div className="article-meta">
-        <span className="article-date">{getUpdatedText()}</span>
+        <span className="article-date" suppressHydrationWarning>Updated {MONTH_YEAR}</span>
       </div>
 
-      <h1 className="article-title">Best Online Casinos April 2026</h1>
+      <h1 className="article-title" suppressHydrationWarning>Best Online Casinos {MONTH_YEAR}</h1>
 
       <p className="article-lead">
         Sweepstakes casinos let you play real casino games and win real cash prizes without spending a dime. Every site on this list gives you free Sweep Coins just for signing up, with more available through daily login bonuses. There is no gambling required -- you can play entirely on free coins, meet the playthrough requirement, and redeem for real money.
