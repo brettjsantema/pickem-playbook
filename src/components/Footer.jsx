@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="container footer-inner">
         <p className="footer-brand">2026 Pick&apos;em Playbook</p>
         <p className="footer-disclaimer">
-          Updated May 13, 2026.
+          Updated July 4th, 2026.
         </p>
       </div>
     </footer>

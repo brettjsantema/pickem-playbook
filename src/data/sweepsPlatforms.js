@@ -5,7 +5,9 @@ export function toSlug(name) {
 const platforms = [
   // Row 1
   { name: 'Jackpot Go',    logo: '/images/logos/jackpotgo.png',     welcomeText: 'Weekly Rewards Track', link: 'https://game.jackpotgo.com?invite_code=XC7DJZXM', hasGuide: true, isNew: true },
+  { name: 'Cider Casino',  logo: '/images/logos/cider-casino-logo.avif', welcomeText: 'Weekly Rewards Track', link: 'https://cidercasino.onelink.me/QfGN/oio1bede?c=J2SSUUGN' },
   { name: 'Modo',          logo: '/images/logos/modo.png',          welcomeText: 'Welcome Offers',       link: 'https://modo.us?referralCode=T5WNX6' },
+  { name: 'The Win Zone',  logo: '/images/logos/thewinzone.svg',    welcomeText: 'Big Welcome Offers',   link: 'https://www.thewinzone.com/s/2KUr31' },
   { name: 'Crown Coins',   logo: '/images/logos/crowncoins.png',    welcomeText: 'Welcome Offers',       link: 'https://crowncoinscasino.com/?utm_campaign=9067a285-018f-4af3-a128-df01d53d1767&utm_source=friends', hasGuide: true },
   { name: 'LuckyHands',    logo: '/images/logos/luckyhands.jpg',    welcomeText: 'Welcome Offers',       link: 'https://luckyhands.com/sign-up?code=e3a41524-0a48-4d3b-b2bd-29c477dc7cc1', hasGuide: true },
   // Row 2
