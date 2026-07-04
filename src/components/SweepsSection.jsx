@@ -54,21 +54,21 @@ export default function SweepsSection() {
         </div>
         <div className="sweeps-featured-header">
           <span className="sweeps-featured-title">Today's featured sites</span>
-          <span className="sweeps-featured-date">May 12th, 2026</span>
+          <span className="sweeps-featured-date">July 4th, 2026</span>
         </div>
 
         {/* Regular 2-card row */}
         <div className="sweeps-featured sweeps-featured--2col">
           {[
             {
-              tag: 'Hot Right Now', name: 'JackpotGo', logo: '/images/logos/jackpotgo.png',
-              link: 'https://jackpotgo.com/referral?code=PPLAYBOOK', domain: 'jackpotgo.com',
-              bullets: ['Generous daily login bonuses', 'Great selection of high-RTP slots and table games'],
+              tag: 'New & Worth Trying', name: 'Cider Casino', logo: '/images/logos/cider-casino-logo.avif',
+              link: 'https://cidercasino.onelink.me/QfGN/oio1bede?c=J2SSUUGN', domain: 'cidercasino.com',
+              bullets: ['New sister site of Jackpot Go — same generous daily login bonuses', 'Great selection of high-RTP slots and table games', 'Use code: J2SSUUGN'],
             },
             {
-              tag: 'New & Worth Trying', name: 'The Win Zone', logo: '/images/logos/thewinzone.svg',
-              link: 'https://thewinzone.com', domain: 'thewinzone.com',
-              bullets: ['Big welcome offer for new signups', 'Low wagering requirements on SC bonuses'],
+              tag: 'Hot Right Now', name: 'Modo', logo: '/images/logos/modo.png',
+              link: 'https://modo.us?referralCode=T5WNX6', domain: 'modo.us',
+              bullets: ['Constant deals that can be easily cleared with mines, dice, or table games', 'Build up Modo stars to redeem for even more free SC'],
             },
           ].map(f => (
             <div key={f.name} className="sweeps-featured-card">
