@@ -83,10 +83,10 @@ const tiers = [
         link: 'https://www.hellomillions.com/lp/raf?r=5459cd73%2F2553383889',
       },
       {
-        name: 'Fortune Coins',
-        logo: '/images/logos/fortunecoins.png',
+        name: 'FortuneWins',
+        logo: '/images/logos/fortunewins.svg',
         summary: 'Focused on slots with a good free coin offering on signup. Consistent daily bonuses and a clean redemption process.',
-        link: 'https://www.fortunecoins.com/signup/da50747e-94a0-4981-8bee-0964a8b3dd0b',
+        link: 'https://fortunewins.com/signup/da50747e-94a0-4981-8bee-0964a8b3dd0b',
       },
       {
         name: 'Sweep Jungle',

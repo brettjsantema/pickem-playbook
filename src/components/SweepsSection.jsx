@@ -209,7 +209,7 @@ export default function SweepsSection() {
             {platforms.map(p => (
               <div key={p.name} className="card platform-card sweeps-card">
                 <div className="platform-header">
-                  {p.logo && <img src={p.logo} alt={p.name} className={`platform-logo${['Jackpota', 'Sweep Jungle', 'Ace', 'Spindoo', 'The Win Zone'].includes(p.name) ? ' platform-logo--contain' : ''}`} />}
+                  {p.logo && <img src={p.logo} alt={p.name} className={`platform-logo${['Jackpota', 'Sweep Jungle', 'Ace', 'Spindoo', 'The Win Zone', 'FortuneWins'].includes(p.name) ? ' platform-logo--contain' : ''}`} />}
                   <h3 className="platform-name">{p.name}</h3>
                 </div>
                 <div className="sweeps-card-features">
@@ -267,7 +267,7 @@ export default function SweepsSection() {
                 rel="noopener noreferrer"
                 onClick={() => track('signup_click', { site: p.name, section: 'sweeps' })}
               >
-                {p.logo && <img src={p.logo} alt={p.name} className={`sweeps-card-mini-logo${['Jackpota', 'Sweep Jungle', 'Ace', 'Spindoo', 'The Win Zone'].includes(p.name) ? ' platform-logo--contain' : ''}`} />}
+                {p.logo && <img src={p.logo} alt={p.name} className={`sweeps-card-mini-logo${['Jackpota', 'Sweep Jungle', 'Ace', 'Spindoo', 'The Win Zone', 'FortuneWins'].includes(p.name) ? ' platform-logo--contain' : ''}`} />}
                 <span className="sweeps-card-mini-name">{p.name}</span>
               </a>
             ))}
