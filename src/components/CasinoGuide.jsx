@@ -4,7 +4,7 @@ import { track } from '@vercel/analytics'
 import platforms, { toSlug } from '../data/sweepsPlatforms.js'
 import useSEO from '../hooks/useSEO.js'
 import { getRouteMeta } from '../data/routeMeta.js'
-import { goHref } from '../data/goLinks.js'
+import GoLink from './GoLink.jsx'
 import './CasinoGuide.css'
 
 function LuckyHandsGuide({ platform }) {
@@ -279,15 +279,14 @@ export default function CasinoGuide() {
           : <p className="casino-guide-coming-soon">Coming soon.</p>
         }
 
-        <a
-          href={goHref(platform.name, platform.link)}
+        <GoLink
+          name={platform.name}
+          fallback={platform.link}
           className="btn btn-primary casino-guide-cta"
-          target="_blank"
-          rel="noopener noreferrer"
           onClick={() => track('signup_click', { site: platform.name, section: 'casino-guide' })}
         >
           <CashStack size={15} /> Sign Up for {platform.name}
-        </a>
+        </GoLink>
       </div>
     </section>
   )

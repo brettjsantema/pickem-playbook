@@ -3,7 +3,7 @@ import { CashStack, ArrowLeft, CheckCircleFill, ExclamationTriangleFill } from '
 import { track } from '@vercel/analytics'
 import useSEO from '../hooks/useSEO.js'
 import { getRouteMeta } from '../data/routeMeta.js'
-import { goHref } from '../data/goLinks.js'
+import GoLink from './GoLink.jsx'
 import './CasinoGuide.css'
 import './B2Guide.css'
 
@@ -155,16 +155,15 @@ export default function B2Guide() {
 
         <div className="b2-cta-grid">
           {b2Sites.map(s => (
-            <a
+            <GoLink
               key={s.name}
-              href={goHref(s.name, s.link)}
+              name={s.name}
+              fallback={s.link}
               className="btn btn-primary b2-cta-btn"
-              target="_blank"
-              rel="noopener noreferrer"
               onClick={() => track('signup_click', { site: s.name, section: 'b2-guide' })}
             >
               <CashStack size={14} /> Sign Up for {s.name}
-            </a>
+            </GoLink>
           ))}
         </div>
 

@@ -22,21 +22,12 @@ function GoRedirect() {
   useSEO(getRouteMeta(`/go/${slug || ''}`))
   useEffect(() => {
     if (!target) return
-    // brief delay so the analytics pageview beacon fires before the tab navigates away
-    const t = setTimeout(() => window.location.replace(target), 400)
+    // beat of delay so the SPA route-change pageview beacon fires first
+    const t = setTimeout(() => window.location.replace(target), 150)
     return () => clearTimeout(t)
   }, [target])
   if (!target) return <NotFound />
-  return (
-    <section className="section">
-      <div className="container">
-        <div className="section-header">
-          <h1 className="section-title">Sending you over…</h1>
-          <p className="section-subtitle">If nothing happens, <a href={target} rel="nofollow sponsored noopener noreferrer">tap here</a>.</p>
-        </div>
-      </div>
-    </section>
-  )
+  return null
 }
 
 function NotFound() {

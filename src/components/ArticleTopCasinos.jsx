@@ -3,7 +3,7 @@ import { CashStack } from 'react-bootstrap-icons'
 import { track } from '@vercel/analytics'
 import useSEO from '../hooks/useSEO.js'
 import { getRouteMeta, MONTH_YEAR } from '../data/routeMeta.js'
-import { goHref } from '../data/goLinks.js'
+import GoLink from './GoLink.jsx'
 import './ArticleTopCasinos.css'
 
 const tiers = [
@@ -182,15 +182,14 @@ export default function ArticleTopCasinos() {
                 </div>
                 <div className="article-row-name">{e.name}</div>
                 <div className="article-row-summary">{e.summary}</div>
-                <a
-                  href={goHref(e.name, e.link)}
+                <GoLink
+                  name={e.name}
+                  fallback={e.link}
                   className="btn btn-primary article-row-btn"
-                  target="_blank"
-                  rel="noopener noreferrer"
                   onClick={() => track('signup_click', { site: e.name, section: 'article-top-casinos' })}
                 >
                   <CashStack size={13} /> Sign Up
-                </a>
+                </GoLink>
               </div>
             ))}
           </div>

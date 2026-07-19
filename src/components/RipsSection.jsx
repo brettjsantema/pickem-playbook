@@ -1,9 +1,10 @@
 import useSEO from '../hooks/useSEO.js'
 import { getRouteMeta } from '../data/routeMeta.js'
+import GoLink from './GoLink.jsx'
 import './Section.css'
 import './RipsSection.css'
 
-const REFERRAL = '/go/rips-by-triumph'
+const RIPS_LINK = 'https://rips.onelink.me/Wj0m/e5vx6k8s'
 
 export default function RipsSection() {
   useSEO(getRouteMeta('/rips'))
@@ -45,9 +46,9 @@ export default function RipsSection() {
             <h3 className="rips-promo-heading">Use my signup link to get a free card pack</h3>
             <p className="rips-promo-desc">Download the app, and we both get a free pack. Cards are revealed in the app, and once revealed you can either cash out or have them shipped to you.</p>
             <p className="rips-promo-desc">The link above should apply the referral automatically. If it doesn't, you can enter code <strong className="rips-code">OCRCYCJ</strong> manually when signing up.</p>
-            <a href={REFERRAL} className="rips-cta-btn" target="_blank" rel="noopener noreferrer">
+            <GoLink name="Rips by Triumph" fallback={RIPS_LINK} className="rips-cta-btn">
               Get a Free Pack
-            </a>
+            </GoLink>
           </div>
         </div>
 
@@ -88,9 +89,9 @@ export default function RipsSection() {
 
         {/* CTA */}
         <div className="rips-bottom-cta">
-          <a href={REFERRAL} className="rips-cta-btn rips-cta-btn--large" target="_blank" rel="noopener noreferrer">
+          <GoLink name="Rips by Triumph" fallback={RIPS_LINK} className="rips-cta-btn rips-cta-btn--large">
             Download Rips &amp; Claim Free Pack →
-          </a>
+          </GoLink>
           <p className="rips-cta-note">iOS only · No purchase required to claim free pack</p>
         </div>
 
