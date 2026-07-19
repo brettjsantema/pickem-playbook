@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { ExclamationTriangleFill, CheckCircleFill, XCircleFill, CashStack, LockFill, UnlockFill, ArrowRight, ExclamationCircleFill, BoxArrowUpRight } from 'react-bootstrap-icons'
 import { track } from '@vercel/analytics'
 import platforms, { toSlug } from '../data/sweepsPlatforms.js'
+import { goHref } from '../data/goLinks.js'
 import useSEO from '../hooks/useSEO.js'
 import { getRouteMeta } from '../data/routeMeta.js'
 import './Section.css'
@@ -51,21 +52,26 @@ export default function SweepsSection() {
         </div>
         <div className="sweeps-featured-header">
           <span className="sweeps-featured-title">Today's featured sites</span>
-          <span className="sweeps-featured-date">July 4th, 2026</span>
+          <span className="sweeps-featured-date">July 19th, 2026</span>
         </div>
 
-        {/* Regular 2-card row */}
-        <div className="sweeps-featured sweeps-featured--2col">
+        {/* Featured 3-card row */}
+        <div className="sweeps-featured">
           {[
             {
-              tag: 'New & Worth Trying', name: 'Cider Casino', logo: '/images/logos/cider-casino-logo.avif',
-              link: 'https://cidercasino.onelink.me/QfGN/oio1bede?c=J2SSUUGN', domain: 'cidercasino.com',
-              bullets: ['New sister site of Jackpot Go — same generous daily login bonuses', 'Great selection of high-RTP slots and table games', 'Use code: J2SSUUGN'],
+              tag: 'New & Worth Trying', name: 'CoinWizard', logo: '/images/logos/coinwizard.svg',
+              link: 'https://www.coinwizardgames.com/referral/K3N55EE5LG', domain: 'coinwizardgames.com',
+              bullets: ['+2.50 SC free on signup — no purchase needed', '50 SC for $24.99 welcome offer', 'Great daily reward — GoldenHearts sister site'],
             },
             {
-              tag: 'Hot Right Now', name: 'Modo', logo: '/images/logos/modo.png',
-              link: 'https://modo.us?referralCode=T5WNX6', domain: 'modo.us',
-              bullets: ['Constant deals that can be easily cleared with mines, dice, or table games', 'Build up Modo stars to redeem for even more free SC'],
+              tag: 'Big Welcome Offer', name: 'Legendz', logo: '/images/logos/legendz.webp',
+              link: 'https://www.legendz.com/?referred_by_id=1021969', domain: 'legendz.com',
+              bullets: ['200 SC for $99.99 welcome offer', 'Arcade-style dice and plinko games, plus live dealers'],
+            },
+            {
+              tag: 'Free SC on Signup', name: 'Moozi', logo: '/images/logos/moozi.png',
+              link: 'https://moozi.com/signup?referral_code=2611347992', domain: 'moozi.com',
+              bullets: ['+5 SC free on signup', 'Solid welcome offers on coin bundles'],
             },
           ].map(f => (
             <div key={f.name} className="sweeps-featured-card">
@@ -81,7 +87,7 @@ export default function SweepsSection() {
                   </ul>
                 )}
               </div>
-              <a href={f.link} className="btn btn-primary sweeps-featured-btn" target="_blank" rel="noopener noreferrer" onClick={() => track('signup_click', { site: f.name, section: 'sweeps-featured' })}>
+              <a href={goHref(f.name, f.link)} className="btn btn-primary sweeps-featured-btn" target="_blank" rel="nofollow sponsored noopener noreferrer" onClick={() => track('signup_click', { site: f.name, section: 'sweeps-featured' })}>
                 {f.domain} <BoxArrowUpRight size={11} />
               </a>
             </div>
@@ -209,7 +215,7 @@ export default function SweepsSection() {
             {platforms.map(p => (
               <div key={p.name} className="card platform-card sweeps-card">
                 <div className="platform-header">
-                  {p.logo && <img src={p.logo} alt={p.name} className={`platform-logo${['Jackpota', 'Sweep Jungle', 'Ace', 'Spindoo', 'The Win Zone', 'FortuneWins'].includes(p.name) ? ' platform-logo--contain' : ''}`} />}
+                  {p.logo && <img src={p.logo} alt={p.name} className={`platform-logo${['Jackpota', 'Sweep Jungle', 'Ace', 'Spindoo', 'The Win Zone', 'FortuneWins', 'CoinWizard', 'Legendz'].includes(p.name) ? ' platform-logo--contain' : ''}`} />}
                   <h3 className="platform-name">{p.name}</h3>
                 </div>
                 <div className="sweeps-card-features">
@@ -239,7 +245,7 @@ export default function SweepsSection() {
                   </div>
                 )}
                 <div className="sweeps-card-btns">
-                  <a href={p.link} className="btn btn-primary platform-cta sweeps-card-btn" target="_blank" rel="noopener noreferrer" onClick={() => track('signup_click', { site: p.name, section: 'sweeps' })}>
+                  <a href={goHref(p.name, p.link)} className="btn btn-primary platform-cta sweeps-card-btn" target="_blank" rel="nofollow sponsored noopener noreferrer" onClick={() => track('signup_click', { site: p.name, section: 'sweeps' })}>
                     <CashStack size={14} /> Sign Up
                   </a>
                   {p.hasGuide || p.b2Guide
@@ -261,13 +267,13 @@ export default function SweepsSection() {
             {platforms.map(p => (
               <a
                 key={p.name}
-                href={p.link}
+                href={goHref(p.name, p.link)}
                 className="sweeps-card-mini"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => track('signup_click', { site: p.name, section: 'sweeps' })}
               >
-                {p.logo && <img src={p.logo} alt={p.name} className={`sweeps-card-mini-logo${['Jackpota', 'Sweep Jungle', 'Ace', 'Spindoo', 'The Win Zone', 'FortuneWins'].includes(p.name) ? ' platform-logo--contain' : ''}`} />}
+                {p.logo && <img src={p.logo} alt={p.name} className={`sweeps-card-mini-logo${['Jackpota', 'Sweep Jungle', 'Ace', 'Spindoo', 'The Win Zone', 'FortuneWins', 'CoinWizard', 'Legendz'].includes(p.name) ? ' platform-logo--contain' : ''}`} />}
                 <span className="sweeps-card-mini-name">{p.name}</span>
               </a>
             ))}

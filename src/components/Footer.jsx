@@ -1,3 +1,4 @@
+import { BUILD_DATE } from '../data/routeMeta.js'
 import './Footer.css'
 
 export default function Footer() {
@@ -5,8 +6,8 @@ export default function Footer() {
     <footer className="footer">
       <div className="container footer-inner">
         <p className="footer-brand">2026 Pick&apos;em Playbook</p>
-        <p className="footer-disclaimer">
-          Updated July 4th, 2026.
+        <p className="footer-disclaimer" suppressHydrationWarning>
+          Updated {BUILD_DATE}.
         </p>
       </div>
     </footer>

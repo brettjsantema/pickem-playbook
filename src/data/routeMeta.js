@@ -3,6 +3,7 @@ import platforms, { toSlug } from './sweepsPlatforms.js'
 export const SITE = 'https://pickemplaybook.com'
 
 export const MONTH_YEAR = new Date().toLocaleString('en-US', { month: 'long', year: 'numeric', timeZone: 'America/Chicago' })
+export const BUILD_DATE = new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'America/Chicago' })
 
 const guideSlugs = platforms.filter(p => p.hasGuide).map(p => toSlug(p.name))
 

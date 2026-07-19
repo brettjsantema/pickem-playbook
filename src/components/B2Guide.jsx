@@ -3,6 +3,7 @@ import { CashStack, ArrowLeft, CheckCircleFill, ExclamationTriangleFill } from '
 import { track } from '@vercel/analytics'
 import useSEO from '../hooks/useSEO.js'
 import { getRouteMeta } from '../data/routeMeta.js'
+import { goHref } from '../data/goLinks.js'
 import './CasinoGuide.css'
 import './B2Guide.css'
 
@@ -156,7 +157,7 @@ export default function B2Guide() {
           {b2Sites.map(s => (
             <a
               key={s.name}
-              href={s.link}
+              href={goHref(s.name, s.link)}
               className="btn btn-primary b2-cta-btn"
               target="_blank"
               rel="noopener noreferrer"

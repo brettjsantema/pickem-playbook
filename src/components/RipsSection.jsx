@@ -3,7 +3,7 @@ import { getRouteMeta } from '../data/routeMeta.js'
 import './Section.css'
 import './RipsSection.css'
 
-const REFERRAL = 'https://rips.onelink.me/Wj0m/e5vx6k8s'
+const REFERRAL = '/go/rips-by-triumph'
 
 export default function RipsSection() {
   useSEO(getRouteMeta('/rips'))

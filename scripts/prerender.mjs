@@ -55,4 +55,9 @@ for (const route of PRERENDER_ROUTES) {
   writeFileSync(outPath, html)
   console.log(`prerendered ${route} -> ${appHtml.length} chars, title: ${meta.title.slice(0, 60)}`)
 }
+const sitemapPath = join(root, 'dist', 'sitemap.xml')
+const today = new Date().toLocaleDateString('en-CA', { timeZone: 'America/Chicago' })
+const sitemap = readFileSync(sitemapPath, 'utf-8').replace(/<lastmod>[^<]*<\/lastmod>/g, `<lastmod>${today}</lastmod>`)
+writeFileSync(sitemapPath, sitemap)
+console.log(`sitemap lastmod set to ${today}`)
 console.log(`prerender complete: ${PRERENDER_ROUTES.length} routes`)

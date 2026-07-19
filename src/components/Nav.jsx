@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
+import { MONTH_YEAR } from '../data/routeMeta.js'
 import { Link, useLocation } from 'react-router-dom'
 import './Nav.css'
 
@@ -97,7 +98,7 @@ export default function Nav() {
                     className={`nav-dropdown-item ${pathname === '/articles/best-online-casinos-2026' ? 'nav-dropdown-item--active' : ''}`}
                     onClick={closeAll}
                   >
-                    Best Online Casinos April 2026
+                    {`Best Online Casinos ${MONTH_YEAR}`}
                   </Link>
                 </li>
               </ul>
